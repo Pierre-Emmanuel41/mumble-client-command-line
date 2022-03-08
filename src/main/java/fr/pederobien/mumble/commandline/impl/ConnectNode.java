@@ -24,9 +24,9 @@ public class ConnectNode extends MumbleClientNode {
 	public List<String> onTabComplete(String[] args) {
 		switch (args.length) {
 		case 1:
-			return asList("<IP address>");
+			return asList(getMessage(EMumbleClientCode.MUMBLE__CONNECT__ADDRESS_COMPLETION));
 		case 2:
-			return check(args[0], address -> PATTERN.matcher(address).matches(), asList("<port>"));
+			return check(args[0], address -> PATTERN.matcher(address).matches(), asList(getMessage(EMumbleClientCode.MUMBLE__CONNECT__PORT_COMPLETION)));
 		default:
 			return emptyList();
 		}

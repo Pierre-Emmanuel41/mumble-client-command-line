@@ -42,4 +42,14 @@ public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClien
 	protected void send(ICode code, Object... args) {
 		MumbleClientDictionaryContext.instance().send(new MessageEvent(Locale.getDefault(), code.getCode(), args));
 	}
+
+	/**
+	 * Get a message associated to the given code translated in the OS language.
+	 * 
+	 * @param code Used as key to get the right message in the right dictionary.
+	 * @param args Some arguments (optional) used for dynamic messages.
+	 */
+	protected String getMessage(ICode code, Object... args) {
+		return MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), code.getCode(), args));
+	}
 }

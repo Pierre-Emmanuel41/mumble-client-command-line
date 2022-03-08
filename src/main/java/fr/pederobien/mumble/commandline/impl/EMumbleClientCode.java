@@ -10,6 +10,12 @@ public enum EMumbleClientCode implements ICode {
 	// Code for the "mumble connect" command -------------------------------------
 	MUMBLE__CONNECT__EXPLANATION,
 
+	// Code for the IP address completion
+	MUMBLE__CONNECT__ADDRESS_COMPLETION,
+
+	// Code for the port number completion
+	MUMBLE__CONNECT__PORT_COMPLETION,
+
 	// Code when the IP address is missing
 	MUMBLE__CONNECT__ADDRESS_IS_MISSING,
 

@@ -16,6 +16,14 @@
 			<value>Connecte ce client Mumble à un serveur Mumble</value>
 		</message>
 		<message>
+			<code>MUMBLE__CONNECT__ADDRESS_COMPLETION</code>
+			<value>&lt;adresse IP&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__PORT_COMPLETION</code>
+			<value>&lt;port&gt;</value>
+		</message>
+		<message>
 			<code>MUMBLE__CONNECT__ADDRESS_IS_MISSING</code>
 			<value>Impossible de se connecter au serveur, l'adresse IP est manquante</value>
 		</message>
