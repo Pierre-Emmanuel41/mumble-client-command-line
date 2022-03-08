@@ -70,8 +70,20 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the sound modifier does not exist
 	MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_NOT_FOUND,
 
-	// Code when the server returns a fail code
+	// Code when the channel has been added on the remote
 	MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED,
+
+	// Code for the "mumble channels remove" command -----------------------------
+	MUMBLE__CHANNELS__REMOVE__EXPLANATION,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__REMOVE__NAME_IS_MISSING,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__REMOVE__CHANNEL_NOT_FOUND,
+
+	// Code when the channel has been removed from the remote
+	MUMBLE__CHANNELS__REMOVE__REQUEST_SUCCEED,
 
 	;
 

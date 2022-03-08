@@ -102,5 +102,21 @@
 			<code>MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED</code>
 			<value>The channel %s with modifier %s has been added to %s</value>
 		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__EXPLANATION</code>
+			<value>To remove a channel from a server</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__NAME_IS_MISSING</code>
+			<value>Cannot remove a channel from %s, the channel name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL_NOT_FOUND</code>
+			<value>Cannot remove a channel %s from %s, the channel does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__REQUEST_SUCCEED</code>
+			<value>The channel %s has been removed from %s</value>
+		</message>
 	</messages>
 </dictionary>

@@ -9,15 +9,14 @@ import fr.pederobien.commandtree.interfaces.INode;
 import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
-import fr.pederobien.mumble.commandline.interfaces.IMumbleClientNode;
 import fr.pederobien.utils.AsyncConsole;
 
 public class MumbleClientCommandTree {
 	private IMumbleServer server;
 	private ICommandRootNode<ICode> root;
-	private IMumbleClientNode connectNode;
-	private IMumbleClientNode stopNode;
-	private IMumbleClientNode channelsNode;
+	private ConnectNode connectNode;
+	private StopNode stopNode;
+	private ChannelsNode channelsNode;
 
 	public MumbleClientCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
@@ -59,21 +58,21 @@ public class MumbleClientCommandTree {
 	/**
 	 * @return The node that connects a mumble client to a remote.
 	 */
-	public IMumbleClientNode getConnectNode() {
+	public ConnectNode getConnectNode() {
 		return connectNode;
 	}
 
 	/**
 	 * @return The node that aborts the connection with the remote.
 	 */
-	public IMumbleClientNode getStopNode() {
+	public StopNode getStopNode() {
 		return stopNode;
 	}
 
 	/**
 	 * @return The node that adds or removes channels from a server.
 	 */
-	public IMumbleClientNode getChannelsNode() {
+	public ChannelsNode getChannelsNode() {
 		return channelsNode;
 	}
 }
