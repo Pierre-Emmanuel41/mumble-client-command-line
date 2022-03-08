@@ -1,12 +1,15 @@
 package fr.pederobien.mumble.commandline.impl;
 
 import java.nio.file.Paths;
+import java.util.Locale;
 import java.util.Scanner;
 
 import fr.pederobien.commandtree.events.NodeEvent;
+import fr.pederobien.commandtree.exceptions.NotAvailableArgumentException;
 import fr.pederobien.communication.event.ConnectionEvent;
 import fr.pederobien.dictionary.event.DictionaryEvent;
 import fr.pederobien.dictionary.impl.JarXmlDictionaryParser;
+import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.dictionary.impl.XmlDictionaryParser;
 import fr.pederobien.dictionary.interfaces.IDictionaryParser;
 import fr.pederobien.utils.AsyncConsole;
@@ -21,13 +24,52 @@ public class BeginContext {
 	private MumbleClientCommandTree tree;
 	private Scanner scanner;
 
-	public void initialize() {
+	/**
+	 * Initialize the context.
+	 * 
+	 * @return This initialized context.
+	 */
+	public BeginContext initialize() {
 		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class).register();
 
 		tree = new MumbleClientCommandTree();
 		scanner = new Scanner(System.in);
 
 		registerDictionaries();
+
+		return this;
+	}
+
+	/**
+	 * Start waiting for user input in order to run commands
+	 */
+	public void start() {
+		AsyncConsole.println(MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), EMumbleClientCode.MUMBLE__STARTING.toString())));
+
+		while (true) {
+			AsyncConsole.print(">");
+			String command = scanner.nextLine();
+
+			if (command.trim().equals("stop")) {
+				// Disconnecting before stopping program
+				try {
+					tree.getRoot().onCommand(new String[] { tree.getDisconnectNode().getLabel() });
+				} catch (NotAvailableArgumentException e) {
+					// do nothing
+				}
+				break;
+			}
+
+			try {
+				tree.getRoot().onCommand(command.split(" "));
+				Thread.sleep(200);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		AsyncConsole.println(MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), EMumbleClientCode.MUMBLE__STOPPING.toString())));
+		scanner.close();
 	}
 
 	/**
