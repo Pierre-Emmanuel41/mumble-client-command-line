@@ -47,5 +47,13 @@
 			<code>MUMBLE__CONNECT__CONNECTION_ABORT</code>
 			<value>la connexion à %s:%s a échoué ...</value>
 		</message>
+		<message>
+			<code>MUMBLE__STOP__EXPLANATION</code>
+			<value>Pour annuler la connexion avec le server</value>
+		</message>
+		<message>
+			<code>MUMBLE__STOP__CONNECTION_ABORTED</code>
+			<value>La connexion à %s:%s a été interrompue</value>
+		</message>
 	</messages>
 </dictionary>

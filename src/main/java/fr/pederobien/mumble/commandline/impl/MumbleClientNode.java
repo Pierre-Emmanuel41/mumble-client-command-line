@@ -1,6 +1,7 @@
 package fr.pederobien.mumble.commandline.impl;
 
 import java.util.Locale;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import fr.pederobien.commandtree.impl.CommandNode;
@@ -20,20 +21,8 @@ public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClien
 	 * @param explanation The explanation associated to this node.
 	 * @param isAvailable True if this node is available, false otherwise.
 	 */
-	protected MumbleClientNode(Supplier<IMumbleServer> server, String label, ICode explanation, Supplier<Boolean> isAvailable) {
-		super(label, explanation, isAvailable);
-		this.server = server;
-	}
-
-	/**
-	 * Creates a node specified by the given parameters.
-	 * 
-	 * @param server      The server attached to this node.
-	 * @param label       The primary node name.
-	 * @param explanation The explanation associated to this node.
-	 */
-	protected MumbleClientNode(Supplier<IMumbleServer> server, String label, ICode explanation) {
-		super(label, explanation);
+	protected MumbleClientNode(Supplier<IMumbleServer> server, String label, ICode explanation, Function<IMumbleServer, Boolean> isAvailable) {
+		super(label, explanation, () -> isAvailable.apply(server.get()));
 		this.server = server;
 	}
 

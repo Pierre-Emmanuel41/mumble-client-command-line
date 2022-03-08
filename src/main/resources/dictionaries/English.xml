@@ -50,5 +50,13 @@
 			<code>MUMBLE__CONNECT__CONNECTION_ABORT</code>
 			<value>Fail to connect to %s:%s ...</value>
 		</message>
+		<message>
+			<code>MUMBLE__STOP__EXPLANATION</code>
+			<value>To abort the connection with the remote</value>
+		</message>
+		<message>
+			<code>MUMBLE__STOP__CONNECTION_ABORTED</code>
+			<value>The connection to %s:%s has been aborted</value>
+		</message>
 	</messages>
 </dictionary>

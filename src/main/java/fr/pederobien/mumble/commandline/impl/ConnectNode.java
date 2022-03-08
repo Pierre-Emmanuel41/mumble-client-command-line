@@ -16,7 +16,7 @@ public class ConnectNode extends MumbleClientNode {
 	 * @param tree The tree associated to this node.
 	 */
 	protected ConnectNode(MumbleClientCommandTree tree) {
-		super(() -> tree.getServer(), "connect", EMumbleClientCode.MUMBLE__CONNECT__EXPLANATION, () -> true);
+		super(() -> tree.getServer(), "connect", EMumbleClientCode.MUMBLE__CONNECT__EXPLANATION, server -> true);
 		this.tree = tree;
 	}
 
@@ -63,11 +63,11 @@ public class ConnectNode extends MumbleClientNode {
 		}
 
 		IMumbleServer server = new GameMumbleServer(String.format("MumbleServer_%s:%s", address, port), address, port);
-		tree.setServer(server);
 		try {
 			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, address, port);
 			server.open();
 			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_COMPLETE, address, port);
+			tree.setServer(server);
 		} catch (IllegalStateException e) {
 			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_ABORT, address, port);
 			return false;

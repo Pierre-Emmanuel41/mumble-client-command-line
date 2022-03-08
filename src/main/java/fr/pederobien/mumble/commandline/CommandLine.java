@@ -34,6 +34,8 @@ public class CommandLine {
 				break;
 		}
 
+		System.out.println("Stopping Mumble client command line");
+
 		scanner.close();
 	}
 }

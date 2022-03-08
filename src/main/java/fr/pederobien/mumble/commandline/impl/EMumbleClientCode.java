@@ -34,6 +34,12 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the connection with the remote failed
 	MUMBLE__CONNECT__CONNECTION_ABORT,
 
+	// Code for the "mumble stop" command ----------------------------------------
+	MUMBLE__STOP__EXPLANATION,
+
+	// Code when the connection is aborted
+	MUMBLE__STOP__CONNECTION_ABORTED,
+
 	;
 
 	@Override
