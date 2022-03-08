@@ -3,7 +3,6 @@ package fr.pederobien.mumble.commandline;
 import java.util.Scanner;
 
 import fr.pederobien.commandtree.events.NodeEvent;
-import fr.pederobien.communication.event.ConnectionEvent;
 import fr.pederobien.dictionary.event.DictionaryEvent;
 import fr.pederobien.mumble.commandline.impl.BeginContext;
 import fr.pederobien.utils.event.EventLogger;
@@ -11,7 +10,7 @@ import fr.pederobien.utils.event.EventLogger;
 public class CommandLine {
 
 	public static void main(String[] args) {
-		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class).register();
+		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(NodeEvent.class).register();
 
 		BeginContext context = new BeginContext();
 		context.initialize();
@@ -27,7 +26,7 @@ public class CommandLine {
 			try {
 				context.getTree().getRoot().onCommand(command.split(" "));
 			} catch (Exception e) {
-				// Do nothing
+				e.printStackTrace();
 			}
 
 			if (command.trim().equals("stop"))

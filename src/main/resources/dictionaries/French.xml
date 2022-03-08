@@ -7,6 +7,14 @@
 		<locale>fr-CA</locale>
 	</locales>
 	<messages>
+	<message>
+			<code>MUMBLE__NAME__COMPLETION</code>
+			<value>&lt;nom&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__REQUEST_FAILED</code>
+			<value>La requête a échoué (message : %s)</value>
+		</message>
 		<message>
 			<code>MUMBLE__ROOT__EXPLANATION</code>
 			<value>La commande pour envoyer des requêtes au serveur</value>
@@ -62,6 +70,34 @@
 		<message>
 			<code>MUMBLE__STOP__CONNECTION_ABORTED</code>
 			<value>La connexion à %s:%s a été interrompue</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__EXPLANATION</code>
+			<value>Pour ajouter or supprimer des channels d'un serveur</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__EXPLANATION</code>
+			<value>Pour ajouter un channel à un serveur</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__NAME_IS_MISSING</code>
+			<value>Impossible d'ajouter un channel à %s, le nom du channel est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL_ALREADY_REGISTERED</code>
+			<value>Impossible d'ajouter le channel %s à %s, ce channel est déjà enregistré</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_IS_MISSING</code>
+			<value>Impossible d'ajouter le channel %s à %s, le nom du modifieur de son est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_NOT_FOUND</code>
+			<value>Impossible d'ajouter le channel %s à %s, le modifieur de son %s n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED</code>
+			<value>Le channel %s avec le modifieur %s a été ajouté à %s</value>
 		</message>
 	</messages>
 </dictionary>

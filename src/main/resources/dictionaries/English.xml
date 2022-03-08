@@ -11,6 +11,14 @@
 	</locales>
 	<messages>
 		<message>
+			<code>MUMBLE__NAME__COMPLETION</code>
+			<value>&lt;name&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__REQUEST_FAILED</code>
+			<value>Request failed (message : %s)</value>
+		</message>
+		<message>
 			<code>MUMBLE__ROOT__EXPLANATION</code>
 			<value>The command to send requests to a mumble server</value>
 		</message>
@@ -65,6 +73,34 @@
 		<message>
 			<code>MUMBLE__STOP__CONNECTION_ABORTED</code>
 			<value>The connection to %s:%s has been aborted</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__EXPLANATION</code>
+			<value>To add or remove channels from a server</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__EXPLANATION</code>
+			<value>To add a channel to a server</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__NAME_IS_MISSING</code>
+			<value>Cannot add a channel to %s, the channel name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL_ALREADY_REGISTERED</code>
+			<value>Cannot add channel %s to %s, the channel is already registered</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_IS_MISSING</code>
+			<value>Cannot add channel %s to %s, the sound modifier name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_NOT_FOUND</code>
+			<value>Cannot add channel %s to %s, the sound modifier %s does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED</code>
+			<value>The channel %s with modifier %s has been added to %s</value>
 		</message>
 	</messages>
 </dictionary>

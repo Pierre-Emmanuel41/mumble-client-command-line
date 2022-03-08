@@ -4,6 +4,12 @@ import fr.pederobien.mumble.commandline.interfaces.ICode;
 
 public enum EMumbleClientCode implements ICode {
 
+	// Common codes --------------------------------------------------------------
+	MUMBLE__NAME__COMPLETION,
+
+	// Code when the server returns a fail code
+	MUMBLE__REQUEST_FAILED,
+
 	// Code for the "mumble" command ---------------------------------------------
 	MUMBLE__ROOT__EXPLANATION,
 
@@ -45,6 +51,27 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the connection is aborted
 	MUMBLE__STOP__CONNECTION_ABORTED,
+
+	// Code for the "mumble channels" command ------------------------------------
+	MUMBLE__CHANNELS__EXPLANATION,
+
+	// Code for the "mumble channels add" command --------------------------------
+	MUMBLE__CHANNELS__ADD__EXPLANATION,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__ADD__NAME_IS_MISSING,
+
+	// Code when the channel is already registered
+	MUMBLE__CHANNELS__ADD__CHANNEL_ALREADY_REGISTERED,
+
+	// Code when the sound modifier name is missing
+	MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_IS_MISSING,
+
+	// Code when the sound modifier does not exist
+	MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_NOT_FOUND,
+
+	// Code when the server returns a fail code
+	MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED,
 
 	;
 

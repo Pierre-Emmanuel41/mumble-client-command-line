@@ -17,6 +17,7 @@ public class MumbleClientCommandTree {
 	private ICommandRootNode<ICode> root;
 	private IMumbleClientNode connectNode;
 	private IMumbleClientNode stopNode;
+	private IMumbleClientNode channelsNode;
 
 	public MumbleClientCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
@@ -29,6 +30,7 @@ public class MumbleClientCommandTree {
 
 		root.add(connectNode = new ConnectNode(this));
 		root.add(stopNode = new StopNode(() -> getServer()));
+		root.add(channelsNode = new ChannelsNode(() -> getServer()));
 	}
 
 	/**
@@ -66,5 +68,12 @@ public class MumbleClientCommandTree {
 	 */
 	public IMumbleClientNode getStopNode() {
 		return stopNode;
+	}
+
+	/**
+	 * @return The node that adds or removes channels from a server.
+	 */
+	public IMumbleClientNode getChannelsNode() {
+		return channelsNode;
 	}
 }
