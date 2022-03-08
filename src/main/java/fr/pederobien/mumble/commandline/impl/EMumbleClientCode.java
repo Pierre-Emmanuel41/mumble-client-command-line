@@ -91,6 +91,24 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the channel has been removed from the remote
 	MUMBLE__CHANNELS__REMOVE__REQUEST_SUCCEED,
 
+	// Code for the "mumble channels rename" command -----------------------------
+	MUMBLE__CHANNELS__RENAME__EXPLANATION,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__RENAME__NAME_IS_MISSING,
+
+	// Code when the channel does not exist
+	MUMBLE__CHANNELS__RENAME__CHANNEL_NOT_FOUND,
+
+	// Code when the new channel name is missing
+	MUMBLE__CHANNELS__RENAME__NEW_NAME_IS_MISSING,
+
+	// Code when the channel is already registered
+	MUMBLE__CHANNELS__RENAME__CHANNEL_ALREADY_REGISTERED,
+
+	// Code when the channel has been renamed on the remote
+	MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED,
+
 	;
 
 	@Override

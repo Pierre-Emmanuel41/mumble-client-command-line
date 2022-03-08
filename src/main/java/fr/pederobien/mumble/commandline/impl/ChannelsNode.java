@@ -7,6 +7,7 @@ import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 public class ChannelsNode extends MumbleClientNode {
 	private ChannelsAddNode addNode;
 	private ChannelsRemoveNode removeNode;
+	private ChannelsRenameNode renameNode;
 
 	/**
 	 * Creates a node that adds or removes channel from a mumble server.
@@ -18,6 +19,7 @@ public class ChannelsNode extends MumbleClientNode {
 
 		add(addNode = new ChannelsAddNode(server));
 		add(removeNode = new ChannelsRemoveNode(server));
+		add(renameNode = new ChannelsRenameNode(server));
 	}
 
 	/**
@@ -32,5 +34,12 @@ public class ChannelsNode extends MumbleClientNode {
 	 */
 	public ChannelsRemoveNode getRemoveNode() {
 		return removeNode;
+	}
+
+	/**
+	 * @return The channel that renames a channel on a server.
+	 */
+	public ChannelsRenameNode getRenameNode() {
+		return renameNode;
 	}
 }

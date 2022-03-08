@@ -123,5 +123,29 @@
 			<code>MUMBLE__CHANNELS__REMOVE__REQUEST_SUCCEED</code>
 			<value>Le channel %s a été supprimé de %s</value>
 		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__RENAME__EXPLANATION</code>
+			<value>Pour renommer un channel sur le serveur</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__RENAME__NAME_IS_MISSING</code>
+			<value>Impossible de renommer un channel, le nom du channel à renommer est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__RENAME__CHANNEL_NOT_FOUND</code>
+			<value>Impossible de renommer un channel, le channel n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__RENAME__NEW_NAME_IS_MISSING</code>
+			<value>Impossible de renommer le channel %s, le nom du channel est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__RENAME__CHANNEL_ALREADY_REGISTERED</code>
+			<value>Impossible de renommer %s en %s, le channel est déjà enregistré</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED</code>
+			<value>Le channel %s a été renommé %s</value>
+		</message>
 	</messages>
 </dictionary>
