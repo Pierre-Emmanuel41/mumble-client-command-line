@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+	<version>1.0</version>
+	<locales>
+		<locale>fr</locale>
+		<locale>fr-FR</locale>
+		<locale>fr-CA</locale>
+	</locales>
+	<messages>
+		<message>
+			<code>MUMBLE__ROOT__EXPLANATION</code>
+			<value>La commande pour envoyer des requêtes au serveur</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__EXPLANATION</code>
+			<value>Connecte ce client Mumble à un serveur Mumble</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__ADDRESS_IS_MISSING</code>
+			<value>Impossible de se connecter au serveur, l'adresse IP est manquante</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__ADDRESS_NOT_IPv4</code>
+			<value>Impossible de se connecter au serveur, l'addresse IP %s doit être de type IPv4</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__PORT_NUMBER_IS_MISSING</code>
+			<value>Impossible de se connecter au serveur, Le numéro de port est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__PORT_NUMBER_BAD_FORMAT</code>
+			<value>Impossible de se connecter au serveur, le numéro de port %s doit être un entier</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__PORT_NUMBER_BAD_RANGE</code>
+			<value>Impossible de se connecter au serveur, le numéro de port %s doit être dans l'intervalle [0,65535]</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__ATTEMPTING_CONNECTION</code>
+			<value>Tentative de connexion à %s:%s ...</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__CONNECTION_COMPLETE</code>
+			<value>Client connecté à %s:%s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__CONNECTION_ABORT</code>
+			<value>la connexion à %s:%s a échoué ...</value>
+		</message>
+	</messages>
+</dictionary>
