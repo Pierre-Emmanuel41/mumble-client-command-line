@@ -4,6 +4,12 @@ import fr.pederobien.mumble.commandline.interfaces.ICode;
 
 public enum EMumbleClientCode implements ICode {
 
+	// Starting application ------------------------------------------------------
+	MUMBLE__STARTING,
+
+	// Stopping application ------------------------------------------------------
+	MUMBLE__STOPPING,
+
 	// Common codes --------------------------------------------------------------
 	MUMBLE__NAME__COMPLETION,
 
@@ -46,11 +52,11 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the connection with the remote failed
 	MUMBLE__CONNECT__CONNECTION_ABORT,
 
-	// Code for the "mumble stop" command ----------------------------------------
-	MUMBLE__STOP__EXPLANATION,
+	// Code for the "mumble disconnect" command ----------------------------------------
+	MUMBLE__DISCONNECT__EXPLANATION,
 
 	// Code when the connection is aborted
-	MUMBLE__STOP__CONNECTION_ABORTED,
+	MUMBLE__DISCONNECT__CONNECTION_ABORTED,
 
 	// Code for the "mumble channels" command ------------------------------------
 	MUMBLE__CHANNELS__EXPLANATION,

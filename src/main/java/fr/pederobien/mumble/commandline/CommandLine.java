@@ -1,41 +1,45 @@
 package fr.pederobien.mumble.commandline;
 
-import java.util.Scanner;
+import java.util.Locale;
 
-import fr.pederobien.commandtree.events.NodeEvent;
-import fr.pederobien.communication.event.ConnectionEvent;
-import fr.pederobien.dictionary.event.DictionaryEvent;
+import fr.pederobien.commandtree.exceptions.NotAvailableArgumentException;
+import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.mumble.commandline.impl.BeginContext;
-import fr.pederobien.utils.event.EventLogger;
+import fr.pederobien.mumble.commandline.impl.EMumbleClientCode;
+import fr.pederobien.mumble.commandline.impl.MumbleClientDictionaryContext;
+import fr.pederobien.utils.AsyncConsole;
 
 public class CommandLine {
 
 	public static void main(String[] args) {
-		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class).register();
-
 		BeginContext context = new BeginContext();
 		context.initialize();
 
-		System.out.println("Starting Mumble client command line");
+		AsyncConsole.println(MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), EMumbleClientCode.MUMBLE__STARTING.toString())));
 
-		Scanner scanner = new Scanner(System.in);
-
-		String command = "";
 		while (true) {
-			command = scanner.nextLine();
+			AsyncConsole.print(">");
+			String command = context.getScanner().nextLine();
+
+			if (command.trim().equals("stop")) {
+				// Disconnecting before stopping program
+				try {
+					context.getTree().getRoot().onCommand(new String[] { context.getTree().getDisconnectNode().getLabel() });
+				} catch (NotAvailableArgumentException e) {
+					// do nothing
+				}
+				break;
+			}
 
 			try {
 				context.getTree().getRoot().onCommand(command.split(" "));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-
-			if (command.trim().equals("stop"))
-				break;
 		}
 
-		System.out.println("Stopping Mumble client command line");
+		AsyncConsole.println(MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), EMumbleClientCode.MUMBLE__STOPPING.toString())));
 
-		scanner.close();
+		context.getScanner().close();
 	}
 }

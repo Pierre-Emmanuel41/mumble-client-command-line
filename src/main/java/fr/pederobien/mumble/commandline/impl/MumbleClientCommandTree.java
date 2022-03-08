@@ -15,7 +15,7 @@ public class MumbleClientCommandTree {
 	private IMumbleServer server;
 	private ICommandRootNode<ICode> root;
 	private ConnectNode connectNode;
-	private StopNode stopNode;
+	private DisconnectNode disconnectNode;
 	private ChannelsNode channelsNode;
 
 	public MumbleClientCommandTree() {
@@ -28,7 +28,7 @@ public class MumbleClientCommandTree {
 		root = new CommandRootNode<ICode>("mumble", EMumbleClientCode.MUMBLE__ROOT__EXPLANATION, () -> true, displayer);
 
 		root.add(connectNode = new ConnectNode(this));
-		root.add(stopNode = new StopNode(() -> getServer()));
+		root.add(disconnectNode = new DisconnectNode(() -> getServer()));
 		root.add(channelsNode = new ChannelsNode(() -> getServer()));
 	}
 
@@ -65,8 +65,8 @@ public class MumbleClientCommandTree {
 	/**
 	 * @return The node that aborts the connection with the remote.
 	 */
-	public StopNode getStopNode() {
-		return stopNode;
+	public DisconnectNode getDisconnectNode() {
+		return disconnectNode;
 	}
 
 	/**

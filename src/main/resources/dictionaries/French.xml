@@ -7,7 +7,15 @@
 		<locale>fr-CA</locale>
 	</locales>
 	<messages>
-	<message>
+		<message>
+			<code>MUMBLE__STARTING</code>
+			<value>Démarrage de Mumble client command line</value>
+		</message>
+		<message>
+			<code>MUMBLE__STOPPING</code>
+			<value>Arrêt de Mumble client command line</value>
+		</message>
+		<message>
 			<code>MUMBLE__NAME__COMPLETION</code>
 			<value>&lt;nom&gt;</value>
 		</message>
@@ -61,15 +69,15 @@
 		</message>
 		<message>
 			<code>MUMBLE__CONNECT__CONNECTION_ABORT</code>
-			<value>la connexion à %s:%s a échoué ...</value>
+			<value>la connexion avec %s:%s a échoué ...</value>
 		</message>
 		<message>
-			<code>MUMBLE__STOP__EXPLANATION</code>
+			<code>MUMBLE__DISCONNECT__EXPLANATION</code>
 			<value>Pour annuler la connexion avec le server</value>
 		</message>
 		<message>
-			<code>MUMBLE__STOP__CONNECTION_ABORTED</code>
-			<value>La connexion à %s:%s a été interrompue</value>
+			<code>MUMBLE__DISCONNECT__CONNECTION_ABORTED</code>
+			<value>La connexion avec %s:%s a été interrompue</value>
 		</message>
 		<message>
 			<code>MUMBLE__CHANNELS__EXPLANATION</code>

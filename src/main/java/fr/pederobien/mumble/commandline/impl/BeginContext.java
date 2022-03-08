@@ -1,11 +1,16 @@
 package fr.pederobien.mumble.commandline.impl;
 
 import java.nio.file.Paths;
+import java.util.Scanner;
 
+import fr.pederobien.commandtree.events.NodeEvent;
+import fr.pederobien.communication.event.ConnectionEvent;
+import fr.pederobien.dictionary.event.DictionaryEvent;
 import fr.pederobien.dictionary.impl.JarXmlDictionaryParser;
 import fr.pederobien.dictionary.impl.XmlDictionaryParser;
 import fr.pederobien.dictionary.interfaces.IDictionaryParser;
 import fr.pederobien.utils.AsyncConsole;
+import fr.pederobien.utils.event.EventLogger;
 
 public class BeginContext {
 	private static final String FILE_PREFIX = "file";
@@ -14,9 +19,13 @@ public class BeginContext {
 	private static final String PROD_DICTIONARY_FOLDER = "resources/dictionaries/";
 
 	private MumbleClientCommandTree tree;
+	private Scanner scanner;
 
 	public void initialize() {
+		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class).register();
+
 		tree = new MumbleClientCommandTree();
+		scanner = new Scanner(System.in);
 
 		registerDictionaries();
 	}
@@ -26,6 +35,13 @@ public class BeginContext {
 	 */
 	public MumbleClientCommandTree getTree() {
 		return tree;
+	}
+
+	/**
+	 * @return The scanner associated to {@link System#in} inputStream.
+	 */
+	public Scanner getScanner() {
+		return scanner;
 	}
 
 	private void registerDictionaries() {

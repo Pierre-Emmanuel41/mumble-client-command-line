@@ -11,6 +11,14 @@
 	</locales>
 	<messages>
 		<message>
+			<code>MUMBLE__STARTING</code>
+			<value>Starting Mumble client command line</value>
+		</message>
+		<message>
+			<code>MUMBLE__STOPPING</code>
+			<value>Stopping Mumble client command line</value>
+		</message>
+		<message>
 			<code>MUMBLE__NAME__COMPLETION</code>
 			<value>&lt;name&gt;</value>
 		</message>
@@ -67,12 +75,12 @@
 			<value>Fail to connect to %s:%s ...</value>
 		</message>
 		<message>
-			<code>MUMBLE__STOP__EXPLANATION</code>
+			<code>MUMBLE__DISCONNECT__EXPLANATION</code>
 			<value>To abort the connection with the remote</value>
 		</message>
 		<message>
-			<code>MUMBLE__STOP__CONNECTION_ABORTED</code>
-			<value>The connection to %s:%s has been aborted</value>
+			<code>MUMBLE__DISCONNECT__CONNECTION_ABORTED</code>
+			<value>The connection with %s:%s has been aborted</value>
 		</message>
 		<message>
 			<code>MUMBLE__CHANNELS__EXPLANATION</code>
