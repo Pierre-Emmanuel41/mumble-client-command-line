@@ -13,6 +13,12 @@ public enum EMumbleClientCode implements ICode {
 	// Common codes --------------------------------------------------------------
 	MUMBLE__NAME__COMPLETION,
 
+	// Code for the IP address completion
+	MUMBLE__ADDRESS_COMPLETION,
+
+	// Code for the port number completion
+	MUMBLE__PORT_COMPLETION,
+
 	// Code when the server returns a fail code
 	MUMBLE__REQUEST_FAILED,
 
@@ -27,12 +33,6 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code for the "mumble connect" command -------------------------------------
 	MUMBLE__CONNECT__EXPLANATION,
-
-	// Code for the IP address completion
-	MUMBLE__CONNECT__ADDRESS_COMPLETION,
-
-	// Code for the port number completion
-	MUMBLE__CONNECT__PORT_COMPLETION,
 
 	// Code when the IP address is missing
 	MUMBLE__CONNECT__ADDRESS_IS_MISSING,
@@ -114,6 +114,90 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the channel has been renamed on the remote
 	MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED,
+
+	// Code for the "mumble players" command -------------------------------------
+	MUMBLE__PLAYERS__EXPLANATION,
+
+	// Code for the "mumble players add" command ---------------------------------
+	MUMBLE__PLAYERS__ADD__EXPLANATION,
+
+	// Code for the administrator status completion
+	MUMBLE__PLAYERS__ADD__ADMIN_COMPLETION,
+
+	// Code for the x coordinate completion
+	MUMBLE__PLAYERS__ADD__X_COMPLETION,
+
+	// Code for the y coordinate completion
+	MUMBLE__PLAYERS__ADD__Y_COMPLETION,
+
+	// Code for the z coordinate completion
+	MUMBLE__PLAYERS__ADD__Z_COMPLETION,
+
+	// Code for the yaw coordinate completion
+	MUMBLE__PLAYERS__ADD__YAW_COMPLETION,
+
+	// Code for the pitch coordinate completion
+	MUMBLE__PLAYERS__ADD__PITCH_COMPLETION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__ADD__NAME_IS_MISSING,
+
+	// Code when the player is already registered
+	MUMBLE__PLAYERS__ADD__PLAYER_ALREADY_REGISTERED,
+
+	// Code when the game address is missing
+	MUMBLE__PLAYERS__ADD__ADDRESS_IS_MISSING,
+
+	// Code when the IP address is not IPv4
+	MUMBLE__PLAYERS__ADD__ADDRESS_NOT_IPv4,
+
+	// Code when the game port is missing
+	MUMBLE__PLAYERS__ADD__PORT_NUMBER_IS_MISSING,
+
+	// Code when the port number has an invalid format
+	MUMBLE__PLAYERS__ADD__PORT_NUMBER_BAD_FORMAT,
+
+	// Code when the port number has an invalid range
+	MUMBLE__PLAYERS__ADD__PORT_NUMBER_BAD_RANGE,
+
+	// Code when the administrator status is missing
+	MUMBLE__PLAYERS__ADD__ADMIN_IS_MISSING,
+
+	// Code when the administrator status has an invalid format
+	MUMBLE__PLAYERS__ADD__ADMIN_BAD_FORMAT,
+
+	// Code when the x coordinate is missing
+	MUMBLE__PLAYERS__ADD__X_IS_MISSING,
+
+	// Code when the x coordinate has an invalid format
+	MUMBLE__PLAYERS__ADD__X_BAD_FORMAT,
+
+	// Code when the y coordinate is missing
+	MUMBLE__PLAYERS__ADD__Y_IS_MISSING,
+
+	// Code when the y coordinate has an invalid format
+	MUMBLE__PLAYERS__ADD__Y_BAD_FORMAT,
+
+	// Code when the z coordinate is missing
+	MUMBLE__PLAYERS__ADD__Z_IS_MISSING,
+
+	// Code when the z coordinate has an invalid format
+	MUMBLE__PLAYERS__ADD__Z_BAD_FORMAT,
+
+	// Code when the yaw angle is missing
+	MUMBLE__PLAYERS__ADD__YAW_IS_MISSING,
+
+	// Code when the yaw angle has an invalid format
+	MUMBLE__PLAYERS__ADD__YAW_BAD_FORMAT,
+
+	// Code when the pitch angle is missing
+	MUMBLE__PLAYERS__ADD__PITCH_IS_MISSING,
+
+	// Code when the pitch angle has an invalid format
+	MUMBLE__PLAYERS__ADD__PITCH_BAD_FORMAT,
+
+	// Code when the player has been added on the remote
+	MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED,
 
 	;
 

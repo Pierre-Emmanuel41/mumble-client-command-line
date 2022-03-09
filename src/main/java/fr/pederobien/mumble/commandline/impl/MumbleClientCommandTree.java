@@ -17,6 +17,7 @@ public class MumbleClientCommandTree {
 	private ConnectNode connectNode;
 	private DisconnectNode disconnectNode;
 	private ChannelsNode channelsNode;
+	private PlayersNode playersNode;
 
 	public MumbleClientCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
@@ -30,6 +31,7 @@ public class MumbleClientCommandTree {
 		root.add(connectNode = new ConnectNode(this));
 		root.add(disconnectNode = new DisconnectNode(() -> getServer()));
 		root.add(channelsNode = new ChannelsNode(() -> getServer()));
+		root.add(playersNode = new PlayersNode(() -> getServer()));
 	}
 
 	/**
@@ -74,5 +76,12 @@ public class MumbleClientCommandTree {
 	 */
 	public ChannelsNode getChannelsNode() {
 		return channelsNode;
+	}
+
+	/**
+	 * @return The node that adds, removes or update the properties of a player.
+	 */
+	public PlayersNode getPlayersNode() {
+		return playersNode;
 	}
 }

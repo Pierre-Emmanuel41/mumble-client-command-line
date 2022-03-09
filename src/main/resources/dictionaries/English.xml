@@ -23,6 +23,14 @@
 			<value>&lt;name&gt;</value>
 		</message>
 		<message>
+			<code>MUMBLE__ADDRESS_COMPLETION</code>
+			<value>&lt;IP address&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PORT_COMPLETION</code>
+			<value>&lt;port&gt;</value>
+		</message>
+		<message>
 			<code>MUMBLE__REQUEST_FAILED</code>
 			<value>Request failed (message : %s)</value>
 		</message>
@@ -41,14 +49,6 @@
 		<message>
 			<code>MUMBLE__CONNECT__EXPLANATION</code>
 			<value>Connect this mumble client to a mumble server</value>
-		</message>
-		<message>
-			<code>MUMBLE__CONNECT__ADDRESS_COMPLETION</code>
-			<value>&lt;IP address&gt;</value>
-		</message>
-		<message>
-			<code>MUMBLE__CONNECT__PORT_COMPLETION</code>
-			<value>&lt;port&gt;</value>
 		</message>
 		<message>
 			<code>MUMBLE__CONNECT__ADDRESS_IS_MISSING</code>
@@ -157,6 +157,118 @@
 		<message>
 			<code>MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED</code>
 			<value>The channel %s has been renamed as %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__EXPLANATION</code>
+			<value>To add, remove or update the properties of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__EXPLANATION</code>
+			<value>To add a player on the remote</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__ADMIN_COMPLETION</code>
+			<value>&lt;isAdmin&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__X_COMPLETION</code>
+			<value>&lt;x&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__Y_COMPLETION</code>
+			<value>&lt;y&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__Z_COMPLETION</code>
+			<value>&lt;z&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__YAW_COMPLETION</code>
+			<value>&lt;yaw&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__PITCH_COMPLETION</code>
+			<value>&lt;pitch&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__NAME_IS_MISSING</code>
+			<value>Cannot add a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__PLAYER_ALREADY_REGISTERED</code>
+			<value>Cannot add %s, the player is already registered</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__ADDRESS_IS_MISSING</code>
+			<value>Cannot add %s, the player game address is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__ADDRESS_NOT_IPv4</code>
+			<value>Cannot add %s, the IP address %s is not IPv4</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__PORT_NUMBER_IS_MISSING</code>
+			<value>Cannot add %s, the port number is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__PORT_NUMBER_BAD_FORMAT</code>
+			<value>Cannot add %s, the port number %s should be an integer</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__PORT_NUMBER_BAD_RANGE</code>
+			<value>Cannot add %s, the port number %s should be in range [0,65535]</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__ADMIN_IS_MISSING</code>
+			<value>Cannot add %s, the administrator status is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__ADMIN_BAD_FORMAT</code>
+			<value>Cannot add %s, the administrator status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__X_IS_MISSING</code>
+			<value>Cannot add %s, the x coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__X_BAD_FORMAT</code>
+			<value>Cannot add %s, the x coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__Y_IS_MISSING</code>
+			<value>Cannot add %s, the y coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__Y_BAD_FORMAT</code>
+			<value>Cannot add %s, the y coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__Z_IS_MISSING</code>
+			<value>Cannot add %s, the z coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__Z_BAD_FORMAT</code>
+			<value>Cannot add %s, the z coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__YAW_IS_MISSING</code>
+			<value>Cannot add %s, the yaw angle is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__YAW_BAD_FORMAT</code>
+			<value>Cannot add %s, the yaw angle should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__PITCH_IS_MISSING</code>
+			<value>Cannot add %s, the pitch angle is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__PITCH_BAD_FORMAT</code>
+			<value>Cannot add %s, the pitch angle should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED</code>
+			<value>The player %s has been added on the server</value>
 		</message>
 	</messages>
 </dictionary>
