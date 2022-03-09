@@ -199,6 +199,18 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player has been added on the remote
 	MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED,
 
+	// Code for the "mumble players remove" command ------------------------------
+	MUMBLE__PLAYERS__REMOVE__EXPLANATION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__REMOVE__NAME_IS_MISSING,
+
+	// Code when the player does not exists
+	MUMBLE__PLAYERS__REMOVE__PLAYER_NOT_FOUND,
+
+	// Code when the player has been removed
+	MUMBLE__PLAYERS__REMOVE__REQUEST_SUCCEED,
+
 	;
 
 	@Override

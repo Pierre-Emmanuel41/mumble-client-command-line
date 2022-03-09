@@ -6,6 +6,7 @@ import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 
 public class PlayersNode extends MumbleClientNode {
 	private PlayersAddNode addNode;
+	private PlayersRemoveNode removeNode;
 
 	/**
 	 * Creates a node to add, remove or update players properties.
@@ -16,6 +17,7 @@ public class PlayersNode extends MumbleClientNode {
 		super(server, "players", EMumbleClientCode.MUMBLE__PLAYERS__EXPLANATION, s -> s != null);
 
 		add(addNode = new PlayersAddNode(server));
+		add(removeNode = new PlayersRemoveNode(server));
 	}
 
 	/**
@@ -23,5 +25,12 @@ public class PlayersNode extends MumbleClientNode {
 	 */
 	public PlayersAddNode getAddNode() {
 		return addNode;
+	}
+
+	/**
+	 * @return The node that removes a player from a server.
+	 */
+	public PlayersRemoveNode getRemoveNode() {
+		return removeNode;
 	}
 }

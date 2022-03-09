@@ -270,5 +270,21 @@
 			<code>MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED</code>
 			<value>The player %s has been added on the server</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__EXPLANATION</code>
+			<value>To remove a player from a server</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__NAME_IS_MISSING</code>
+			<value>Cannot remove a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__PLAYER_NOT_FOUND</code>
+			<value>Cannot remove %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__REQUEST_SUCCEED</code>
+			<value>The player %s has been removed from the server</value>
+		</message>
 	</messages>
 </dictionary>

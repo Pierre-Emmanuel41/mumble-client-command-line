@@ -267,5 +267,21 @@
 			<code>MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED</code>
 			<value>La joueur %s a été ajouté au serveur</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__EXPLANATION</code>
+			<value>Pour supprimer un joueur du serveur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__NAME_IS_MISSING</code>
+			<value>Impossible de supprimer un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__PLAYER_NOT_FOUND</code>
+			<value>Impossible de supprimer %s, ce joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__REMOVE__REQUEST_SUCCEED</code>
+			<value>Le joueur %s a été supprimé du serveur</value>
+		</message>
 	</messages>
 </dictionary>
