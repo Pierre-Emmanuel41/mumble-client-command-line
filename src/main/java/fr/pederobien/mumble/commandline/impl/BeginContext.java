@@ -5,6 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import fr.pederobien.commandtree.events.NodeEvent;
+import fr.pederobien.commandtree.exceptions.NodeNotFoundException;
 import fr.pederobien.commandtree.exceptions.NotAvailableArgumentException;
 import fr.pederobien.communication.event.ConnectionEvent;
 import fr.pederobien.dictionary.event.DictionaryEvent;
@@ -12,6 +13,7 @@ import fr.pederobien.dictionary.impl.JarXmlDictionaryParser;
 import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.dictionary.impl.XmlDictionaryParser;
 import fr.pederobien.dictionary.interfaces.IDictionaryParser;
+import fr.pederobien.mumble.commandline.interfaces.ICode;
 import fr.pederobien.utils.AsyncConsole;
 import fr.pederobien.utils.event.EventLogger;
 
@@ -44,7 +46,7 @@ public class BeginContext {
 	 * Start waiting for user input in order to run commands
 	 */
 	public void start() {
-		AsyncConsole.println(MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), EMumbleClientCode.MUMBLE__STARTING.toString())));
+		send(EMumbleClientCode.MUMBLE__STARTING);
 
 		while (true) {
 			AsyncConsole.print(">");
@@ -63,12 +65,16 @@ public class BeginContext {
 			try {
 				tree.getRoot().onCommand(command.split(" "));
 				Thread.sleep(200);
+			} catch (NodeNotFoundException e) {
+				send(EMumbleClientCode.MUMBLE__NODE_NOT_FOUND, e.getNotFoundArgument());
+			} catch (NotAvailableArgumentException e) {
+				send(EMumbleClientCode.MUMBLE__NODE_NOT_AVAILABLE, e.getArgument());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
 
-		AsyncConsole.println(MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), EMumbleClientCode.MUMBLE__STOPPING.toString())));
+		send(EMumbleClientCode.MUMBLE__STOPPING);
 		scanner.close();
 	}
 
@@ -114,5 +120,15 @@ public class BeginContext {
 				for (StackTraceElement element : e.getStackTrace())
 					AsyncConsole.println(element);
 			}
+	}
+
+	/**
+	 * Send a language sensitive message in the console.
+	 * 
+	 * @param code Used as key to get the right message in the right dictionary.
+	 * @param args Some arguments (optional) used for dynamic messages.
+	 */
+	private void send(ICode code, Object... args) {
+		MumbleClientDictionaryContext.instance().send(new MessageEvent(Locale.getDefault(), code.getCode(), args));
 	}
 }

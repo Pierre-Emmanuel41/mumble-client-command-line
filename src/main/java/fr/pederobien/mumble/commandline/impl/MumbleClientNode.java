@@ -4,6 +4,8 @@ import java.util.Locale;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+import fr.pederobien.commandtree.exceptions.NodeNotFoundException;
+import fr.pederobien.commandtree.exceptions.NotAvailableArgumentException;
 import fr.pederobien.commandtree.impl.CommandNode;
 import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
@@ -24,6 +26,18 @@ public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClien
 	protected MumbleClientNode(Supplier<IMumbleServer> server, String label, ICode explanation, Function<IMumbleServer, Boolean> isAvailable) {
 		super(label, explanation, () -> isAvailable.apply(server.get()));
 		this.server = server;
+	}
+
+	@Override
+	public boolean onCommand(String[] args) {
+		try {
+			return super.onCommand(args);
+		} catch (NodeNotFoundException e) {
+			send(EMumbleClientCode.MUMBLE__NODE_NOT_FOUND, e.getNotFoundArgument());
+		} catch (NotAvailableArgumentException e) {
+			send(EMumbleClientCode.MUMBLE__NODE_NOT_AVAILABLE, e.getLabel());
+		}
+		return false;
 	}
 
 	/**

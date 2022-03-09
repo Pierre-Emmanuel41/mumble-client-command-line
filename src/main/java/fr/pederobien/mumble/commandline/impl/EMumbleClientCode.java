@@ -16,6 +16,12 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the server returns a fail code
 	MUMBLE__REQUEST_FAILED,
 
+	// Code when a node does not exist
+	MUMBLE__NODE_NOT_FOUND,
+
+	// Code when a node is not available
+	MUMBLE__NODE_NOT_AVAILABLE,
+
 	// Code for the "mumble" command ---------------------------------------------
 	MUMBLE__ROOT__EXPLANATION,
 

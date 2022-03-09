@@ -27,6 +27,14 @@
 			<value>Request failed (message : %s)</value>
 		</message>
 		<message>
+			<code>MUMBLE__NODE_NOT_FOUND</code>
+			<value>The command %s does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__NODE_NOT_AVAILABLE</code>
+			<value>The command %s is not available</value>
+		</message>
+		<message>
 			<code>MUMBLE__ROOT__EXPLANATION</code>
 			<value>The command to send requests to a mumble server</value>
 		</message>

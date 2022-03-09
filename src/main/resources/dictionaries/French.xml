@@ -24,6 +24,14 @@
 			<value>La requête a échoué (message : %s)</value>
 		</message>
 		<message>
+			<code>MUMBLE__NODE_NOT_FOUND</code>
+			<value>La commande %s n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__NODE_NOT_AVAILABLE</code>
+			<value>La commande %s n'est pas disponible</value>
+		</message>
+		<message>
 			<code>MUMBLE__ROOT__EXPLANATION</code>
 			<value>La commande pour envoyer des requêtes au serveur</value>
 		</message>
