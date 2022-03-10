@@ -1,5 +1,8 @@
 package fr.pederobien.mumble.commandline.impl;
 
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -80,11 +83,11 @@ public class PlayersAddNode extends MumbleClientNode {
 			return false;
 		}
 
-		String gameAddress;
+		String address;
 		try {
-			gameAddress = args[1];
-			if (!PATTERN.matcher(gameAddress).matches()) {
-				send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__ADDRESS_NOT_IPv4, name, gameAddress);
+			address = args[1];
+			if (!PATTERN.matcher(address).matches()) {
+				send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__ADDRESS_NOT_IPv4, name, address);
 				return false;
 			}
 		} catch (IndexOutOfBoundsException e) {
@@ -92,11 +95,11 @@ public class PlayersAddNode extends MumbleClientNode {
 			return false;
 		}
 
-		int gamePort;
+		int port;
 		try {
-			gamePort = Integer.parseInt(args[2]);
-			if (gamePort < 0 || 65535 < gamePort) {
-				send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__PORT_NUMBER_BAD_RANGE, name, gamePort);
+			port = Integer.parseInt(args[2]);
+			if (port < 0 || 65535 < port) {
+				send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__PORT_NUMBER_BAD_RANGE, name, port);
 				return false;
 			}
 		} catch (IndexOutOfBoundsException e) {
@@ -179,7 +182,16 @@ public class PlayersAddNode extends MumbleClientNode {
 			else
 				send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED, name);
 		};
-		getServer().getPlayers().add(name, gameAddress, gamePort, isAdmin, x, y, z, yaw, pitch, update);
+
+		InetSocketAddress gameAddress;
+		try {
+			gameAddress = new InetSocketAddress(InetAddress.getByName(address), port);
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+			return false;
+		}
+
+		getServer().getPlayers().add(name, gameAddress, isAdmin, x, y, z, yaw, pitch, update);
 		return true;
 	}
 }
