@@ -283,5 +283,29 @@
 			<code>MUMBLE__PLAYERS__REMOVE__REQUEST_SUCCEED</code>
 			<value>Le joueur %s a été supprimé du serveur</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__RENAME__EXPLANATION</code>
+			<value>Pour renommer un joueur sur un serveur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__RENAME__NAME_IS_MISSING</code>
+			<value>Impossible de renommer un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__RENAME__PLAYER_NOT_FOUND</code>
+			<value>Impossible de renommer %s, le joueur n'existe pas.</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__RENAME__NEW_NAME_IS_MISSING</code>
+			<value>Impossible de renommer %s, le nouveau nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__RENAME__PLAYER_ALREADY_REGISTERED</code>
+			<value>Impossible de renommer %s en %s, le joueur est déjà enregistré</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__RENAME__REQUEST_SUCCEED</code>
+			<value>Le joueur %s a été renommé %s</value>
+		</message>
 	</messages>
 </dictionary>

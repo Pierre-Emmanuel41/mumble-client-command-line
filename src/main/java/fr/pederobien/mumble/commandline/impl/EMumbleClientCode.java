@@ -208,8 +208,26 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player does not exists
 	MUMBLE__PLAYERS__REMOVE__PLAYER_NOT_FOUND,
 
-	// Code when the player has been removed
+	// Code when the player has been removed on the remote
 	MUMBLE__PLAYERS__REMOVE__REQUEST_SUCCEED,
+
+	// Code for the "mumble players remove" command ------------------------------
+	MUMBLE__PLAYERS__RENAME__EXPLANATION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__RENAME__NAME_IS_MISSING,
+
+	// Code when the player does not exist
+	MUMBLE__PLAYERS__RENAME__PLAYER_NOT_FOUND,
+
+	// Code when the new player name is missing
+	MUMBLE__PLAYERS__RENAME__NEW_NAME_IS_MISSING,
+
+	// Code when the player is already registered
+	MUMBLE__PLAYERS__RENAME__PLAYER_ALREADY_REGISTERED,
+
+	// Code when the player has been renamed on the remote
+	MUMBLE__PLAYERS__RENAME__REQUEST_SUCCEED,
 
 	;
 
