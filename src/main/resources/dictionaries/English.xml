@@ -310,5 +310,33 @@
 			<code>MUMBLE__PLAYERS__RENAME__REQUEST_SUCCEED</code>
 			<value>The player %s has been renamed as %s</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__EXPLANATION</code>
+			<value>To update the online status of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__COMPLETION</code>
+			<value>&lt;isOnline&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__NAME_IS_MISSING</code>
+			<value>Cannot update the online status of a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__PLAYER_NOT_FOUND</code>
+			<value>Cannot update the online status of %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__ONLINE_BAD_FORMAT</code>
+			<value>Cannot update the online status of %s, the online status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__ONLINE_REQUEST_SUCCEED</code>
+			<value>%s is now online</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__OFFLINE_REQUEST_SUCCEED</code>
+			<value>%s is now offline</value>
+		</message>
 	</messages>
 </dictionary>

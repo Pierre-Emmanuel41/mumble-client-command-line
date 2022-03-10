@@ -62,6 +62,9 @@ public class ConnectNode extends MumbleClientNode {
 			return false;
 		}
 
+		if (getServer() != null)
+			getServer().dispose();
+
 		IMumbleServer server = new GameMumbleServer(String.format("MumbleServer_%s:%s", address, port), address, port);
 		try {
 			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, address, port);

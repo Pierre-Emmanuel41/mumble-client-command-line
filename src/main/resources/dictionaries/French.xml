@@ -115,7 +115,7 @@
 			<code>MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED</code>
 			<value>Le channel %s avec le modifieur %s a été ajouté à %s</value>
 		</message>
-				<message>
+		<message>
 			<code>MUMBLE__CHANNELS__REMOVE__EXPLANATION</code>
 			<value>Pour supprimer un channel d'un serveur</value>
 		</message>
@@ -306,6 +306,34 @@
 		<message>
 			<code>MUMBLE__PLAYERS__RENAME__REQUEST_SUCCEED</code>
 			<value>Le joueur %s a été renommé %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__EXPLANATION</code>
+			<value>Pour mettre à jour le statut en ligne d'un joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__COMPLETION</code>
+			<value>&lt;estEnLigne&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__NAME_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut en ligne d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__PLAYER_NOT_FOUND</code>
+			<value>Impossible de mettre à jour le statut en ligne de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__ONLINE_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour le status en ligne de  %s, le status en ligne doit être un booléen</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__ONLINE_REQUEST_SUCCEED</code>
+			<value>%s est maintenant en ligne</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__OFFLINE_REQUEST_SUCCEED</code>
+			<value>%s est maintenant hors ligne</value>
 		</message>
 	</messages>
 </dictionary>

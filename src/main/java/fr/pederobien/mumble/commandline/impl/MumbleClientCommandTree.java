@@ -29,7 +29,7 @@ public class MumbleClientCommandTree {
 		root = new CommandRootNode<ICode>("mumble", EMumbleClientCode.MUMBLE__ROOT__EXPLANATION, () -> true, displayer);
 
 		root.add(connectNode = new ConnectNode(this));
-		root.add(disconnectNode = new DisconnectNode(() -> getServer()));
+		root.add(disconnectNode = new DisconnectNode(this));
 		root.add(channelsNode = new ChannelsNode(() -> getServer()));
 		root.add(playersNode = new PlayersNode(() -> getServer()));
 	}

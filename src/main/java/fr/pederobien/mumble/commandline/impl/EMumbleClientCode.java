@@ -229,6 +229,27 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player has been renamed on the remote
 	MUMBLE__PLAYERS__RENAME__REQUEST_SUCCEED,
 
+	// Code for the "mumble players online" command ------------------------------
+	MUMBLE__PLAYERS__ONLINE__EXPLANATION,
+
+	// Code for the online status completion
+	MUMBLE__PLAYERS__ONLINE__COMPLETION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__ONLINE__NAME_IS_MISSING,
+
+	// Code when the player does not exist
+	MUMBLE__PLAYERS__ONLINE__PLAYER_NOT_FOUND,
+
+	// Code when the player does not exist
+	MUMBLE__PLAYERS__ONLINE__ONLINE_BAD_FORMAT,
+
+	// Code when the player online status has been updated on the remote
+	MUMBLE__PLAYERS__ONLINE__ONLINE_REQUEST_SUCCEED,
+
+	// Code when the player online status has been updated on the remote
+	MUMBLE__PLAYERS__ONLINE__OFFLINE_REQUEST_SUCCEED,
+
 	;
 
 	@Override
