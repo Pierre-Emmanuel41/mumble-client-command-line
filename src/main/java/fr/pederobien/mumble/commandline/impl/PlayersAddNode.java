@@ -7,14 +7,12 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import java.util.regex.Pattern;
 
 import fr.pederobien.commandtree.exceptions.BooleanParseException;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
 
 public class PlayersAddNode extends MumbleClientNode {
-	private static final Pattern PATTERN = Pattern.compile("^(([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.){3}([01]?\\d\\d?|2[0-4]\\d|25[0-5])$");
 
 	/**
 	 * Creates a node in order to add a player on a server.
@@ -34,7 +32,15 @@ public class PlayersAddNode extends MumbleClientNode {
 			Predicate<String> nameValid = name -> !getServer().getPlayers().get(name).isPresent();
 			return check(args[0], nameValid, asList(getMessage(EMumbleClientCode.MUMBLE__ADDRESS_COMPLETION)));
 		case 3:
-			return check(args[1], address -> PATTERN.matcher(address).matches(), asList(getMessage(EMumbleClientCode.MUMBLE__PORT_COMPLETION)));
+			Predicate<String> addressValid = address -> {
+				try {
+					InetAddress.getByName(address);
+				} catch (UnknownHostException e) {
+					return false;
+				}
+				return true;
+			};
+			return check(args[1], addressValid, asList(getMessage(EMumbleClientCode.MUMBLE__PORT_COMPLETION)));
 		case 4:
 			Predicate<String> portValid = portStr -> {
 				try {
@@ -83,15 +89,14 @@ public class PlayersAddNode extends MumbleClientNode {
 			return false;
 		}
 
-		String address;
+		InetAddress address;
 		try {
-			address = args[1];
-			if (!PATTERN.matcher(address).matches()) {
-				send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__ADDRESS_NOT_IPv4, name, address);
-				return false;
-			}
+			address = InetAddress.getByName(args[1]);
 		} catch (IndexOutOfBoundsException e) {
 			send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__ADDRESS_IS_MISSING, name);
+			return false;
+		} catch (UnknownHostException e) {
+			send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__ADDRESS_NOT_FOUND, name, args[1]);
 			return false;
 		}
 
@@ -183,15 +188,7 @@ public class PlayersAddNode extends MumbleClientNode {
 				send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED, name);
 		};
 
-		InetSocketAddress gameAddress;
-		try {
-			gameAddress = new InetSocketAddress(InetAddress.getByName(address), port);
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-			return false;
-		}
-
-		getServer().getPlayers().add(name, gameAddress, isAdmin, x, y, z, yaw, pitch, update);
+		getServer().getPlayers().add(name, new InetSocketAddress(address, port), isAdmin, x, y, z, yaw, pitch, update);
 		return true;
 	}
 }

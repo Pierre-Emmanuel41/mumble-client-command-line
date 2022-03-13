@@ -52,8 +52,8 @@
 			<value>Impossible de se connecter au serveur, l'adresse IP est manquante</value>
 		</message>
 		<message>
-			<code>MUMBLE__CONNECT__ADDRESS_NOT_IPv4</code>
-			<value>Impossible de se connecter au serveur, l'addresse IP %s doit être de type IPv4</value>
+			<code>MUMBLE__CONNECT__ADDRESS_NOT_FOUND</code>
+			<value>Impossible de se connecter au serveur, aucune adresse IP n'a été trouvé pour %s</value>
 		</message>
 		<message>
 			<code>MUMBLE__CONNECT__PORT_NUMBER_IS_MISSING</code>
@@ -200,8 +200,8 @@
 			<value>Impossible d'ajouter %s, l'address de jeu du joueur est manquante</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__ADD__ADDRESS_NOT_IPv4</code>
-			<value>Impossible d'ajouter %s, l'address %s n'est pas de type IPv4</value>
+			<code>MUMBLE__PLAYERS__ADD__ADDRESS_NOT_FOUND</code>
+			<value>Impossible d'ajouter %s, aucune adresse IP n'a été trouvé pour %s</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ADD__PORT_NUMBER_IS_MISSING</code>
@@ -334,6 +334,42 @@
 		<message>
 			<code>MUMBLE__PLAYERS__ONLINE__OFFLINE_REQUEST_SUCCEED</code>
 			<value>%s est maintenant hors ligne</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__EXPLANATION</code>
+			<value>Pour mettre à jour l'adresse qu'utilise un joueur pour jouer au jeu</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__NAME_IS_MISSING</code>
+			<value>Impossible de mettre à jour l'adresse de jeu d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__PLAYER_NOT_FOUND</code>
+			<value>Impossible de mettre à jour l'adresse de jeu de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__ADDRESS_IS_MISSING</code>
+			<value>Impossible de mettre à jour l'adresse de jeu de %s, l'adresse est manquante</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__ADDRESS_NOT_FOUND</code>
+			<value>Impossible de mettre à jour l'adresse de jeu de %s, aucune adresse IP n'a été trouvé pour %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__PORT_NUMBER_IS_MISSING</code>
+			<value>Impossible de mettre à jour l'adresse de jeu de %s, le numéro de port est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__PORT_NUMBER_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour l'adresse de jeu de %s, le numéro de port doit être un entier</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__PORT_NUMBER_BAD_RANGE</code>
+			<value>Impossible de mettre à jour l'adresse de jeu de %s, le numéro de port doit être dans l'intervalle [0,65535]</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED</code>
+			<value>L'adresse de jeu de %s est maintenant %s:%s</value>
 		</message>
 	</messages>
 </dictionary>

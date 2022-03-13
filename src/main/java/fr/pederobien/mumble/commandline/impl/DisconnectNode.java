@@ -19,7 +19,7 @@ public class DisconnectNode extends MumbleClientNode {
 			return true;
 
 		getServer().dispose();
-		send(EMumbleClientCode.MUMBLE__DISCONNECT__CONNECTION_ABORTED, getServer().getAddress(), getServer().getPort());
+		send(EMumbleClientCode.MUMBLE__DISCONNECT__CONNECTION_ABORTED, getServer().getAddress().getAddress().getHostAddress(), getServer().getAddress().getPort());
 		tree.setServer(null);
 		return true;
 	}

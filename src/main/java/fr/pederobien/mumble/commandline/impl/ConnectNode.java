@@ -1,13 +1,15 @@
 package fr.pederobien.mumble.commandline.impl;
 
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.UnknownHostException;
 import java.util.List;
-import java.util.regex.Pattern;
+import java.util.function.Predicate;
 
 import fr.pederobien.mumble.client.impl.GameMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 
 public class ConnectNode extends MumbleClientNode {
-	private static final Pattern PATTERN = Pattern.compile("^(([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.){3}([01]?\\d\\d?|2[0-4]\\d|25[0-5])$");
 	private MumbleClientCommandTree tree;
 
 	/**
@@ -26,7 +28,15 @@ public class ConnectNode extends MumbleClientNode {
 		case 1:
 			return asList(getMessage(EMumbleClientCode.MUMBLE__ADDRESS_COMPLETION));
 		case 2:
-			return check(args[0], address -> PATTERN.matcher(address).matches(), asList(getMessage(EMumbleClientCode.MUMBLE__PORT_COMPLETION)));
+			Predicate<String> addressValid = address -> {
+				try {
+					InetAddress.getByName(address);
+				} catch (UnknownHostException e) {
+					return false;
+				}
+				return true;
+			};
+			return check(args[0], addressValid, asList(getMessage(EMumbleClientCode.MUMBLE__PORT_COMPLETION)));
 		default:
 			return emptyList();
 		}
@@ -34,16 +44,14 @@ public class ConnectNode extends MumbleClientNode {
 
 	@Override
 	public boolean onCommand(String[] args) {
-		String address;
+		InetAddress address;
 		try {
-			address = args[0];
+			address = InetAddress.getByName(args[0]);
 		} catch (IndexOutOfBoundsException e) {
 			send(EMumbleClientCode.MUMBLE__CONNECT__ADDRESS_IS_MISSING);
 			return false;
-		}
-
-		if (!PATTERN.matcher(address).matches()) {
-			send(EMumbleClientCode.MUMBLE__CONNECT__ADDRESS_NOT_IPv4, address);
+		} catch (UnknownHostException e) {
+			send(EMumbleClientCode.MUMBLE__CONNECT__ADDRESS_NOT_FOUND, args[0]);
 			return false;
 		}
 
@@ -65,7 +73,7 @@ public class ConnectNode extends MumbleClientNode {
 		if (getServer() != null)
 			getServer().dispose();
 
-		IMumbleServer server = new GameMumbleServer(String.format("MumbleServer_%s:%s", address, port), address, port);
+		IMumbleServer server = new GameMumbleServer(String.format("MumbleServer_%s:%s", address.getHostAddress(), port), new InetSocketAddress(address, port));
 		try {
 			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, address, port);
 			server.open();

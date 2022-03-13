@@ -37,8 +37,8 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the IP address is missing
 	MUMBLE__CONNECT__ADDRESS_IS_MISSING,
 
-	// Code when the IP address is not IPv4
-	MUMBLE__CONNECT__ADDRESS_NOT_IPv4,
+	// Code when no IP address for the host could be found
+	MUMBLE__CONNECT__ADDRESS_NOT_FOUND,
 
 	// Code when the port number is missing
 	MUMBLE__CONNECT__PORT_NUMBER_IS_MISSING,
@@ -148,8 +148,8 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the game address is missing
 	MUMBLE__PLAYERS__ADD__ADDRESS_IS_MISSING,
 
-	// Code when the IP address is not IPv4
-	MUMBLE__PLAYERS__ADD__ADDRESS_NOT_IPv4,
+	// Code when no IP address for the host could be found
+	MUMBLE__PLAYERS__ADD__ADDRESS_NOT_FOUND,
 
 	// Code when the game port is missing
 	MUMBLE__PLAYERS__ADD__PORT_NUMBER_IS_MISSING,
@@ -249,6 +249,33 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the player online status has been updated on the remote
 	MUMBLE__PLAYERS__ONLINE__OFFLINE_REQUEST_SUCCEED,
+
+	// Code for the "mumble players gameAddress" command -------------------------
+	MUMBLE__PLAYERS__GAME_ADDRESS__EXPLANATION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__GAME_ADDRESS__NAME_IS_MISSING,
+
+	// Code when the player does not exist
+	MUMBLE__PLAYERS__GAME_ADDRESS__PLAYER_NOT_FOUND,
+
+	// Code when the address is missing
+	MUMBLE__PLAYERS__GAME_ADDRESS__ADDRESS_IS_MISSING,
+
+	// Code when no IP address for the host could be found
+	MUMBLE__PLAYERS__GAME_ADDRESS__ADDRESS_NOT_FOUND,
+
+	// Code when the port number is missing
+	MUMBLE__PLAYERS__GAME_ADDRESS__PORT_NUMBER_IS_MISSING,
+
+	// Code when the port number has an invalid format
+	MUMBLE__PLAYERS__GAME_ADDRESS__PORT_NUMBER_BAD_FORMAT,
+
+	// Code when the port number has an invalid range
+	MUMBLE__PLAYERS__GAME_ADDRESS__PORT_NUMBER_BAD_RANGE,
+
+	// Code when the game address of a player has been updated on the remote
+	MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED,
 
 	;
 
