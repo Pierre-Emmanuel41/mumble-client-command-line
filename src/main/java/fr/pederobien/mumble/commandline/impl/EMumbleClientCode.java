@@ -242,6 +242,9 @@ public enum EMumbleClientCode implements ICode {
 	MUMBLE__PLAYERS__ONLINE__PLAYER_NOT_FOUND,
 
 	// Code when the player does not exist
+	MUMBLE__PLAYERS__ONLINE__STATUS_IS_MISSING,
+
+	// Code when the online status has a bad format
 	MUMBLE__PLAYERS__ONLINE__ONLINE_BAD_FORMAT,
 
 	// Code when the player online status has been updated on the remote
@@ -276,6 +279,30 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the game address of a player has been updated on the remote
 	MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED,
+
+	// Code for the "mumble players mute" command --------------------------------
+	MUMBLE__PLAYERS__MUTE__EXPLANATION,
+
+	// Code for the mute status completion
+	MUMBLE__PLAYERS__MUTE__COMPLETION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__MUTE__NAME_IS_MISSING,
+
+	// Code when the player does not exist
+	MUMBLE__PLAYERS__MUTE__PLAYER_NOT_FOUND,
+
+	// Code when the mute status is missing
+	MUMBLE__PLAYERS__MUTE__STATUS_IS_MISSING,
+
+	// Code when the mute status has a bad format
+	MUMBLE__PLAYERS__MUTE__STATUS_BAD_FORMAT,
+
+	// Code when the player is mute
+	MUMBLE__PLAYERS__MUTE__MUTED_REQUEST_SUCCEED,
+
+	// Code when the player is unmute
+	MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED,
 
 	;
 

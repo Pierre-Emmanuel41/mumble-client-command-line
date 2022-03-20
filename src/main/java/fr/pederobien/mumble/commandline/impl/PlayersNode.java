@@ -10,6 +10,7 @@ public class PlayersNode extends MumbleClientNode {
 	private PlayersRenameNode renameNode;
 	private PlayersOnlineNode onlineNode;
 	private PlayersGameAddressNode gameAddressNode;
+	private PlayersMuteNode muteNode;
 
 	/**
 	 * Creates a node to add, remove or update players properties.
@@ -24,6 +25,7 @@ public class PlayersNode extends MumbleClientNode {
 		add(renameNode = new PlayersRenameNode(server));
 		add(onlineNode = new PlayersOnlineNode(server));
 		add(gameAddressNode = new PlayersGameAddressNode(server));
+		add(muteNode = new PlayersMuteNode(server));
 	}
 
 	/**
@@ -59,5 +61,12 @@ public class PlayersNode extends MumbleClientNode {
 	 */
 	public PlayersGameAddressNode getGameAddressNode() {
 		return gameAddressNode;
+	}
+
+	/**
+	 * @return The node that update the mute status of a player.
+	 */
+	public PlayersMuteNode getMuteNode() {
+		return muteNode;
 	}
 }

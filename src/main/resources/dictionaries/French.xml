@@ -324,8 +324,12 @@
 			<value>Impossible de mettre à jour le statut en ligne de %s, le joueur n'existe pas</value>
 		</message>
 		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le status en ligne de %s, le statut en ligne est manquant</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__ONLINE__ONLINE_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour le status en ligne de  %s, le status en ligne doit être un booléen</value>
+			<value>Impossible de mettre à jour le status en ligne de %s, le status en ligne doit être un booléen</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ONLINE__ONLINE_REQUEST_SUCCEED</code>
@@ -370,6 +374,38 @@
 		<message>
 			<code>MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED</code>
 			<value>L'adresse de jeu de %s est maintenant %s:%s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__EXPLANATION</code>
+			<value>Pour mettre à jour le statut muet d'un joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__COMPLETION</code>
+			<value>&lt;muet&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__NAME_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut muet d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__PLAYER_NOT_FOUND</code>
+			<value>Impossible de mettre à jour le statut muet de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut muet de %s, le statut muet du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__STATUS_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour le statut muet de %s, le statut muet doit être un booléen</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__MUTED_REQUEST_SUCCEED</code>
+			<value>%s est maintenant muet</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED</code>
+			<value>%s n'est plus muet</value>
 		</message>
 	</messages>
 </dictionary>

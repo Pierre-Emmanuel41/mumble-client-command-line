@@ -327,6 +327,10 @@
 			<value>Cannot update the online status of %s, the player does not exist</value>
 		</message>
 		<message>
+			<code>MUMBLE__PLAYERS__ONLINE__STATUS_IS_MISSING</code>
+			<value>Cannot update the online status of %s, the player online status is missing</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__ONLINE__ONLINE_BAD_FORMAT</code>
 			<value>Cannot update the online status of %s, the online status should be a boolean</value>
 		</message>
@@ -373,6 +377,38 @@
 		<message>
 			<code>MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED</code>
 			<value>The game address of %s is now %s:%s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__EXPLANATION</code>
+			<value>To update the mute status of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__COMPLETION</code>
+			<value>&lt;isMute&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__NAME_IS_MISSING</code>
+			<value>Cannot update the mute status of a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__PLAYER_NOT_FOUND</code>
+			<value>Cannot update the mute status of %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__STATUS_IS_MISSING</code>
+			<value>Cannot update the mute status of %s, the player mute status is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__STATUS_BAD_FORMAT</code>
+			<value>Cannot update the mute status of %s, the mute status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__MUTED_REQUEST_SUCCEED</code>
+			<value>%s is now muted</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED</code>
+			<value>%s is now unmuted</value>
 		</message>
 	</messages>
 </dictionary>
