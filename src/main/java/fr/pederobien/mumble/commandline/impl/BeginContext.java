@@ -3,6 +3,7 @@ package fr.pederobien.mumble.commandline.impl;
 import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import fr.pederobien.commandtree.events.NodeEvent;
 import fr.pederobien.commandtree.exceptions.NodeNotFoundException;
@@ -25,6 +26,11 @@ public class BeginContext {
 
 	private MumbleClientCommandTree tree;
 	private Scanner scanner;
+	private AtomicBoolean isInitialized;
+
+	public BeginContext() {
+		isInitialized = new AtomicBoolean(false);
+	}
 
 	/**
 	 * Initialize the context.
@@ -32,6 +38,9 @@ public class BeginContext {
 	 * @return This initialized context.
 	 */
 	public BeginContext initialize() {
+		if (!isInitialized.compareAndSet(false, true))
+			return this;
+
 		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class).register();
 
 		tree = new MumbleClientCommandTree();
@@ -46,6 +55,9 @@ public class BeginContext {
 	 * Start waiting for user input in order to run commands
 	 */
 	public void start() {
+		if (!isInitialized.get())
+			throw new IllegalStateException("The context has not been initialized");
+
 		send(EMumbleClientCode.MUMBLE__STARTING);
 
 		while (true) {
