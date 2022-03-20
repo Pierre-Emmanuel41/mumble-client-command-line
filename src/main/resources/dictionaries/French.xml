@@ -407,5 +407,37 @@
 			<code>MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED</code>
 			<value>%s n'est plus muet</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__EXPLANATION</code>
+			<value>Pour mettre à jour le statut sourd d'un joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__COMPLETION</code>
+			<value>&lt;sourd&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut sourd d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND</code>
+			<value>Impossible de mettre à jour le statut sourd de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut sourd de %s, le statut sourd du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour le statut sourd de %s, le statut sourd doit être un booléen</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED</code>
+			<value>%s est maintenant sourd</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
+			<value>%s n'est plus sourd</value>
+		</message>
 	</messages>
 </dictionary>

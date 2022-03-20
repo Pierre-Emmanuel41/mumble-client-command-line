@@ -410,5 +410,37 @@
 			<code>MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED</code>
 			<value>%s is now unmuted</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__EXPLANATION</code>
+			<value>To update the deafen status of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__COMPLETION</code>
+			<value>&lt;isDeafen&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING</code>
+			<value>Cannot update the deafen status of a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND</code>
+			<value>Cannot update the deafen status of %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING</code>
+			<value>Cannot update the deafen status of %s, the player deafen status is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT</code>
+			<value>Cannot update the deafen status of %s, the deafen status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED</code>
+			<value>%s is now deafened</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
+			<value>%s is now undeafened</value>
+		</message>
 	</messages>
 </dictionary>
