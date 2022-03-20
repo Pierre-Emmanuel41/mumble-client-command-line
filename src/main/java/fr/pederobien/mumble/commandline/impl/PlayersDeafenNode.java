@@ -12,7 +12,7 @@ import fr.pederobien.mumble.client.interfaces.IResponse;
 public class PlayersDeafenNode extends MumbleClientNode {
 
 	/**
-	 * Creates a node to deafen a player.
+	 * Creates a node to update the deafen status of a player.
 	 * 
 	 * @param server The server associated to this node.
 	 */

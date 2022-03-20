@@ -9,15 +9,15 @@ import fr.pederobien.commandtree.exceptions.BooleanParseException;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
 
-public class PlayersMuteNode extends MumbleClientNode {
+public class PlayersAdminNode extends MumbleClientNode {
 
 	/**
-	 * Creates a node to update the mute status of a player.
+	 * Creates a node to update the administrator status of a player.
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersMuteNode(Supplier<IMumbleServer> server) {
-		super(server, "mute", EMumbleClientCode.MUMBLE__PLAYERS__MUTE__EXPLANATION, s -> s != null);
+	protected PlayersAdminNode(Supplier<IMumbleServer> server) {
+		super(server, "admin", EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__EXPLANATION, s -> s != null);
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class PlayersMuteNode extends MumbleClientNode {
 			return filter(getServer().getPlayers().stream().map(player -> player.getName()), args);
 		case 2:
 			Predicate<String> nameValid = name -> getServer().getPlayers().get(name).isPresent();
-			return check(args[0], nameValid, asList(getMessage(EMumbleClientCode.MUMBLE__PLAYERS__MUTE__COMPLETION)));
+			return check(args[0], nameValid, asList(getMessage(EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__COMPLETION)));
 		default:
 			return emptyList();
 		}
@@ -39,34 +39,34 @@ public class PlayersMuteNode extends MumbleClientNode {
 		try {
 			name = args[0];
 			if (!getServer().getPlayers().get(name).isPresent()) {
-				send(EMumbleClientCode.MUMBLE__PLAYERS__MUTE__PLAYER_NOT_FOUND, name);
+				send(EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__PLAYER_NOT_FOUND, name);
 				return false;
 			}
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__PLAYERS__MUTE__NAME_IS_MISSING);
+			send(EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__NAME_IS_MISSING);
 			return false;
 		}
 
-		boolean isMute;
+		boolean isAdmin;
 		try {
-			isMute = getBoolean(args[1]);
+			isAdmin = getBoolean(args[1]);
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__PLAYERS__MUTE__STATUS_IS_MISSING, name);
+			send(EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__STATUS_IS_MISSING, name);
 			return false;
 		} catch (BooleanParseException e) {
-			send(EMumbleClientCode.MUMBLE__PLAYERS__MUTE__STATUS_BAD_FORMAT, name);
+			send(EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__STATUS_BAD_FORMAT, name);
 			return false;
 		}
 
 		Consumer<IResponse> update = response -> {
 			if (response.hasFailed())
 				send(EMumbleClientCode.MUMBLE__REQUEST_FAILED, response.getErrorCode().getMessage());
-			else if (isMute)
-				send(EMumbleClientCode.MUMBLE__PLAYERS__MUTE__MUTED_REQUEST_SUCCEED, name);
+			else if (isAdmin)
+				send(EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__ADMIN_REQUEST_SUCCEED, name);
 			else
-				send(EMumbleClientCode.MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED, name);
+				send(EMumbleClientCode.MUMBLE__PLAYERS__ADMIN__NOT_ADMIN_REQUEST_SUCCEED, name);
 		};
-		getServer().getPlayers().get(name).get().setMute(isMute, update);
+		getServer().getPlayers().get(name).get().setAdmin(isAdmin, update);
 		return true;
 	}
 }

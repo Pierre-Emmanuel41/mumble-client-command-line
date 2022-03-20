@@ -376,6 +376,38 @@
 			<value>L'adresse de jeu de %s est maintenant %s:%s</value>
 		</message>
 		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__EXPLANATION</code>
+			<value>Pour mettre à jour le statut d'admin d'un joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__COMPLETION</code>
+			<value>&lt;admin&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__NAME_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut d'admin d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__PLAYER_NOT_FOUND</code>
+			<value>Impossible de mettre à jour le statut d'admin de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut d'admin de %s, le statut muet du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__STATUS_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour le statut d'admin de %s, le statut muet doit être un booléen</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__ADMIN_REQUEST_SUCCEED</code>
+			<value>%s est maintenant un admin</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__NOT_ADMIN_REQUEST_SUCCEED</code>
+			<value>%s n'est plus un admin</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__MUTE__EXPLANATION</code>
 			<value>Pour mettre à jour le statut muet d'un joueur</value>
 		</message>

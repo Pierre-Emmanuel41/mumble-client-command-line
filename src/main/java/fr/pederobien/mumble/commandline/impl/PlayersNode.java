@@ -10,6 +10,7 @@ public class PlayersNode extends MumbleClientNode {
 	private PlayersRenameNode renameNode;
 	private PlayersOnlineNode onlineNode;
 	private PlayersGameAddressNode gameAddressNode;
+	private PlayersAdminNode adminNode;
 	private PlayersMuteNode muteNode;
 	private PlayersDeafenNode deafenNode;
 
@@ -26,6 +27,7 @@ public class PlayersNode extends MumbleClientNode {
 		add(renameNode = new PlayersRenameNode(server));
 		add(onlineNode = new PlayersOnlineNode(server));
 		add(gameAddressNode = new PlayersGameAddressNode(server));
+		add(adminNode = new PlayersAdminNode(server));
 		add(muteNode = new PlayersMuteNode(server));
 		add(deafenNode = new PlayersDeafenNode(server));
 	}
@@ -66,14 +68,21 @@ public class PlayersNode extends MumbleClientNode {
 	}
 
 	/**
-	 * @return The node that update the mute status of a player.
+	 * @return The node that update the administrator status of a player on a server.
+	 */
+	public PlayersAdminNode getAdminNode() {
+		return adminNode;
+	}
+
+	/**
+	 * @return The node that update the mute status of a player on a server.
 	 */
 	public PlayersMuteNode getMuteNode() {
 		return muteNode;
 	}
 
 	/**
-	 * @return The node that update the deafen status of a player.
+	 * @return The node that update the deafen status of a player on a server.
 	 */
 	public PlayersDeafenNode getDeafenNode() {
 		return deafenNode;

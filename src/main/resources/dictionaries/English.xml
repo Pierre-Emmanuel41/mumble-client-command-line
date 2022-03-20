@@ -379,6 +379,38 @@
 			<value>The game address of %s is now %s:%s</value>
 		</message>
 		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__EXPLANATION</code>
+			<value>To update the admin status of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__COMPLETION</code>
+			<value>&lt;isMute&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__NAME_IS_MISSING</code>
+			<value>Cannot update the admin status of a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__PLAYER_NOT_FOUND</code>
+			<value>Cannot update the admin status of %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__STATUS_IS_MISSING</code>
+			<value>Cannot update the admin status of %s, the player admin status is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__STATUS_BAD_FORMAT</code>
+			<value>Cannot update the admin status of %s, the admin status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__ADMIN_REQUEST_SUCCEED</code>
+			<value>%s is now an admin</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__ADMIN__NOT_ADMIN_REQUEST_SUCCEED</code>
+			<value>%s is no more an admin</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__MUTE__EXPLANATION</code>
 			<value>To update the mute status of a player</value>
 		</message>
@@ -408,7 +440,7 @@
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED</code>
-			<value>%s is now unmuted</value>
+			<value>%s is no more muted</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__DEAFEN__EXPLANATION</code>
@@ -440,7 +472,7 @@
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
-			<value>%s is now undeafened</value>
+			<value>%s is no more deafened</value>
 		</message>
 	</messages>
 </dictionary>

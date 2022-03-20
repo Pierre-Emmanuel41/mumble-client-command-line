@@ -281,6 +281,30 @@ public enum EMumbleClientCode implements ICode {
 	MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED,
 
 	// Code for the "mumble players mute" command --------------------------------
+	MUMBLE__PLAYERS__ADMIN__EXPLANATION,
+
+	// Code for the administrator status completion
+	MUMBLE__PLAYERS__ADMIN__COMPLETION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__ADMIN__NAME_IS_MISSING,
+
+	// Code when the player does not exist
+	MUMBLE__PLAYERS__ADMIN__PLAYER_NOT_FOUND,
+
+	// Code when the administrator status is missing
+	MUMBLE__PLAYERS__ADMIN__STATUS_IS_MISSING,
+
+	// Code when the administrator status has a bad format
+	MUMBLE__PLAYERS__ADMIN__STATUS_BAD_FORMAT,
+
+	// Code when the player is administrator
+	MUMBLE__PLAYERS__ADMIN__ADMIN_REQUEST_SUCCEED,
+
+	// Code when the player is not and administrator
+	MUMBLE__PLAYERS__ADMIN__NOT_ADMIN_REQUEST_SUCCEED,
+
+	// Code for the "mumble players mute" command --------------------------------
 	MUMBLE__PLAYERS__MUTE__EXPLANATION,
 
 	// Code for the mute status completion
@@ -304,7 +328,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is unmute
 	MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED,
 
-	// Code for the "mumble players deafen" command --------------------------------
+	// Code for the "mumble players deafen" command ------------------------------
 	MUMBLE__PLAYERS__DEAFEN__EXPLANATION,
 
 	// Code for the deafen status completion
