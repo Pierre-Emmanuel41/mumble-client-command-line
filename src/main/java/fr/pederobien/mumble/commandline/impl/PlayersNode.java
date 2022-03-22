@@ -13,6 +13,7 @@ public class PlayersNode extends MumbleClientNode {
 	private PlayersAdminNode adminNode;
 	private PlayersMuteNode muteNode;
 	private PlayersDeafenNode deafenNode;
+	private PlayersMuteByNode muteByNode;
 
 	/**
 	 * Creates a node to add, remove or update players properties.
@@ -30,6 +31,7 @@ public class PlayersNode extends MumbleClientNode {
 		add(adminNode = new PlayersAdminNode(server));
 		add(muteNode = new PlayersMuteNode(server));
 		add(deafenNode = new PlayersDeafenNode(server));
+		add(muteByNode = new PlayersMuteByNode(server));
 	}
 
 	/**
@@ -61,30 +63,37 @@ public class PlayersNode extends MumbleClientNode {
 	}
 
 	/**
-	 * @return The node that update the game address of a player on a server.
+	 * @return The node that updates the game address of a player on a server.
 	 */
 	public PlayersGameAddressNode getGameAddressNode() {
 		return gameAddressNode;
 	}
 
 	/**
-	 * @return The node that update the administrator status of a player on a server.
+	 * @return The node that updates the administrator status of a player on a server.
 	 */
 	public PlayersAdminNode getAdminNode() {
 		return adminNode;
 	}
 
 	/**
-	 * @return The node that update the mute status of a player on a server.
+	 * @return The node that updates the mute status of a player on a server.
 	 */
 	public PlayersMuteNode getMuteNode() {
 		return muteNode;
 	}
 
 	/**
-	 * @return The node that update the deafen status of a player on a server.
+	 * @return The node that updates the deafen status of a player on a server.
 	 */
 	public PlayersDeafenNode getDeafenNode() {
 		return deafenNode;
+	}
+
+	/**
+	 * @return The node that mutes a player for another player.
+	 */
+	public PlayersMuteByNode getMuteByNode() {
+		return muteByNode;
 	}
 }

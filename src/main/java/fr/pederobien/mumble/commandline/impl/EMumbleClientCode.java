@@ -352,6 +352,36 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is undeafen
 	MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED,
 
+	// Code for the "mumble players muteBy" command ------------------------------
+	MUMBLE__PLAYERS__MUTE_BY__EXPLANATION,
+
+	// Code for the mute by status completion
+	MUMBLE__PLAYERS__MUTE_BY__COMPLETION,
+
+	// Code when the target player is missing
+	MUMBLE__PLAYERS__MUTE_BY__TARGET_NAME_IS_MISSING,
+
+	// Code when the target player does not exist
+	MUMBLE__PLAYERS__MUTE_BY__TARGET_NOT_FOUND,
+
+	// Code when the source player is missing
+	MUMBLE__PLAYERS__MUTE_BY__SOURCE_NAME_IS_MISSING,
+
+	// Code when the source player does not exist
+	MUMBLE__PLAYERS__MUTE_BY__SOURCE_NOT_FOUND,
+
+	// Code when the mute status is missing
+	MUMBLE__PLAYERS__MUTE_BY__STATUS_IS_MISSING,
+
+	// Code when the source player does not exist
+	MUMBLE__PLAYERS__MUTE_BY__STATUS_BAD_FORMAT,
+
+	// Code when the source player does not exist
+	MUMBLE__PLAYERS__MUTE_BY__MUTE_REQUEST_SUCCEED,
+
+	// Code when the source player does not exist
+	MUMBLE__PLAYERS__MUTE_BY__UNMUTE_REQUEST_SUCCEED,
+
 	;
 
 	@Override

@@ -471,5 +471,45 @@
 			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
 			<value>%s n'est plus sourd</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__EXPLANATION</code>
+			<value>Pour rendre muet un joueur pour un autre joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__COMPLETION</code>
+			<value>&lt;estMuetPour&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__TARGET_NAME_IS_MISSING</code>
+			<value>Impossible de rendre muet un joueur pour un autre joueur, le nom du joueur cible est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__TARGET_NOT_FOUND</code>
+			<value>Impossible de rendre muet %s pour un autre joueur, le joueur cible n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__SOURCE_NAME_IS_MISSING</code>
+			<value>Impossible de rendre muet %s for another player, le nom du joueur source est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__SOURCE_NOT_FOUND</code>
+			<value>Impossible de rendre muet %s pour %s, le joueur source n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__STATUS_IS_MISSING</code>
+			<value>Impossible de rendre muet %s pour %s, le statut muet est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__STATUS_BAD_FORMAT</code>
+			<value>Impossible de rendre muet %s pour %s, le statut muet doit être un booleen</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__MUTE_REQUEST_SUCCEED</code>
+			<value>%s est maintenant muet pour %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__UNMUTE_REQUEST_SUCCEED</code>
+			<value>%s n'est plus muet pour %s</value>
+		</message>
 	</messages>
 </dictionary>

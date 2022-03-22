@@ -474,5 +474,45 @@
 			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
 			<value>%s is no more deafened</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__EXPLANATION</code>
+			<value>To mute a player for another player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__COMPLETION</code>
+			<value>&lt;isMuteBy&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__TARGET_NAME_IS_MISSING</code>
+			<value>Cannot mute a player for another player, the target player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__TARGET_NOT_FOUND</code>
+			<value>Cannot mute %s for another player, the target player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__SOURCE_NAME_IS_MISSING</code>
+			<value>Cannot mute %s for another player, the source player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__SOURCE_NOT_FOUND</code>
+			<value>Cannot mute %s for %s, the source player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__STATUS_IS_MISSING</code>
+			<value>Cannot mute %s for %s, the mute status is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__STATUS_BAD_FORMAT</code>
+			<value>Cannot mute %s for %s, the mute status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__MUTE_REQUEST_SUCCEED</code>
+			<value>%s is now mute for %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__MUTE_BY__UNMUTE_REQUEST_SUCCEED</code>
+			<value>%s is no more mute for %s</value>
+		</message>
 	</messages>
 </dictionary>
