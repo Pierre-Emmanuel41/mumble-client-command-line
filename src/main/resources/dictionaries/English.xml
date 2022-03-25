@@ -96,26 +96,30 @@
 		</message>
 		<message>
 			<code>MUMBLE__CHANNELS__ADD__EXPLANATION</code>
+			<value>To add a channel to a server or players to a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION</code>
 			<value>To add a channel to a server</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__NAME_IS_MISSING</code>
 			<value>Cannot add a channel to %s, the channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL_ALREADY_REGISTERED</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED</code>
 			<value>Cannot add channel %s to %s, the channel is already registered</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_IS_MISSING</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING</code>
 			<value>Cannot add channel %s to %s, the sound modifier name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_NOT_FOUND</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND</code>
 			<value>Cannot add channel %s to %s, the sound modifier %s does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED</code>
 			<value>The channel %s with modifier %s has been added to %s</value>
 		</message>
 		<message>

@@ -70,20 +70,23 @@ public enum EMumbleClientCode implements ICode {
 	// Code for the "mumble channels add" command --------------------------------
 	MUMBLE__CHANNELS__ADD__EXPLANATION,
 
+	// Code for the "mumble channels add" command --------------------------------
+	MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION,
+
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__ADD__NAME_IS_MISSING,
+	MUMBLE__CHANNELS__ADD__CHANNEL__NAME_IS_MISSING,
 
 	// Code when the channel is already registered
-	MUMBLE__CHANNELS__ADD__CHANNEL_ALREADY_REGISTERED,
+	MUMBLE__CHANNELS__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED,
 
 	// Code when the sound modifier name is missing
-	MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_IS_MISSING,
+	MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING,
 
 	// Code when the sound modifier does not exist
-	MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_NOT_FOUND,
+	MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND,
 
 	// Code when the channel has been added on the remote
-	MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED,
+	MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED,
 
 	// Code for the "mumble channels remove" command -----------------------------
 	MUMBLE__CHANNELS__REMOVE__EXPLANATION,

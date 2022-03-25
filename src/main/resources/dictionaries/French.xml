@@ -93,26 +93,30 @@
 		</message>
 		<message>
 			<code>MUMBLE__CHANNELS__ADD__EXPLANATION</code>
+			<value>Pour ajouter un channel à un serveur ou des joueurs à un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__EXPLANATION</code>
 			<value>Pour ajouter un channel à un serveur</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__NAME_IS_MISSING</code>
 			<value>Impossible d'ajouter un channel à %s, le nom du channel est manquant</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL_ALREADY_REGISTERED</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED</code>
 			<value>Impossible d'ajouter le channel %s à %s, ce channel est déjà enregistré</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_IS_MISSING</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING</code>
 			<value>Impossible d'ajouter le channel %s à %s, le nom du modifieur de son est manquant</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__SOUND_MODIFIER_NOT_FOUND</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND</code>
 			<value>Impossible d'ajouter le channel %s à %s, le modifieur de son %s n'existe pas</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED</code>
 			<value>Le channel %s avec le modifieur %s a été ajouté à %s</value>
 		</message>
 		<message>
