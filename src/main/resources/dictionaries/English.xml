@@ -123,6 +123,34 @@
 			<value>The channel %s with modifier %s has been added to %s</value>
 		</message>
 		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__EXPLANATION</code>
+			<value>To add players to a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING</code>
+			<value>Cannot add players to a channel, the channel name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NOT_FOUND</code>
+			<value>Cannot add players to %s, the channel does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__PLAYER_NOT_FOUND</code>
+			<value>Cannot add %s to %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__NO_PLAYER_ADDED</code>
+			<value>No player has been added to %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED</code>
+			<value>%s has been added to %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED</code>
+			<value>Players %s have been added to %s</value>
+		</message>
+		<message>
 			<code>MUMBLE__CHANNELS__REMOVE__EXPLANATION</code>
 			<value>To remove a channel from a server</value>
 		</message>

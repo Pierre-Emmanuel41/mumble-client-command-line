@@ -58,7 +58,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the connection with the remote failed
 	MUMBLE__CONNECT__CONNECTION_ABORT,
 
-	// Code for the "mumble disconnect" command ----------------------------------------
+	// Code for the "mumble disconnect" command ----------------------------------
 	MUMBLE__DISCONNECT__EXPLANATION,
 
 	// Code when the connection is aborted
@@ -70,7 +70,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code for the "mumble channels add" command --------------------------------
 	MUMBLE__CHANNELS__ADD__EXPLANATION,
 
-	// Code for the "mumble channels add" command --------------------------------
+	// Code for the "mumble channels add channel" command ------------------------
 	MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -87,6 +87,27 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the channel has been added on the remote
 	MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED,
+
+	// Code for the "mumble channels add players" command ------------------------
+	MUMBLE__CHANNELS__ADD__PLAYERS__EXPLANATION,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING,
+
+	// Code when the channel does not exist
+	MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NOT_FOUND,
+
+	// Code when the player does not exist
+	MUMBLE__CHANNELS__ADD__PLAYERS__PLAYER_NOT_FOUND,
+
+	// Code when no player has been added
+	MUMBLE__CHANNELS__ADD__PLAYERS__NO_PLAYER_ADDED,
+
+	// Code when one player has been added
+	MUMBLE__CHANNELS__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED,
+
+	// Code when several players has been added
+	MUMBLE__CHANNELS__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED,
 
 	// Code for the "mumble channels remove" command -----------------------------
 	MUMBLE__CHANNELS__REMOVE__EXPLANATION,

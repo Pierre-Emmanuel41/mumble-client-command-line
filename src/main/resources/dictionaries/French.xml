@@ -96,7 +96,7 @@
 			<value>Pour ajouter un channel à un serveur ou des joueurs à un channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__EXPLANATION</code>
+			<code>MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION</code>
 			<value>Pour ajouter un channel à un serveur</value>
 		</message>
 		<message>
@@ -118,6 +118,34 @@
 		<message>
 			<code>MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED</code>
 			<value>Le channel %s avec le modifieur %s a été ajouté à %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__EXPLANATION</code>
+			<value>Pour ajouter des joueurs à un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING</code>
+			<value>Impossible d'ajouter un joueur à un channel, le nom du channel est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NOT_FOUND</code>
+			<value>Impossible d'ajouter des joueurs à %s, le channel n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__PLAYER_NOT_FOUND</code>
+			<value>Impossible d'ajouter %s à %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__NO_PLAYER_ADDED</code>
+			<value>Aucun joueur n'a été ajouté à %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED</code>
+			<value>%s a été ajouté à %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED</code>
+			<value>Les joueurs %s ont été ajouté à %s</value>
 		</message>
 		<message>
 			<code>MUMBLE__CHANNELS__REMOVE__EXPLANATION</code>
