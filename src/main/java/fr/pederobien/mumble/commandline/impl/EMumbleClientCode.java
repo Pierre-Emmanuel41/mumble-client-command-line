@@ -124,6 +124,27 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the channel has been removed from the remote
 	MUMBLE__CHANNELS__REMOVE__CHANNEL__REQUEST_SUCCEED,
 
+	// Code for the "mumble channels remove channel" command ---------------------
+	MUMBLE__CHANNELS__REMOVE__PLAYERS__EXPLANATION,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NAME_IS_MISSING,
+
+	// Code when the channel does not exist
+	MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NOT_FOUND,
+
+	// Code when the player does not exist
+	MUMBLE__CHANNELS__REMOVE__PLAYERS__PLAYER_NOT_FOUND,
+
+	// Code when no player has been removed
+	MUMBLE__CHANNELS__REMOVE__PLAYERS__NO_PLAYER_REMOVED,
+
+	// Code when one player has been removed
+	MUMBLE__CHANNELS__REMOVE__PLAYERS__ONE_PLAYER_REMOVED_REQUEST_SUCCEED,
+
+	// Code when several players has been removed
+	MUMBLE__CHANNELS__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED,
+
 	// Code for the "mumble channels rename" command -----------------------------
 	MUMBLE__CHANNELS__RENAME__EXPLANATION,
 

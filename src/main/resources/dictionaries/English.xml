@@ -152,19 +152,51 @@
 		</message>
 		<message>
 			<code>MUMBLE__CHANNELS__REMOVE__EXPLANATION</code>
+			<value>To remove a channel from a server or players from a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__EXPLANATION</code>
 			<value>To remove a channel from a server</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__NAME_IS_MISSING</code>
 			<value>Cannot remove a channel from %s, the channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL_NOT_FOUND</code>
+			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__CHANNEL_NOT_FOUND</code>
 			<value>Cannot remove a channel %s from %s, the channel does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__REQUEST_SUCCEED</code>
 			<value>The channel %s has been removed from %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__EXPLANATION</code>
+			<value>To remove players from a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NAME_IS_MISSING</code>
+			<value>Cannot remove players from a channel, the channel name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NOT_FOUND</code>
+			<value>Cannot remove players from %s, the channel does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__PLAYER_NOT_FOUND</code>
+			<value>Cannot remove %s from %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__NO_PLAYER_REMOVED</code>
+			<value>No player has been removed from %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__ONE_PLAYER_REMOVED_REQUEST_SUCCEED</code>
+			<value>%s has been removed from %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED</code>
+			<value>Players %s have been removed from %s</value>
 		</message>
 		<message>
 			<code>MUMBLE__CHANNELS__RENAME__EXPLANATION</code>
