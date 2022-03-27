@@ -112,14 +112,17 @@ public enum EMumbleClientCode implements ICode {
 	// Code for the "mumble channels remove" command -----------------------------
 	MUMBLE__CHANNELS__REMOVE__EXPLANATION,
 
-	// Code when the channel name is missing
-	MUMBLE__CHANNELS__REMOVE__NAME_IS_MISSING,
+	// Code for the "mumble channels remove channel" command ---------------------
+	MUMBLE__CHANNELS__REMOVE__CHANNEL__EXPLANATION,
 
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__REMOVE__CHANNEL_NOT_FOUND,
+	MUMBLE__CHANNELS__REMOVE__CHANNEL__NAME_IS_MISSING,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__REMOVE__CHANNEL__CHANNEL_NOT_FOUND,
 
 	// Code when the channel has been removed from the remote
-	MUMBLE__CHANNELS__REMOVE__REQUEST_SUCCEED,
+	MUMBLE__CHANNELS__REMOVE__CHANNEL__REQUEST_SUCCEED,
 
 	// Code for the "mumble channels rename" command -----------------------------
 	MUMBLE__CHANNELS__RENAME__EXPLANATION,
