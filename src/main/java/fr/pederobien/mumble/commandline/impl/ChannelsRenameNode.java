@@ -25,9 +25,9 @@ public class ChannelsRenameNode extends MumbleClientNode {
 	public List<String> onTabComplete(String[] args) {
 		switch (args.length) {
 		case 1:
-			return filter(getServer().getChannelList().stream().map(channel -> channel.getName()), args);
+			return filter(getServer().getChannels().stream().map(channel -> channel.getName()), args);
 		case 2:
-			Predicate<String> nameValid = name -> getServer().getChannelList().getChannel(name).isPresent();
+			Predicate<String> nameValid = name -> getServer().getChannels().get(name).isPresent();
 			return check(args[0], nameValid, asList(getMessage(EMumbleClientCode.MUMBLE__NAME__COMPLETION)));
 		default:
 			return emptyList();
@@ -44,7 +44,7 @@ public class ChannelsRenameNode extends MumbleClientNode {
 			return false;
 		}
 
-		Optional<IChannel> optOldChannel = getServer().getChannelList().getChannel(oldName);
+		Optional<IChannel> optOldChannel = getServer().getChannels().get(oldName);
 		if (!optOldChannel.isPresent()) {
 			send(EMumbleClientCode.MUMBLE__CHANNELS__RENAME__CHANNEL_NOT_FOUND, oldName);
 			return false;
@@ -58,7 +58,7 @@ public class ChannelsRenameNode extends MumbleClientNode {
 			return false;
 		}
 
-		Optional<IChannel> optNewChannel = getServer().getChannelList().getChannel(newName);
+		Optional<IChannel> optNewChannel = getServer().getChannels().get(newName);
 		if (optNewChannel.isPresent()) {
 			send(EMumbleClientCode.MUMBLE__CHANNELS__RENAME__CHANNEL_ALREADY_REGISTERED, oldName, newName);
 			return false;

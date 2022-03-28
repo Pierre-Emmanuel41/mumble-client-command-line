@@ -29,7 +29,7 @@ public class ChannelsAddChannelNode extends MumbleClientNode {
 			return asList(getMessage(EMumbleClientCode.MUMBLE__NAME__COMPLETION));
 
 		case 2:
-			Predicate<String> nameValid = name -> !getServer().getChannelList().getChannel(name).isPresent();
+			Predicate<String> nameValid = name -> !getServer().getChannels().get(name).isPresent();
 			return check(args[0], nameValid, getServer().getSoundModifierList().stream().map(soundModifier -> soundModifier.getName()).collect(Collectors.toList()));
 		default:
 			return emptyList();
@@ -46,7 +46,7 @@ public class ChannelsAddChannelNode extends MumbleClientNode {
 			return false;
 		}
 
-		if (getServer().getChannelList().getChannel(name).isPresent()) {
+		if (getServer().getChannels().get(name).isPresent()) {
 			send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED, name, getServer().getName());
 			return false;
 		}
@@ -70,7 +70,7 @@ public class ChannelsAddChannelNode extends MumbleClientNode {
 			else
 				send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED, name, soundModifier.getName(), getServer().getName());
 		};
-		getServer().getChannelList().add(name, soundModifier, update);
+		getServer().getChannels().add(name, soundModifier, update);
 		return true;
 	}
 }

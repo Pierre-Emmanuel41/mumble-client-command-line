@@ -28,9 +28,9 @@ public class ChannelsRemovePlayersNode extends MumbleClientNode {
 	public List<String> onTabComplete(String[] args) {
 		switch (args.length) {
 		case 1:
-			return filter(getServer().getChannelList().stream().map(channel -> channel.getName()), args);
+			return filter(getServer().getChannels().stream().map(channel -> channel.getName()), args);
 		case 2:
-			Predicate<String> channelNameValid = name -> getServer().getChannelList().getChannel(name).isPresent();
+			Predicate<String> channelNameValid = name -> getServer().getChannels().get(name).isPresent();
 			List<String> list = filter(getServer().getPlayers().stream().map(player -> player.getName()), args);
 			return check(args[0], channelNameValid, list);
 		default:
@@ -45,7 +45,7 @@ public class ChannelsRemovePlayersNode extends MumbleClientNode {
 	public boolean onCommand(String[] args) {
 		IChannel channel;
 		try {
-			Optional<IChannel> optChannel = getServer().getChannelList().getChannel(args[0]);
+			Optional<IChannel> optChannel = getServer().getChannels().get(args[0]);
 			if (!optChannel.isPresent()) {
 				send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NOT_FOUND, args[0]);
 				return false;

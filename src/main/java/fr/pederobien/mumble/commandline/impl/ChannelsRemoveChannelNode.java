@@ -38,7 +38,7 @@ public class ChannelsRemoveChannelNode extends MumbleClientNode {
 			return false;
 		}
 
-		if (!getServer().getChannelList().getChannel(name).isPresent()) {
+		if (!getServer().getChannels().get(name).isPresent()) {
 			send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__CHANNEL__CHANNEL_NOT_FOUND, name, getServer().getName());
 			return false;
 		}
@@ -49,7 +49,7 @@ public class ChannelsRemoveChannelNode extends MumbleClientNode {
 			else
 				send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__CHANNEL__REQUEST_SUCCEED, name, getServer().getName());
 		};
-		getServer().getChannelList().remove(name, update);
+		getServer().getChannels().remove(name, update);
 		return true;
 	}
 }
