@@ -449,27 +449,27 @@
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ADMIN__NAME_IS_MISSING</code>
-			<value>Impossible de mettre à jour le statut d'admin d'un joueur, le nom du joueur est manquant</value>
+			<value>Impossible de mettre à jour le statut d'administrateur d'un joueur, le nom du joueur est manquant</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ADMIN__PLAYER_NOT_FOUND</code>
-			<value>Impossible de mettre à jour le statut d'admin de %s, le joueur n'existe pas</value>
+			<value>Impossible de mettre à jour le statut d'administrateur de %s, le joueur n'existe pas</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ADMIN__STATUS_IS_MISSING</code>
-			<value>Impossible de mettre à jour le statut d'admin de %s, le statut muet du joueur est manquant</value>
+			<value>Impossible de mettre à jour le statut d'administrateur de %s, le statut muet du joueur est manquant</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ADMIN__STATUS_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour le statut d'admin de %s, le statut muet doit être un booléen</value>
+			<value>Impossible de mettre à jour le statut d'administrateur de %s, le statut muet doit être un booléen</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ADMIN__ADMIN_REQUEST_SUCCEED</code>
-			<value>%s est maintenant un admin</value>
+			<value>%s est maintenant un administrateur</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__ADMIN__NOT_ADMIN_REQUEST_SUCCEED</code>
-			<value>%s n'est plus un admin</value>
+			<value>%s n'est plus un administrateur</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__MUTE__EXPLANATION</code>
@@ -502,38 +502,6 @@
 		<message>
 			<code>MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED</code>
 			<value>%s n'est plus muet</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__EXPLANATION</code>
-			<value>Pour mettre à jour le statut sourd d'un joueur</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__COMPLETION</code>
-			<value>&lt;sourd&gt;</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING</code>
-			<value>Impossible de mettre à jour le statut sourd d'un joueur, le nom du joueur est manquant</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND</code>
-			<value>Impossible de mettre à jour le statut sourd de %s, le joueur n'existe pas</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING</code>
-			<value>Impossible de mettre à jour le statut sourd de %s, le statut sourd du joueur est manquant</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour le statut sourd de %s, le statut sourd doit être un booléen</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED</code>
-			<value>%s est maintenant sourd</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
-			<value>%s n'est plus sourd</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__MUTE_BY__EXPLANATION</code>
@@ -574,6 +542,70 @@
 		<message>
 			<code>MUMBLE__PLAYERS__MUTE_BY__UNMUTE_REQUEST_SUCCEED</code>
 			<value>%s n'est plus muet pour %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__EXPLANATION</code>
+			<value>Pour mettre à jour le statut sourd d'un joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__COMPLETION</code>
+			<value>&lt;sourd&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut sourd d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND</code>
+			<value>Impossible de mettre à jour le statut sourd de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut sourd de %s, le statut sourd du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour le statut sourd de %s, le statut sourd doit être un booléen</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED</code>
+			<value>%s est maintenant sourd</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
+			<value>%s n'est plus sourd</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__EXPLANATION</code>
+			<value>Pour kick un joueur d'un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NAME_IS_MISSING</code>
+			<value>Impossible de kick un joueur, le nom du joueur à kicker est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NOT_FOUND</code>
+			<value>Impossible de kick %s, le joueur à kicker n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NAME_IS_MISSING</code>
+			<value>Impossible de kick %s par un autre joueur, le nom du joueur qui kick est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_FOUND</code>
+			<value>Impossible de kick %s par %s, le joueur qui kick n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_ADMIN</code>
+			<value>Impossible de kick %s par %s, le joueur qui kick n'est pas un administrateur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Impossible de kick %s par %s, le joueur a kicker n'est pas enregistré dans un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED</code>
+			<value>%s a été kick de %s par %s</value>
 		</message>
 	</messages>
 </dictionary>

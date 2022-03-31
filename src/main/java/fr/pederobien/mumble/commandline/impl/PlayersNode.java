@@ -14,6 +14,7 @@ public class PlayersNode extends MumbleClientNode {
 	private PlayersMuteNode muteNode;
 	private PlayersDeafenNode deafenNode;
 	private PlayersMuteByNode muteByNode;
+	private PlayersKickNode kickNode;
 
 	/**
 	 * Creates a node to add, remove or update players properties.
@@ -32,6 +33,7 @@ public class PlayersNode extends MumbleClientNode {
 		add(muteNode = new PlayersMuteNode(server));
 		add(deafenNode = new PlayersDeafenNode(server));
 		add(muteByNode = new PlayersMuteByNode(server));
+		add(kickNode = new PlayersKickNode(server));
 	}
 
 	/**
@@ -95,5 +97,12 @@ public class PlayersNode extends MumbleClientNode {
 	 */
 	public PlayersMuteByNode getMuteByNode() {
 		return muteByNode;
+	}
+
+	/**
+	 * @return The node that kicks a player from a channel.
+	 */
+	public PlayersKickNode getKickNode() {
+		return kickNode;
 	}
 }

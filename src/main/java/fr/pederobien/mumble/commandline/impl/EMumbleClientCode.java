@@ -376,30 +376,6 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is unmute
 	MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED,
 
-	// Code for the "mumble players deafen" command ------------------------------
-	MUMBLE__PLAYERS__DEAFEN__EXPLANATION,
-
-	// Code for the deafen status completion
-	MUMBLE__PLAYERS__DEAFEN__COMPLETION,
-
-	// Code when the player name is missing
-	MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING,
-
-	// Code when the player does not exist
-	MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND,
-
-	// Code when the deafen status is missing
-	MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING,
-
-	// Code when the deafen status has a bad format
-	MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT,
-
-	// Code when the player is deafen
-	MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED,
-
-	// Code when the player is undeafen
-	MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED,
-
 	// Code for the "mumble players muteBy" command ------------------------------
 	MUMBLE__PLAYERS__MUTE_BY__EXPLANATION,
 
@@ -429,6 +405,54 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the source player does not exist
 	MUMBLE__PLAYERS__MUTE_BY__UNMUTE_REQUEST_SUCCEED,
+
+	// Code for the "mumble players deafen" command ------------------------------
+	MUMBLE__PLAYERS__DEAFEN__EXPLANATION,
+
+	// Code for the deafen status completion
+	MUMBLE__PLAYERS__DEAFEN__COMPLETION,
+
+	// Code when the player name is missing
+	MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING,
+
+	// Code when the player does not exist
+	MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND,
+
+	// Code when the deafen status is missing
+	MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING,
+
+	// Code when the deafen status has a bad format
+	MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT,
+
+	// Code when the player is deafen
+	MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED,
+
+	// Code when the player is undeafen
+	MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED,
+
+	// Code for the "mumble channels kick" command -------------------------------
+	MUMBLE__PLAYERS__KICK__EXPLANATION,
+
+	// Code when name of the player to kick is missing
+	MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NAME_IS_MISSING,
+
+	// Code when the player to kick does not exist
+	MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NOT_FOUND,
+
+	// Code when name of the kicking player is missing
+	MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NAME_IS_MISSING,
+
+	// Code when the kicking player does not exist
+	MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_FOUND,
+
+	// Code when the kicking player is not an administrator
+	MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_ADMIN,
+
+	// Code when the player to kick is not registered in a channel
+	MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NOT_REGISTERED_IN_CHANNEL,
+
+	// Code when a player has been kicked from a channel
+	MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED,
 
 	;
 

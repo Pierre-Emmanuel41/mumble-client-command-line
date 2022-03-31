@@ -507,38 +507,6 @@
 			<value>%s is no more muted</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__EXPLANATION</code>
-			<value>To update the deafen status of a player</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__COMPLETION</code>
-			<value>&lt;isDeafen&gt;</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING</code>
-			<value>Cannot update the deafen status of a player, the player name is missing</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND</code>
-			<value>Cannot update the deafen status of %s, the player does not exist</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING</code>
-			<value>Cannot update the deafen status of %s, the player deafen status is missing</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT</code>
-			<value>Cannot update the deafen status of %s, the deafen status should be a boolean</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED</code>
-			<value>%s is now deafened</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED</code>
-			<value>%s is no more deafened</value>
-		</message>
-		<message>
 			<code>MUMBLE__PLAYERS__MUTE_BY__EXPLANATION</code>
 			<value>To mute a player for another player</value>
 		</message>
@@ -577,6 +545,66 @@
 		<message>
 			<code>MUMBLE__PLAYERS__MUTE_BY__UNMUTE_REQUEST_SUCCEED</code>
 			<value>%s is no more mute for %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__EXPLANATION</code>
+			<value>To update the deafen status of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__COMPLETION</code>
+			<value>&lt;isDeafen&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__NAME_IS_MISSING</code>
+			<value>Cannot update the deafen status of a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__PLAYER_NOT_FOUND</code>
+			<value>Cannot update the deafen status of %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_IS_MISSING</code>
+			<value>Cannot update the deafen status of %s, the player deafen status is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__STATUS_BAD_FORMAT</code>
+			<value>Cannot update the deafen status of %s, the deafen status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__DEAFEN__DEAFEND_REQUEST_SUCCEED</code>
+			<value>%s is now deafened</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__EXPLANATION</code>
+			<value>To kick a player from a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NAME_IS_MISSING</code>
+			<value>Cannot kick a player, the name of the player to kick is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NOT_FOUND</code>
+			<value>Cannot kick %s, the player to kick does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NAME_IS_MISSING</code>
+			<value>Cannot kick %s by another player, the kicking player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_FOUND</code>
+			<value>Cannot kick %s by %s, the kicking player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_ADMIN</code>
+			<value>Cannot kick %s by %s, the kicking player is not an administrator</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Cannot kick %s by %s, the player to kick is not registered in a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED</code>
+			<value>%s has been kicked from %s by %s</value>
 		</message>
 	</messages>
 </dictionary>
