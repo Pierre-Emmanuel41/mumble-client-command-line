@@ -750,5 +750,81 @@
 			<code>MUMBLE__DETAILS__SERVER</code>
 			<value>Server configuration:%n%s</value>
 		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__EXPLANATION</code>
+			<value>To update the position of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_COMPLETION</code>
+			<value>&lt;x&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_COMPLETION</code>
+			<value>&lt;y&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_COMPLETION</code>
+			<value>&lt;z&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_COMPLETION</code>
+			<value>&lt;yaw&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_COMPLETION</code>
+			<value>&lt;pitch&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NAME_IS_MISSING</code>
+			<value>Cannot update the position of a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NOT_FOUND</code>
+			<value>Cannot update the position of %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_IS_MISSING</code>
+			<value>Cannot update the position of %s, the X coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the X coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_IS_MISSING</code>
+			<value>Cannot update the position of %s, the Y coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the Y coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_IS_MISSING</code>
+			<value>Cannot update the position of %s, the Z coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the Z coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_IS_MISSING</code>
+			<value>Cannot update the position of %s, the yaw angle is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the yaw angle should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_IS_MISSING</code>
+			<value>Cannot update the position of %s, the pitch angle is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the pitch angle should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__REQUEST_SUCCEED</code>
+			<value>%s's position is now X=%s, Y=%s, Z=%s, yaw=%s, pitch=%s</value>
+		</message>
 	</messages>
 </dictionary>

@@ -454,6 +454,63 @@ public enum EMumbleClientCode implements ICode {
 	// Code when a player has been kicked from a channel
 	MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED,
 
+	// Code for the "mumble channels position" command ---------------------------
+	MUMBLE__PLAYERS__POSITION__EXPLANATION,
+
+	// Code for the X coordinate completion,
+	MUMBLE__PLAYERS__POSITION__X_COMPLETION,
+
+	// Code for the Y coordinate completion,
+	MUMBLE__PLAYERS__POSITION__Y_COMPLETION,
+
+	// Code for the Z coordinate completion,
+	MUMBLE__PLAYERS__POSITION__Z_COMPLETION,
+
+	// Code for the Yaw angle completion,
+	MUMBLE__PLAYERS__POSITION__YAW_COMPLETION,
+
+	// Code for the X coordinate completion,
+	MUMBLE__PLAYERS__POSITION__PITCH_COMPLETION,
+
+	// Code when the player name is missing,
+	MUMBLE__PLAYERS__POSITION__PLAYER_NAME_IS_MISSING,
+
+	// Code when the player name is missing,
+	MUMBLE__PLAYERS__POSITION__PLAYER_NOT_FOUND,
+
+	// Code when the x coordinate is missing
+	MUMBLE__PLAYERS__POSITION__X_IS_MISSING,
+
+	// Code when the x coordinate has a bad format
+	MUMBLE__PLAYERS__POSITION__X_BAD_FORMAT,
+
+	// Code when the y coordinate is missing
+	MUMBLE__PLAYERS__POSITION__Y_IS_MISSING,
+
+	// Code when the y coordinate has a bad format
+	MUMBLE__PLAYERS__POSITION__Y_BAD_FORMAT,
+
+	// Code when the z coordinate is missing
+	MUMBLE__PLAYERS__POSITION__Z_IS_MISSING,
+
+	// Code when the z coordinate has a bad format
+	MUMBLE__PLAYERS__POSITION__Z_BAD_FORMAT,
+
+	// Code when the yaw coordinate is missing
+	MUMBLE__PLAYERS__POSITION__YAW_IS_MISSING,
+
+	// Code when the yaw coordinate has a bad format
+	MUMBLE__PLAYERS__POSITION__YAW_BAD_FORMAT,
+
+	// Code when the pitch coordinate is missing
+	MUMBLE__PLAYERS__POSITION__PITCH_IS_MISSING,
+
+	// Code when the pitch coordinate has a bad format
+	MUMBLE__PLAYERS__POSITION__PITCH_BAD_FORMAT,
+
+	// Code when the player's position has been updated on the server
+	MUMBLE__PLAYERS__POSITION__REQUEST_SUCCEED,
+
 	// Code for the "mumble details" command -------------------------------------
 	MUMBLE__DETAILS__EXPLANATION,
 

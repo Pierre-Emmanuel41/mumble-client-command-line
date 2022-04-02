@@ -139,7 +139,7 @@ public class PlayersAddNode extends MumbleClientNode {
 
 		double y;
 		try {
-			y = getDouble(args[4]);
+			y = getDouble(args[5]);
 		} catch (IndexOutOfBoundsException e) {
 			send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__Y_IS_MISSING, name);
 			return false;
@@ -150,7 +150,7 @@ public class PlayersAddNode extends MumbleClientNode {
 
 		double z;
 		try {
-			z = getDouble(args[4]);
+			z = getDouble(args[6]);
 		} catch (IndexOutOfBoundsException e) {
 			send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__Z_IS_MISSING, name);
 			return false;
@@ -161,7 +161,7 @@ public class PlayersAddNode extends MumbleClientNode {
 
 		double yaw;
 		try {
-			yaw = getDouble(args[4]);
+			yaw = getDouble(args[7]);
 		} catch (IndexOutOfBoundsException e) {
 			send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__YAW_IS_MISSING, name);
 			return false;
@@ -172,7 +172,7 @@ public class PlayersAddNode extends MumbleClientNode {
 
 		double pitch;
 		try {
-			pitch = getDouble(args[4]);
+			pitch = getDouble(args[8]);
 		} catch (IndexOutOfBoundsException e) {
 			send(EMumbleClientCode.MUMBLE__PLAYERS__ADD__PITCH_IS_MISSING, name);
 			return false;
