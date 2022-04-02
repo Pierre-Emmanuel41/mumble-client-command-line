@@ -607,5 +607,149 @@
 			<code>MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED</code>
 			<value>%s a été kick de %s par %s</value>
 		</message>
+		<message>
+			<code>MUMBLE__DETAILS__EXPLANATION</code>
+			<value>Pour afficher la configuration actuelle su serveur mumble</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SERVER_NAME</code>
+			<value>Nom : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SERVER_IP_ADDRESS</code>
+			<value>Adresse IP : %s:%s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SERVER_REACHABLE</code>
+			<value>Accessible</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SERVER_NOT_REACHABLE</code>
+			<value>Pas accessible</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SERVER_REACHABLE_STATUS</code>
+			<value>État d'accessibilité : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SOUND_MODIFIERS</code>
+			<value>Modifieurs de son :</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SOUND_MODIFIER_NAME</code>
+			<value>Nom : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SOUND_MODIFIER_PARAMETERS</code>
+			<value>Paramètres :</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PARAMETER_NAME</code>
+			<value>Nom : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PARAMETER_VALUE</code>
+			<value>Valeur : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PARAMETER_DEFAULT_VALUE</code>
+			<value>Valeur par défaut : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PARAMETER_MINIMUM_VALUE</code>
+			<value>Valeur minimum : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PARAMETER_MAXIMUM_VALUE</code>
+			<value>Valeur maximum : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYERS</code>
+			<value>Joueurs :</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_NAME</code>
+			<value>Nom : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_IDENTIFIER</code>
+			<value>Identifiant : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_ONLINE</code>
+			<value>En ligne</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_OFFLINE</code>
+			<value>Hors ligne</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_ONLINE_STATUS</code>
+			<value>État en ligne : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_GAME_ADDRESS</code>
+			<value>Adresse de jeu : %s:%s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_ADMIN</code>
+			<value>Administrateur</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_NOT_ADMIN</code>
+			<value>Pas administrateur</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_ADMIN_STATUS</code>
+			<value>Statut d'administrateur : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_MUTE</code>
+			<value>Muet</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_NOT_MUTE</code>
+			<value>Pas muet</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_MUTE_STATUS</code>
+			<value>Statut muet : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_MUTE_BY</code>
+			<value>Muet pour : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_DEAFEN</code>
+			<value>Sourd</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_NOT_DEAFEN</code>
+			<value>Pas sourd</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_DEAFEN_STATUS</code>
+			<value>Statut sourd : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__PLAYER_POSITION</code>
+			<value>Position : X=%s, Y=%s, Z=%s, Lacet=%s, Tangage=%s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__CHANNELS</code>
+			<value>Channels:</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__CHANNEL_NAME</code>
+			<value>Nom : %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__CHANNEL_SOUND_MODIFIER</code>
+			<value>Modifieur de son :</value>
+		</message>
+		<message>
+			<code>MUMBLE__DETAILS__SERVER</code>
+			<value>Configuration du serveur :%n%s</value>
+		</message>
 	</messages>
 </dictionary>

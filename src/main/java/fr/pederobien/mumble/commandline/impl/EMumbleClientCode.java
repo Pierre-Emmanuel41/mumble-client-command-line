@@ -454,6 +454,114 @@ public enum EMumbleClientCode implements ICode {
 	// Code when a player has been kicked from a channel
 	MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED,
 
+	// Code for the "mumble details" command -------------------------------------
+	MUMBLE__DETAILS__EXPLANATION,
+
+	// Code for the server name
+	MUMBLE__DETAILS__SERVER_NAME,
+
+	// Code for the server IP address
+	MUMBLE__DETAILS__SERVER_IP_ADDRESS,
+
+	// Code for the server reachable status
+	MUMBLE__DETAILS__SERVER_REACHABLE_STATUS,
+
+	// Code when the server is not reachable
+	MUMBLE__DETAILS__SERVER_NOT_REACHABLE,
+
+	// Code When the server is reachable
+	MUMBLE__DETAILS__SERVER_REACHABLE,
+
+	// Code for the details of sound modifiers
+	MUMBLE__DETAILS__SOUND_MODIFIERS,
+
+	// Code for the sound modifier's name
+	MUMBLE__DETAILS__SOUND_MODIFIER_NAME,
+
+	// Code for the details of a sound modifier's parameters
+	MUMBLE__DETAILS__SOUND_MODIFIER_PARAMETERS,
+
+	// Code for the parameter's name
+	MUMBLE__DETAILS__PARAMETER_NAME,
+
+	// Code for the parameter's value
+	MUMBLE__DETAILS__PARAMETER_VALUE,
+
+	// Code for the parameter's default value
+	MUMBLE__DETAILS__PARAMETER_DEFAULT_VALUE,
+
+	// Code for the parameter's minimum value
+	MUMBLE__DETAILS__PARAMETER_MINIMUM_VALUE,
+
+	// Code for the parameter's maximum value
+	MUMBLE__DETAILS__PARAMETER_MAXIMUM_VALUE,
+
+	// Code for the details of players
+	MUMBLE__DETAILS__PLAYERS,
+
+	// Code for the player's name
+	MUMBLE__DETAILS__PLAYER_NAME,
+
+	// Code for the player's identifier
+	MUMBLE__DETAILS__PLAYER_IDENTIFIER,
+
+	// Code for the player's online status
+	MUMBLE__DETAILS__PLAYER_ONLINE_STATUS,
+
+	// Code when the player is not connected in game
+	MUMBLE__DETAILS__PLAYER_OFFLINE,
+
+	// Code when the player is connected in game
+	MUMBLE__DETAILS__PLAYER_ONLINE,
+
+	// Code for the player's game address
+	MUMBLE__DETAILS__PLAYER_GAME_ADDRESS,
+
+	// Code for the player's administrator status
+	MUMBLE__DETAILS__PLAYER_ADMIN_STATUS,
+
+	// Code when the player is an administrator
+	MUMBLE__DETAILS__PLAYER_ADMIN,
+
+	// Code when the player is not an administrator
+	MUMBLE__DETAILS__PLAYER_NOT_ADMIN,
+
+	// Code for the player's mute status
+	MUMBLE__DETAILS__PLAYER_MUTE_STATUS,
+
+	// Code when the player is mute
+	MUMBLE__DETAILS__PLAYER_MUTE,
+
+	// Code when the player is not mute
+	MUMBLE__DETAILS__PLAYER_NOT_MUTE,
+
+	// Code for the player's mute by status
+	MUMBLE__DETAILS__PLAYER_MUTE_BY,
+
+	// Code for the player's deafen status
+	MUMBLE__DETAILS__PLAYER_DEAFEN_STATUS,
+
+	// Code when the player is deafen
+	MUMBLE__DETAILS__PLAYER_DEAFEN,
+
+	// Code when the player is not deafen
+	MUMBLE__DETAILS__PLAYER_NOT_DEAFEN,
+
+	// Code for the player's position
+	MUMBLE__DETAILS__PLAYER_POSITION,
+
+	// Code for the details of channels
+	MUMBLE__DETAILS__CHANNELS,
+
+	// Code for the channel's name
+	MUMBLE__DETAILS__CHANNEL_NAME,
+
+	// Code for the details of the channel's sound modifier
+	MUMBLE__DETAILS__CHANNEL_SOUND_MODIFIER,
+
+	// Code for the complete server configuration
+	MUMBLE__DETAILS__SERVER,
+
 	;
 
 	@Override
