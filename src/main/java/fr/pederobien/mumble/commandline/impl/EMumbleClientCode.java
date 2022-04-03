@@ -163,6 +163,21 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the channel has been renamed on the remote
 	MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED,
 
+	// Code for the "mumble channels soundModifier" command ----------------------
+	MUMBLE__CHANNELS__SOUND_MODIFIER__EXPLANATION,
+
+	// Code for the "mumble channels soundModifier details" command --------------
+	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__EXPLANATION,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING,
+
+	// Code when the channel does not exist
+	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND,
+
+	// Code to display the properties of a sound modifier
+	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS,
+
 	// Code for the "mumble players" command -------------------------------------
 	MUMBLE__PLAYERS__EXPLANATION,
 

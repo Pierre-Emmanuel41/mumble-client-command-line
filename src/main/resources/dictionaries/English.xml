@@ -223,6 +223,26 @@
 			<value>The channel %s has been renamed as %s</value>
 		</message>
 		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__EXPLANATION</code>
+			<value>To modify the sound modifier of a channel or the parameters of a sound modifier</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__EXPLANATION</code>
+			<value>To display the property of the sound modifier associated to a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING</code>
+			<value>Cannot display the property of a sound modifier, the channel name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND</code>
+			<value>Cannot display the property of %s's sound modifier, the channel does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS</code>
+			<value>Properties of channel %s's sound modifier:%n%s</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>
 			<value>To add, remove or update the properties of a player</value>
 		</message>

@@ -219,7 +219,27 @@
 			<code>MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED</code>
 			<value>Le channel %s a été renommé %s</value>
 		</message>
-				<message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__EXPLANATION</code>
+			<value>Pour modifier le modifieur de son d'un channel ou les paramètres d'un modifieur de son</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__EXPLANATION</code>
+			<value>Pour afficher les propriétés du modifieur de son d'un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING</code>
+			<value>Impossible d'afficher les propriétés d'un modifieur de son, le nom du channel est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND</code>
+			<value>Impossible d'afficher les propriétés du modifieur de son de %s, le channel n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS</code>
+			<value>Propriétés du modifieur de son du channel %s :%n%s</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>
 			<value>Pour ajouter, supprimer ou mettre à jour les propriétés d'un joueur</value>
 		</message>

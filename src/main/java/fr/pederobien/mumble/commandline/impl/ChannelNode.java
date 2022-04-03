@@ -8,6 +8,7 @@ public class ChannelNode extends MumbleClientNode {
 	private ChannelAddNode addNode;
 	private ChannelRemoveNode removeNode;
 	private ChannelRenameNode renameNode;
+	private ChannelSoundModifierNode soundModifierNode;
 
 	/**
 	 * Creates a node that adds or removes channel from a mumble server.
@@ -20,6 +21,7 @@ public class ChannelNode extends MumbleClientNode {
 		add(addNode = new ChannelAddNode(server));
 		add(removeNode = new ChannelRemoveNode(server));
 		add(renameNode = new ChannelRenameNode(server));
+		add(soundModifierNode = new ChannelSoundModifierNode(server));
 	}
 
 	/**
@@ -41,5 +43,12 @@ public class ChannelNode extends MumbleClientNode {
 	 */
 	public ChannelRenameNode getRenameNode() {
 		return renameNode;
+	}
+
+	/**
+	 * @return The node that modifies the sound modifier of a channel or the parameters of a sound modifier.
+	 */
+	public ChannelSoundModifierNode getSoundModifierNode() {
+		return soundModifierNode;
 	}
 }
