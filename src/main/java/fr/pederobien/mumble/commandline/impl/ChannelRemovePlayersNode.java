@@ -12,16 +12,16 @@ import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
 
-public class ChannelsAddPlayersNode extends MumbleClientNode {
+public class ChannelRemovePlayersNode extends MumbleClientNode {
 	private int current;
 
 	/**
-	 * Creates a node in order to add players in a channel.
+	 * Creates a node that removes players from a channel.
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelsAddPlayersNode(Supplier<IMumbleServer> server) {
-		super(server, "players", EMumbleClientCode.MUMBLE__CHANNELS__ADD__PLAYERS__EXPLANATION, s -> s != null);
+	protected ChannelRemovePlayersNode(Supplier<IMumbleServer> server) {
+		super(server, "players", EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__EXPLANATION, s -> s != null);
 	}
 
 	@Override
@@ -47,12 +47,12 @@ public class ChannelsAddPlayersNode extends MumbleClientNode {
 		try {
 			Optional<IChannel> optChannel = getServer().getChannels().get(args[0]);
 			if (!optChannel.isPresent()) {
-				send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NOT_FOUND, args[0]);
+				send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NOT_FOUND, args[0]);
 				return false;
 			}
 			channel = optChannel.get();
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING);
+			send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NAME_IS_MISSING);
 			return false;
 		}
 
@@ -60,7 +60,7 @@ public class ChannelsAddPlayersNode extends MumbleClientNode {
 		for (String name : extract(args, 1)) {
 			Optional<IPlayer> optPlayer = getServer().getPlayers().get(name);
 			if (!optPlayer.isPresent()) {
-				send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__PLAYERS__PLAYER_NOT_FOUND, name);
+				send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__PLAYER_NOT_FOUND, name);
 				return false;
 			}
 
@@ -68,7 +68,7 @@ public class ChannelsAddPlayersNode extends MumbleClientNode {
 		}
 
 		if (players.isEmpty()) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__PLAYERS__NO_PLAYER_ADDED, channel.getName());
+			send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__NO_PLAYER_REMOVED, channel.getName());
 			return true;
 		}
 
@@ -82,10 +82,10 @@ public class ChannelsAddPlayersNode extends MumbleClientNode {
 				if (current == players.size()) {
 					switch (players.size()) {
 					case 1:
-						send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED, playerNames, channel.getName());
+						send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__ONE_PLAYER_REMOVED_REQUEST_SUCCEED, playerNames, channel.getName());
 						break;
 					default:
-						send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED, playerNames, channel.getName());
+						send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED, playerNames, channel.getName());
 						break;
 					}
 				}
@@ -93,7 +93,7 @@ public class ChannelsAddPlayersNode extends MumbleClientNode {
 		};
 
 		for (IPlayer player : players)
-			channel.getPlayers().add(player, update);
+			channel.getPlayers().remove(player, update);
 		return true;
 	}
 }

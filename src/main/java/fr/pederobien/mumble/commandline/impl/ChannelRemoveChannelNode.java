@@ -7,14 +7,14 @@ import java.util.function.Supplier;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
 
-public class ChannelsRemoveChannelNode extends MumbleClientNode {
+public class ChannelRemoveChannelNode extends MumbleClientNode {
 
 	/**
 	 * Creates a node that removes a channel from the server.
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelsRemoveChannelNode(Supplier<IMumbleServer> server) {
+	protected ChannelRemoveChannelNode(Supplier<IMumbleServer> server) {
 		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__CHANNEL__EXPLANATION, s -> s != null);
 	}
 

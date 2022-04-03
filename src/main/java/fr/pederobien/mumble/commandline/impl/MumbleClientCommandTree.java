@@ -16,7 +16,7 @@ public class MumbleClientCommandTree {
 	private ICommandRootNode<ICode> root;
 	private ConnectNode connectNode;
 	private DisconnectNode disconnectNode;
-	private ChannelsNode channelsNode;
+	private ChannelNode channelNode;
 	private PlayersNode playersNode;
 	private DetailsNode detailsNode;
 
@@ -31,7 +31,7 @@ public class MumbleClientCommandTree {
 
 		root.add(connectNode = new ConnectNode(this));
 		root.add(disconnectNode = new DisconnectNode(this));
-		root.add(channelsNode = new ChannelsNode(() -> getServer()));
+		root.add(channelNode = new ChannelNode(() -> getServer()));
 		root.add(playersNode = new PlayersNode(() -> getServer()));
 		root.add(detailsNode = new DetailsNode(() -> getServer()));
 	}
@@ -76,8 +76,8 @@ public class MumbleClientCommandTree {
 	/**
 	 * @return The node that adds or removes channels from a server.
 	 */
-	public ChannelsNode getChannelsNode() {
-		return channelsNode;
+	public ChannelNode getChannelsNode() {
+		return channelNode;
 	}
 
 	/**

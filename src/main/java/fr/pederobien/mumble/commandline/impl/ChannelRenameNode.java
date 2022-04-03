@@ -10,14 +10,14 @@ import fr.pederobien.mumble.client.interfaces.IChannel;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
 
-public class ChannelsRenameNode extends MumbleClientNode {
+public class ChannelRenameNode extends MumbleClientNode {
 
 	/**
 	 * Creates a node in order to rename a channel.
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelsRenameNode(Supplier<IMumbleServer> server) {
+	protected ChannelRenameNode(Supplier<IMumbleServer> server) {
 		super(server, "rename", EMumbleClientCode.MUMBLE__CHANNELS__RENAME__EXPLANATION, s -> s != null);
 	}
 

@@ -11,14 +11,14 @@ import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
 import fr.pederobien.mumble.client.interfaces.ISoundModifier;
 
-public class ChannelsAddChannelNode extends MumbleClientNode {
+public class ChannelAddChannelNode extends MumbleClientNode {
 
 	/**
 	 * Creates a node to add a channel to a server.
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelsAddChannelNode(Supplier<IMumbleServer> server) {
+	protected ChannelAddChannelNode(Supplier<IMumbleServer> server) {
 		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION, s -> s != null);
 	}
 
