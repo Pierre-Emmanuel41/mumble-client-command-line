@@ -243,6 +243,50 @@
 			<value>Properties of channel %s's sound modifier:%n%s</value>
 		</message>
 		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION</code>
+			<value>To modify the properties of a sound modifier associated to a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__CHANNEL_NAME_IS_MISSING</code>
+			<value>Cannot modify the properties of a sound modifier, the channel name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__CHANNEL_NOT_FOUND</code>
+			<value>Cannot modify the properties of %s's sound modifier, the channel does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NAME_IS_MISSING</code>
+			<value>Cannot modify the properties of %s's sound modifier, the parameter name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NOT_FOUND</code>
+			<value>Cannot modify the parameter %s of %s's sound modifier, the parameter does not exist</value>
+		</message>
+		<message>
+			<code>PARAMETER__ROOT__EXPLANATION</code>
+			<value>To modify the properties of a parameter of a sound modifier associated to a channel</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__EXPLANATION</code>
+			<value>To modify the current value of a parameter</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__COMPLETION</code>
+			<value>&lt;value&gt;</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__VALUE_IS_MISSING</code>
+			<value>Cannot modify the value of %s, the new value is missing</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__VALUE_BAD_FORMAT</code>
+			<value>Cannot modify the value of %s, the new value has not the expected format</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__REQUEST_SUCCEED</code>
+			<value>The value of parameter %s of sound modifier %s associated to channel %s is now %s</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>
 			<value>To add, remove or update the properties of a player</value>
 		</message>

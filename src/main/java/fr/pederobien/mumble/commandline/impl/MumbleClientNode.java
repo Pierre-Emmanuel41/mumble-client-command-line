@@ -24,7 +24,7 @@ public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClien
 	 * @param isAvailable True if this node is available, false otherwise.
 	 */
 	protected MumbleClientNode(Supplier<IMumbleServer> server, String label, ICode explanation, Function<IMumbleServer, Boolean> isAvailable) {
-		super(label, explanation, () -> isAvailable.apply(server.get()));
+		super(label, explanation, () -> isAvailable.apply(server == null ? null : server.get()));
 		this.server = server;
 	}
 

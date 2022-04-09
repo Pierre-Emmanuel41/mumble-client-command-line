@@ -178,6 +178,39 @@ public enum EMumbleClientCode implements ICode {
 	// Code to display the properties of a sound modifier
 	MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS,
 
+	// Code for the "mumble channel soundModifier modify" command ----------------
+	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION,
+
+	// Code when the name of the channel is missing
+	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__CHANNEL_NAME_IS_MISSING,
+
+	// Code when the name of the channel does not exist
+	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__CHANNEL_NOT_FOUND,
+
+	// Code when the name of the channel is missing
+	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NAME_IS_MISSING,
+
+	// Code when the name of the channel does not exist
+	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NOT_FOUND,
+
+	// Code for the "parameter" command ------------------------------------------
+	PARAMETER__ROOT__EXPLANATION,
+
+	// Code for the "parameter value" command ------------------------------------
+	PARAMETER__VALUE__EXPLANATION,
+
+	// Code for the parameter value completion
+	PARAMETER__VALUE__COMPLETION,
+
+	// Code when the new parameter value is missing
+	PARAMETER__VALUE__VALUE_IS_MISSING,
+
+	// Code when the new parameter value has a bad format
+	PARAMETER__VALUE__VALUE_BAD_FORMAT,
+
+	// Code for the parameter value completion
+	PARAMETER__VALUE__REQUEST_SUCCEED,
+
 	// Code for the "mumble players" command -------------------------------------
 	MUMBLE__PLAYERS__EXPLANATION,
 

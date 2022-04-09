@@ -240,6 +240,50 @@
 			<value>Propriétés du modifieur de son du channel %s :%n%s</value>
 		</message>
 		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION</code>
+			<value>Pour modifier les propriétés d'un modifeur de son associé à un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__CHANNEL_NAME_IS_MISSING</code>
+			<value>Impossible de modifier les propriétés d'un modifieur de son, le nom du channel est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__CHANNEL_NOT_FOUND</code>
+			<value>Impossible de modifier les propriétés du modifieur de son de %s, le channel n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NAME_IS_MISSING</code>
+			<value>Impossible de modifier les propriétés du modifieur de son de %s, le nom du paramètre est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NOT_FOUND</code>
+			<value>Impossible de modifier le paramètre %s du modifieur de son de %s, le paramètre n'existe pas</value>
+		</message>
+		<message>
+			<code>PARAMETER__ROOT__EXPLANATION</code>
+			<value>Pour modifier les propriétés d'un paramètre d'un modifieur de son associé à un channel</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__EXPLANATION</code>
+			<value>Pour modifier la valeur du paramètre</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__COMPLETION</code>
+			<value>&lt;valeur&gt;</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__VALUE_IS_MISSING</code>
+			<value>Impossible de modifier la valeur de %s, la nouvelle valeur est manquante</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__VALUE_BAD_FORMAT</code>
+			<value>Impossible de modifier la valeur de %s, la nouvelle valeur n'a pas le format attendu</value>
+		</message>
+		<message>
+			<code>PARAMETER__VALUE__REQUEST_SUCCEED</code>
+			<value>La valeur du paramètre %s du modifieur de son %s associé au channel %s est maintenant %s</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>
 			<value>Pour ajouter, supprimer ou mettre à jour les propriétés d'un joueur</value>
 		</message>

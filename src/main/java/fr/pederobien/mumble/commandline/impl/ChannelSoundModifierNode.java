@@ -6,6 +6,7 @@ import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 
 public class ChannelSoundModifierNode extends MumbleClientNode {
 	private ChannelSoundModifierDetailsNode detailsNode;
+	private ChannelSoundModifierModifyNode modifyNode;
 
 	/**
 	 * Creates a node in order to modify the sound modifier of a channel or the parameters of a sound modifier.
@@ -16,6 +17,7 @@ public class ChannelSoundModifierNode extends MumbleClientNode {
 		super(server, "soundModifier", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__EXPLANATION, s -> s != null);
 
 		add(detailsNode = new ChannelSoundModifierDetailsNode(server));
+		add(modifyNode = new ChannelSoundModifierModifyNode(server));
 	}
 
 	/**
@@ -23,5 +25,12 @@ public class ChannelSoundModifierNode extends MumbleClientNode {
 	 */
 	public ChannelSoundModifierDetailsNode getDetailsNode() {
 		return detailsNode;
+	}
+
+	/**
+	 * @return The node that modify the properties of a sound modifier associated to a channel.
+	 */
+	public ChannelSoundModifierModifyNode getModifyNode() {
+		return modifyNode;
 	}
 }
