@@ -15,7 +15,7 @@ public class ChannelRemoveChannelNode extends MumbleClientNode {
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelRemoveChannelNode(Supplier<IMumbleServer> server) {
-		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__CHANNEL__EXPLANATION, s -> s != null);
+		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__CHANNEL__EXPLANATION, s -> s != null);
 	}
 
 	@Override
@@ -34,12 +34,12 @@ public class ChannelRemoveChannelNode extends MumbleClientNode {
 		try {
 			name = args[0];
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__CHANNEL__NAME_IS_MISSING, getServer().getName());
+			send(EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__CHANNEL__NAME_IS_MISSING, getServer().getName());
 			return false;
 		}
 
 		if (!getServer().getChannels().get(name).isPresent()) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__CHANNEL__CHANNEL_NOT_FOUND, name, getServer().getName());
+			send(EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__CHANNEL__CHANNEL_NOT_FOUND, name, getServer().getName());
 			return false;
 		}
 
@@ -47,7 +47,7 @@ public class ChannelRemoveChannelNode extends MumbleClientNode {
 			if (response.hasFailed())
 				send(EMumbleClientCode.MUMBLE__REQUEST_FAILED, response.getErrorCode().getMessage());
 			else
-				send(EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__CHANNEL__REQUEST_SUCCEED, name, getServer().getName());
+				send(EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__CHANNEL__REQUEST_SUCCEED, name, getServer().getName());
 		};
 		getServer().getChannels().remove(name, update);
 		return true;

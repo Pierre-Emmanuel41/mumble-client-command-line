@@ -14,7 +14,7 @@ public class ChannelRemoveNode extends MumbleClientNode {
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelRemoveNode(Supplier<IMumbleServer> server) {
-		super(server, "remove", EMumbleClientCode.MUMBLE__CHANNELS__REMOVE__EXPLANATION, s -> s != null);
+		super(server, "remove", EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__EXPLANATION, s -> s != null);
 
 		add(channelNode = new ChannelRemoveChannelNode(server));
 		add(playersNode = new ChannelRemovePlayersNode(server));

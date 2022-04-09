@@ -19,7 +19,7 @@ public class ChannelAddChannelNode extends MumbleClientNode {
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelAddChannelNode(Supplier<IMumbleServer> server) {
-		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION, s -> s != null);
+		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNEL__ADD__CHANNEL__EXPLANATION, s -> s != null);
 	}
 
 	@Override
@@ -42,12 +42,12 @@ public class ChannelAddChannelNode extends MumbleClientNode {
 		try {
 			name = args[0];
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__NAME_IS_MISSING, getServer().getName());
+			send(EMumbleClientCode.MUMBLE__CHANNEL__ADD__CHANNEL__NAME_IS_MISSING, getServer().getName());
 			return false;
 		}
 
 		if (getServer().getChannels().get(name).isPresent()) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED, name, getServer().getName());
+			send(EMumbleClientCode.MUMBLE__CHANNEL__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED, name, getServer().getName());
 			return false;
 		}
 
@@ -55,12 +55,12 @@ public class ChannelAddChannelNode extends MumbleClientNode {
 		try {
 			Optional<ISoundModifier> optModifier = getServer().getSoundModifierList().get(args[1]);
 			if (!optModifier.isPresent()) {
-				send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND, name, getServer().getName(), args[1]);
+				send(EMumbleClientCode.MUMBLE__CHANNEL__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND, name, getServer().getName(), args[1]);
 				return false;
 			}
 			soundModifier = optModifier.get();
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING, getServer().getName(), name);
+			send(EMumbleClientCode.MUMBLE__CHANNEL__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING, getServer().getName(), name);
 			return false;
 		}
 
@@ -68,7 +68,7 @@ public class ChannelAddChannelNode extends MumbleClientNode {
 			if (response.hasFailed())
 				send(EMumbleClientCode.MUMBLE__REQUEST_FAILED, response.getErrorCode().getMessage());
 			else
-				send(EMumbleClientCode.MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED, name, soundModifier.getName(), getServer().getName());
+				send(EMumbleClientCode.MUMBLE__CHANNEL__ADD__CHANNEL__REQUEST_SUCCEED, name, soundModifier.getName(), getServer().getName());
 		};
 		getServer().getChannels().add(name, soundModifier, update);
 		return true;

@@ -18,7 +18,7 @@ public class ChannelRenameNode extends MumbleClientNode {
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelRenameNode(Supplier<IMumbleServer> server) {
-		super(server, "rename", EMumbleClientCode.MUMBLE__CHANNELS__RENAME__EXPLANATION, s -> s != null);
+		super(server, "rename", EMumbleClientCode.MUMBLE__CHANNEL__RENAME__EXPLANATION, s -> s != null);
 	}
 
 	@Override
@@ -40,13 +40,13 @@ public class ChannelRenameNode extends MumbleClientNode {
 		try {
 			oldName = args[0];
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__RENAME__NAME_IS_MISSING);
+			send(EMumbleClientCode.MUMBLE__CHANNEL__RENAME__NAME_IS_MISSING);
 			return false;
 		}
 
 		Optional<IChannel> optOldChannel = getServer().getChannels().get(oldName);
 		if (!optOldChannel.isPresent()) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__RENAME__CHANNEL_NOT_FOUND, oldName);
+			send(EMumbleClientCode.MUMBLE__CHANNEL__RENAME__CHANNEL_NOT_FOUND, oldName);
 			return false;
 		}
 
@@ -54,13 +54,13 @@ public class ChannelRenameNode extends MumbleClientNode {
 		try {
 			newName = args[1];
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__RENAME__NEW_NAME_IS_MISSING, oldName);
+			send(EMumbleClientCode.MUMBLE__CHANNEL__RENAME__NEW_NAME_IS_MISSING, oldName);
 			return false;
 		}
 
 		Optional<IChannel> optNewChannel = getServer().getChannels().get(newName);
 		if (optNewChannel.isPresent()) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__RENAME__CHANNEL_ALREADY_REGISTERED, oldName, newName);
+			send(EMumbleClientCode.MUMBLE__CHANNEL__RENAME__CHANNEL_ALREADY_REGISTERED, oldName, newName);
 			return false;
 		}
 
@@ -68,7 +68,7 @@ public class ChannelRenameNode extends MumbleClientNode {
 			if (response.hasFailed())
 				send(EMumbleClientCode.MUMBLE__REQUEST_FAILED, response.getErrorCode().getMessage());
 			else
-				send(EMumbleClientCode.MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED, oldName, newName);
+				send(EMumbleClientCode.MUMBLE__CHANNEL__RENAME__REQUEST_SUCCEED, oldName, newName);
 		};
 		optOldChannel.get().setName(newName, update);
 		return true;

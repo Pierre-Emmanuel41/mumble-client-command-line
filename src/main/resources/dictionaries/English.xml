@@ -91,155 +91,155 @@
 			<value>The connection with %s:%s has been aborted</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__EXPLANATION</code>
 			<value>To add or remove channels from a server</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__ADD__EXPLANATION</code>
 			<value>To add a channel to a server or players to a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__ADD__CHANNEL__EXPLANATION</code>
 			<value>To add a channel to a server</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL__NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__ADD__CHANNEL__NAME_IS_MISSING</code>
 			<value>Cannot add a channel to %s, the channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED</code>
+			<code>MUMBLE__CHANNEL__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED</code>
 			<value>Cannot add channel %s to %s, the channel is already registered</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING</code>
 			<value>Cannot add channel %s to %s, the sound modifier name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND</code>
 			<value>Cannot add channel %s to %s, the sound modifier %s does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNEL__ADD__CHANNEL__REQUEST_SUCCEED</code>
 			<value>The channel %s with modifier %s has been added to %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__PLAYERS__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__ADD__PLAYERS__EXPLANATION</code>
 			<value>To add players to a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING</code>
 			<value>Cannot add players to a channel, the channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__ADD__PLAYERS__CHANNEL_NOT_FOUND</code>
 			<value>Cannot add players to %s, the channel does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__PLAYERS__PLAYER_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__ADD__PLAYERS__PLAYER_NOT_FOUND</code>
 			<value>Cannot add %s to %s, the player does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__PLAYERS__NO_PLAYER_ADDED</code>
+			<code>MUMBLE__CHANNEL__ADD__PLAYERS__NO_PLAYER_ADDED</code>
 			<value>No player has been added to %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNEL__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED</code>
 			<value>%s has been added to %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNEL__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED</code>
 			<value>Players %s have been added to %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__REMOVE__EXPLANATION</code>
 			<value>To remove a channel from a server or players from a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__REMOVE__CHANNEL__EXPLANATION</code>
 			<value>To remove a channel from a server</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__REMOVE__CHANNEL__NAME_IS_MISSING</code>
 			<value>Cannot remove a channel from %s, the channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__CHANNEL_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__REMOVE__CHANNEL__CHANNEL_NOT_FOUND</code>
 			<value>Cannot remove a channel %s from %s, the channel does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__CHANNEL__REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNEL__REMOVE__CHANNEL__REQUEST_SUCCEED</code>
 			<value>The channel %s has been removed from %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__REMOVE__PLAYERS__EXPLANATION</code>
 			<value>To remove players from a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__REMOVE__PLAYERS__CHANNEL_NAME_IS_MISSING</code>
 			<value>Cannot remove players from a channel, the channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__REMOVE__PLAYERS__CHANNEL_NOT_FOUND</code>
 			<value>Cannot remove players from %s, the channel does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__PLAYER_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__REMOVE__PLAYERS__PLAYER_NOT_FOUND</code>
 			<value>Cannot remove %s from %s, the player does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__NO_PLAYER_REMOVED</code>
+			<code>MUMBLE__CHANNEL__REMOVE__PLAYERS__NO_PLAYER_REMOVED</code>
 			<value>No player has been removed from %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__ONE_PLAYER_REMOVED_REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNEL__REMOVE__PLAYERS__ONE_PLAYER_REMOVED_REQUEST_SUCCEED</code>
 			<value>%s has been removed from %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNEL__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED</code>
 			<value>Players %s have been removed from %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__RENAME__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__RENAME__EXPLANATION</code>
 			<value>To rename a channel on the server</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__RENAME__NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__RENAME__NAME_IS_MISSING</code>
 			<value>Cannot rename a channel, the channel to rename is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__RENAME__CHANNEL_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__RENAME__CHANNEL_NOT_FOUND</code>
 			<value>Cannot rename channel %s, the channel does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__RENAME__NEW_NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__RENAME__NEW_NAME_IS_MISSING</code>
 			<value>Cannot rename channel %s, the new channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__RENAME__CHANNEL_ALREADY_REGISTERED</code>
+			<code>MUMBLE__CHANNEL__RENAME__CHANNEL_ALREADY_REGISTERED</code>
 			<value>Cannot rename %s as %s, the channel is already registered</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED</code>
+			<code>MUMBLE__CHANNEL__RENAME__REQUEST_SUCCEED</code>
 			<value>The channel %s has been renamed as %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__EXPLANATION</code>
 			<value>To modify the sound modifier of a channel or the parameters of a sound modifier</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__EXPLANATION</code>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__EXPLANATION</code>
 			<value>To display the property of the sound modifier associated to a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING</code>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING</code>
 			<value>Cannot display the property of a sound modifier, the channel name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND</code>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND</code>
 			<value>Cannot display the property of %s's sound modifier, the channel does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS</code>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS</code>
 			<value>Properties of channel %s's sound modifier:%n%s</value>
 		</message>
 		<message>

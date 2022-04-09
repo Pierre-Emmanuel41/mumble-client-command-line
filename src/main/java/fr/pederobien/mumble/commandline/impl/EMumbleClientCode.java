@@ -64,119 +64,119 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the connection is aborted
 	MUMBLE__DISCONNECT__CONNECTION_ABORTED,
 
-	// Code for the "mumble channels" command ------------------------------------
-	MUMBLE__CHANNELS__EXPLANATION,
+	// Code for the "mumble channel" command ------------------------------------
+	MUMBLE__CHANNEL__EXPLANATION,
 
-	// Code for the "mumble channels add" command --------------------------------
-	MUMBLE__CHANNELS__ADD__EXPLANATION,
+	// Code for the "mumble channel add" command --------------------------------
+	MUMBLE__CHANNEL__ADD__EXPLANATION,
 
-	// Code for the "mumble channels add channel" command ------------------------
-	MUMBLE__CHANNELS__ADD__CHANNEL__EXPLANATION,
+	// Code for the "mumble channel add channels" command ------------------------
+	MUMBLE__CHANNEL__ADD__CHANNEL__EXPLANATION,
 
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__ADD__CHANNEL__NAME_IS_MISSING,
+	MUMBLE__CHANNEL__ADD__CHANNEL__NAME_IS_MISSING,
 
 	// Code when the channel is already registered
-	MUMBLE__CHANNELS__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED,
+	MUMBLE__CHANNEL__ADD__CHANNEL__CHANNEL_ALREADY_REGISTERED,
 
 	// Code when the sound modifier name is missing
-	MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING,
+	MUMBLE__CHANNEL__ADD__CHANNEL__SOUND_MODIFIER_IS_MISSING,
 
 	// Code when the sound modifier does not exist
-	MUMBLE__CHANNELS__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND,
+	MUMBLE__CHANNEL__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND,
 
 	// Code when the channel has been added on the remote
-	MUMBLE__CHANNELS__ADD__CHANNEL__REQUEST_SUCCEED,
+	MUMBLE__CHANNEL__ADD__CHANNEL__REQUEST_SUCCEED,
 
-	// Code for the "mumble channels add players" command ------------------------
-	MUMBLE__CHANNELS__ADD__PLAYERS__EXPLANATION,
+	// Code for the "mumble channel add players" command ------------------------
+	MUMBLE__CHANNEL__ADD__PLAYERS__EXPLANATION,
 
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING,
+	MUMBLE__CHANNEL__ADD__PLAYERS__CHANNEL_NAME_IS_MISSING,
 
 	// Code when the channel does not exist
-	MUMBLE__CHANNELS__ADD__PLAYERS__CHANNEL_NOT_FOUND,
+	MUMBLE__CHANNEL__ADD__PLAYERS__CHANNEL_NOT_FOUND,
 
 	// Code when the player does not exist
-	MUMBLE__CHANNELS__ADD__PLAYERS__PLAYER_NOT_FOUND,
+	MUMBLE__CHANNEL__ADD__PLAYERS__PLAYER_NOT_FOUND,
 
 	// Code when no player has been added
-	MUMBLE__CHANNELS__ADD__PLAYERS__NO_PLAYER_ADDED,
+	MUMBLE__CHANNEL__ADD__PLAYERS__NO_PLAYER_ADDED,
 
 	// Code when one player has been added
-	MUMBLE__CHANNELS__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED,
+	MUMBLE__CHANNEL__ADD__PLAYERS__ONE_PLAYER_ADDED_REQUEST_SUCCEED,
 
 	// Code when several players has been added
-	MUMBLE__CHANNELS__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED,
+	MUMBLE__CHANNEL__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED,
 
-	// Code for the "mumble channels remove" command -----------------------------
-	MUMBLE__CHANNELS__REMOVE__EXPLANATION,
+	// Code for the "mumble channel remove" command -----------------------------
+	MUMBLE__CHANNEL__REMOVE__EXPLANATION,
 
-	// Code for the "mumble channels remove channel" command ---------------------
-	MUMBLE__CHANNELS__REMOVE__CHANNEL__EXPLANATION,
-
-	// Code when the channel name is missing
-	MUMBLE__CHANNELS__REMOVE__CHANNEL__NAME_IS_MISSING,
+	// Code for the "mumble channel remove channel" command ---------------------
+	MUMBLE__CHANNEL__REMOVE__CHANNEL__EXPLANATION,
 
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__REMOVE__CHANNEL__CHANNEL_NOT_FOUND,
+	MUMBLE__CHANNEL__REMOVE__CHANNEL__NAME_IS_MISSING,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNEL__REMOVE__CHANNEL__CHANNEL_NOT_FOUND,
 
 	// Code when the channel has been removed from the remote
-	MUMBLE__CHANNELS__REMOVE__CHANNEL__REQUEST_SUCCEED,
+	MUMBLE__CHANNEL__REMOVE__CHANNEL__REQUEST_SUCCEED,
 
-	// Code for the "mumble channels remove channel" command ---------------------
-	MUMBLE__CHANNELS__REMOVE__PLAYERS__EXPLANATION,
+	// Code for the "mumble channel remove channels" command ---------------------
+	MUMBLE__CHANNEL__REMOVE__PLAYERS__EXPLANATION,
 
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NAME_IS_MISSING,
+	MUMBLE__CHANNEL__REMOVE__PLAYERS__CHANNEL_NAME_IS_MISSING,
 
 	// Code when the channel does not exist
-	MUMBLE__CHANNELS__REMOVE__PLAYERS__CHANNEL_NOT_FOUND,
+	MUMBLE__CHANNEL__REMOVE__PLAYERS__CHANNEL_NOT_FOUND,
 
 	// Code when the player does not exist
-	MUMBLE__CHANNELS__REMOVE__PLAYERS__PLAYER_NOT_FOUND,
+	MUMBLE__CHANNEL__REMOVE__PLAYERS__PLAYER_NOT_FOUND,
 
 	// Code when no player has been removed
-	MUMBLE__CHANNELS__REMOVE__PLAYERS__NO_PLAYER_REMOVED,
+	MUMBLE__CHANNEL__REMOVE__PLAYERS__NO_PLAYER_REMOVED,
 
 	// Code when one player has been removed
-	MUMBLE__CHANNELS__REMOVE__PLAYERS__ONE_PLAYER_REMOVED_REQUEST_SUCCEED,
+	MUMBLE__CHANNEL__REMOVE__PLAYERS__ONE_PLAYER_REMOVED_REQUEST_SUCCEED,
 
 	// Code when several players has been removed
-	MUMBLE__CHANNELS__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED,
+	MUMBLE__CHANNEL__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED,
 
-	// Code for the "mumble channels rename" command -----------------------------
-	MUMBLE__CHANNELS__RENAME__EXPLANATION,
+	// Code for the "mumble channel rename" command -----------------------------
+	MUMBLE__CHANNEL__RENAME__EXPLANATION,
 
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__RENAME__NAME_IS_MISSING,
+	MUMBLE__CHANNEL__RENAME__NAME_IS_MISSING,
 
 	// Code when the channel does not exist
-	MUMBLE__CHANNELS__RENAME__CHANNEL_NOT_FOUND,
+	MUMBLE__CHANNEL__RENAME__CHANNEL_NOT_FOUND,
 
 	// Code when the new channel name is missing
-	MUMBLE__CHANNELS__RENAME__NEW_NAME_IS_MISSING,
+	MUMBLE__CHANNEL__RENAME__NEW_NAME_IS_MISSING,
 
 	// Code when the channel is already registered
-	MUMBLE__CHANNELS__RENAME__CHANNEL_ALREADY_REGISTERED,
+	MUMBLE__CHANNEL__RENAME__CHANNEL_ALREADY_REGISTERED,
 
 	// Code when the channel has been renamed on the remote
-	MUMBLE__CHANNELS__RENAME__REQUEST_SUCCEED,
+	MUMBLE__CHANNEL__RENAME__REQUEST_SUCCEED,
 
-	// Code for the "mumble channels soundModifier" command ----------------------
-	MUMBLE__CHANNELS__SOUND_MODIFIER__EXPLANATION,
+	// Code for the "mumble channel soundModifier" command ----------------------
+	MUMBLE__CHANNEL__SOUND_MODIFIER__EXPLANATION,
 
-	// Code for the "mumble channels soundModifier details" command --------------
-	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__EXPLANATION,
+	// Code for the "mumble channel soundModifier details" command --------------
+	MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__EXPLANATION,
 
 	// Code when the channel name is missing
-	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING,
+	MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING,
 
 	// Code when the channel does not exist
-	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND,
+	MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND,
 
 	// Code to display the properties of a sound modifier
-	MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS,
+	MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS,
 
 	// Code for the "mumble players" command -------------------------------------
 	MUMBLE__PLAYERS__EXPLANATION,
@@ -445,7 +445,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is undeafen
 	MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED,
 
-	// Code for the "mumble channels kick" command -------------------------------
+	// Code for the "mumble players kick" command -------------------------------
 	MUMBLE__PLAYERS__KICK__EXPLANATION,
 
 	// Code when name of the player to kick is missing
@@ -469,7 +469,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when a player has been kicked from a channel
 	MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED,
 
-	// Code for the "mumble channels position" command ---------------------------
+	// Code for the "mumble players position" command ---------------------------
 	MUMBLE__PLAYERS__POSITION__EXPLANATION,
 
 	// Code for the X coordinate completion,

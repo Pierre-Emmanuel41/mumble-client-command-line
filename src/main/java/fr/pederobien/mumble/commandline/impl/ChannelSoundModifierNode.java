@@ -13,7 +13,7 @@ public class ChannelSoundModifierNode extends MumbleClientNode {
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelSoundModifierNode(Supplier<IMumbleServer> server) {
-		super(server, "soundModifier", EMumbleClientCode.MUMBLE__CHANNELS__SOUND_MODIFIER__EXPLANATION, s -> s != null);
+		super(server, "soundModifier", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__EXPLANATION, s -> s != null);
 
 		add(detailsNode = new ChannelSoundModifierDetailsNode(server));
 	}

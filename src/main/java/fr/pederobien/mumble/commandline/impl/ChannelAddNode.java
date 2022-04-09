@@ -14,7 +14,7 @@ public class ChannelAddNode extends MumbleClientNode {
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelAddNode(Supplier<IMumbleServer> server) {
-		super(server, "add", EMumbleClientCode.MUMBLE__CHANNELS__ADD__EXPLANATION, s -> s != null);
+		super(server, "add", EMumbleClientCode.MUMBLE__CHANNEL__ADD__EXPLANATION, s -> s != null);
 
 		add(channelNode = new ChannelAddChannelNode(server));
 		add(playersNode = new ChannelAddPlayersNode(server));

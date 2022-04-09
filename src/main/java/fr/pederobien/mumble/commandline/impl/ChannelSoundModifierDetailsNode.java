@@ -18,7 +18,7 @@ public class ChannelSoundModifierDetailsNode extends MumbleClientNode {
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelSoundModifierDetailsNode(Supplier<IMumbleServer> server) {
-		super(server, "details", EMumbleClientCode.MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__EXPLANATION, s -> s != null);
+		super(server, "details", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__EXPLANATION, s -> s != null);
 	}
 
 	@Override
@@ -32,13 +32,13 @@ public class ChannelSoundModifierDetailsNode extends MumbleClientNode {
 		try {
 			Optional<IChannel> optChannel = getServer().getChannels().get(args[0]);
 			if (!optChannel.isPresent()) {
-				send(EMumbleClientCode.MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND, args[0]);
+				send(EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__CHANNEL_NOT_FOUND, args[0]);
 				return false;
 			}
 
 			channel = optChannel.get();
 		} catch (IndexOutOfBoundsException e) {
-			send(EMumbleClientCode.MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING);
+			send(EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__CHANNEL_NAME_IS_MISSING);
 			return false;
 		}
 
@@ -83,7 +83,7 @@ public class ChannelSoundModifierDetailsNode extends MumbleClientNode {
 				modifierJoiner.add("");
 		}
 
-		send(EMumbleClientCode.MUMBLE__CHANNELS__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS, channel.getName(), modifierJoiner);
+		send(EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS, channel.getName(), modifierJoiner);
 		return true;
 	}
 }
