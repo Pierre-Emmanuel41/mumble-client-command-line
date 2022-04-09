@@ -10,6 +10,7 @@ import fr.pederobien.mumble.client.interfaces.IChannel;
 import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IParameter;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
+import fr.pederobien.mumble.client.interfaces.IRangeParameter;
 import fr.pederobien.mumble.client.interfaces.ISoundModifier;
 
 public class DetailsNode extends MumbleClientNode {
@@ -83,7 +84,7 @@ public class DetailsNode extends MumbleClientNode {
 					String parameterDefaultValue = getMessage(EMumbleClientCode.MUMBLE__DETAILS__PARAMETER_DEFAULT_VALUE, parameter.getDefaultValue());
 					serverJoiner.add(parameterTabulations.concat(parameterDefaultValue));
 
-					if (parameter instanceof RangeParameter<?>) {
+					if (parameter instanceof IRangeParameter<?>) {
 						// Parameter's minimum value
 						String parameterMinValue = getMessage(EMumbleClientCode.MUMBLE__DETAILS__PARAMETER_MINIMUM_VALUE, ((RangeParameter<?>) parameter).getMin());
 						serverJoiner.add(parameterTabulations.concat(parameterMinValue));
@@ -218,6 +219,8 @@ public class DetailsNode extends MumbleClientNode {
 				serverJoiner.add(modifierTabulations.concat(parameters));
 
 				String parameterTabulations = tabulations.concat(modifierTabulations);
+				int parameterCounter = 0;
+				int parameterSize = channel.getSoundModifier().getParameters().toList().size();
 				for (IParameter<?> parameter : channel.getSoundModifier().getParameters()) {
 					// Parameter's name
 					String parameterName = getMessage(EMumbleClientCode.MUMBLE__DETAILS__PARAMETER_NAME, parameter.getName());
@@ -226,6 +229,20 @@ public class DetailsNode extends MumbleClientNode {
 					// Parameter's value
 					String parameterValue = getMessage(EMumbleClientCode.MUMBLE__DETAILS__PARAMETER_VALUE, parameter.getValue());
 					serverJoiner.add(parameterTabulations.concat(parameterValue));
+
+					if (parameter instanceof IRangeParameter<?>) {
+						// Parameter's minimum value
+						String parameterMinValue = getMessage(EMumbleClientCode.MUMBLE__DETAILS__PARAMETER_MINIMUM_VALUE, ((RangeParameter<?>) parameter).getMin());
+						serverJoiner.add(parameterTabulations.concat(parameterMinValue));
+
+						// Parameter's maximum value
+						String parameterMaxValue = getMessage(EMumbleClientCode.MUMBLE__DETAILS__PARAMETER_MAXIMUM_VALUE, ((RangeParameter<?>) parameter).getMax());
+						serverJoiner.add(parameterTabulations.concat(parameterMaxValue));
+					}
+
+					parameterCounter++;
+					if (parameterCounter < parameterSize)
+						serverJoiner.add("");
 				}
 
 				// Server's players
