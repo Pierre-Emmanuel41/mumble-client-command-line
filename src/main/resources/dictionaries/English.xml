@@ -311,6 +311,26 @@
 			<value>The minimum value of parameter %s of sound modifier %s associated to channel %s is now %s</value>
 		</message>
 		<message>
+			<code>PARAMETER__MAX_VALUE__EXPLANATION</code>
+			<value>To modify the current maximum value of a parameter</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__COMPLETION</code>
+			<value>&lt;maxValue&gt;</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__VALUE_IS_MISSING</code>
+			<value>Cannot modify the maximum value of %s, the new maximum value is missing</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__VALUE_BAD_FORMAT</code>
+			<value>Cannot modify the maximum value of %s, the new maximum value has not the expected format</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__REQUEST_SUCCEED</code>
+			<value>The maximum value of parameter %s of sound modifier %s associated to channel %s is now %s</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>
 			<value>To add, remove or update the properties of a player</value>
 		</message>

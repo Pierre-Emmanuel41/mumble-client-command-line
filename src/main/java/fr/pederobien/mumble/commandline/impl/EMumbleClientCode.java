@@ -229,6 +229,21 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the parameter minimum value has been updated on the server
 	PARAMETER__MIN_VALUE__REQUEST_SUCCEED,
 
+	// Code for the "parameter maxValue" command ---------------------------------
+	PARAMETER__MAX_VALUE__EXPLANATION,
+
+	// Code for the parameter maximum value completion
+	PARAMETER__MAX_VALUE__COMPLETION,
+
+	// Code when the new parameter maximum value is missing
+	PARAMETER__MAX_VALUE__VALUE_IS_MISSING,
+
+	// Code when the new parameter maximum value has a bad format
+	PARAMETER__MAX_VALUE__VALUE_BAD_FORMAT,
+
+	// Code when the parameter maximum value has been updated on the server
+	PARAMETER__MAX_VALUE__REQUEST_SUCCEED,
+
 	// Code for the "mumble players" command -------------------------------------
 	MUMBLE__PLAYERS__EXPLANATION,
 

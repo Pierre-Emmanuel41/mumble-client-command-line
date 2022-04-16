@@ -308,6 +308,26 @@
 			<value>La valeur minimum du paramètre %s du modifieur de son %s associé au channel %s est maintenant %s</value>
 		</message>
 		<message>
+			<code>PARAMETER__MAX_VALUE__EXPLANATION</code>
+			<value>Pour modifier la valeur maximum d'un paramètre</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__COMPLETION</code>
+			<value>&lt;valeur maximum&gt;</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__VALUE_IS_MISSING</code>
+			<value>Impossible de modifier la valeur maximum de %s, la nouvelle valeur maximum est manquante</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__VALUE_BAD_FORMAT</code>
+			<value>Impossible de modifier la valeur maximum de %s, la nouvelle valeur maximum n'a pas le format attendu</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__REQUEST_SUCCEED</code>
+			<value>La valeur maximum du paramètre %s du modifieur de son %s associé au channel %s est maintenant %s</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>
 			<value>Pour ajouter, supprimer ou mettre à jour les propriétés d'un joueur</value>
 		</message>
