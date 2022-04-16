@@ -283,8 +283,32 @@
 			<value>Cannot modify the value of %s, the new value has not the expected format</value>
 		</message>
 		<message>
+			<code>PARAMETER__VALUE__VALUE_OUT_OF_RANGE</code>
+			<value>Cannot modify the value of %s, the new value should be in range [%s:%s]</value>
+		</message>
+		<message>
 			<code>PARAMETER__VALUE__REQUEST_SUCCEED</code>
 			<value>The value of parameter %s of sound modifier %s associated to channel %s is now %s</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__EXPLANATION</code>
+			<value>To modify the current minimum value of a parameter</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__COMPLETION</code>
+			<value>&lt;minValue&gt;</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__VALUE_IS_MISSING</code>
+			<value>Cannot modify the minimum value of %s, the new minimum value is missing</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__VALUE_BAD_FORMAT</code>
+			<value>Cannot modify the minimum value of %s, the new minimum value has not the expected format</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__REQUEST_SUCCEED</code>
+			<value>The minimum value of parameter %s of sound modifier %s associated to channel %s is now %s</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>

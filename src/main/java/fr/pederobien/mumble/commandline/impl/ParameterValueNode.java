@@ -51,7 +51,13 @@ public class ParameterValueNode extends ParameterNode {
 			else
 				send(EMumbleClientCode.PARAMETER__VALUE__REQUEST_SUCCEED, getParameter().getName(), soundModifier.getName(), channel.getName(), value);
 		};
-		getParameter().setValue(value, update);
+
+		try {
+			getParameter().setValue(value, update);
+		} catch (IllegalArgumentException e) {
+			// When the parameter as a range
+			send(EMumbleClientCode.PARAMETER__VALUE__VALUE_OUT_OF_RANGE, getRangeParameter().getMin(), getRangeParameter().getMax());
+		}
 		return true;
 	}
 }

@@ -4,6 +4,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 import fr.pederobien.mumble.client.interfaces.IParameter;
+import fr.pederobien.mumble.client.interfaces.IRangeParameter;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
 
 public class ParameterNode extends MumbleClientNode {
@@ -27,5 +28,12 @@ public class ParameterNode extends MumbleClientNode {
 	 */
 	public IParameter<?> getParameter() {
 		return parameter.get();
+	}
+
+	/**
+	 * @return The parameter associated to this node.
+	 */
+	public IRangeParameter<?> getRangeParameter() {
+		return parameter.get() instanceof IRangeParameter<?> ? (IRangeParameter<?>) parameter.get() : null;
 	}
 }

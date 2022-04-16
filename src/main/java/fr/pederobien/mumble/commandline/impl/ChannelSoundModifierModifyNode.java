@@ -20,7 +20,7 @@ public class ChannelSoundModifierModifyNode extends MumbleClientNode {
 		super(server, "modify", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION, s -> s != null);
 
 		parameterTree = new ParameterCommandTree();
-		add(parameterTree.getValueNode());
+		parameterTree.getRoot().export(this);
 	}
 
 	@Override

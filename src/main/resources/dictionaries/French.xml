@@ -265,7 +265,7 @@
 		</message>
 		<message>
 			<code>PARAMETER__VALUE__EXPLANATION</code>
-			<value>Pour modifier la valeur du paramètre</value>
+			<value>Pour modifier la valeur d'un paramètre</value>
 		</message>
 		<message>
 			<code>PARAMETER__VALUE__COMPLETION</code>
@@ -280,8 +280,32 @@
 			<value>Impossible de modifier la valeur de %s, la nouvelle valeur n'a pas le format attendu</value>
 		</message>
 		<message>
+			<code>PARAMETER__VALUE__VALUE_OUT_OF_RANGE</code>
+			<value>Impossible de modifier la valeur de %s, la nouvelle valeur doit être dans l'intervalle [%s:%s]</value>
+		</message>
+		<message>
 			<code>PARAMETER__VALUE__REQUEST_SUCCEED</code>
 			<value>La valeur du paramètre %s du modifieur de son %s associé au channel %s est maintenant %s</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__EXPLANATION</code>
+			<value>Pour modifier la valeur minimum d'un paramètre</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__COMPLETION</code>
+			<value>&lt;valeur minimum&gt;</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__VALUE_IS_MISSING</code>
+			<value>Impossible de modifier la valeur minimum de %s, la nouvelle valeur minimum est manquante</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__VALUE_BAD_FORMAT</code>
+			<value>Impossible de modifier la valeur minimum de %s, la nouvelle valeur minimum n'a pas le format attendu</value>
+		</message>
+		<message>
+			<code>PARAMETER__MIN_VALUE__REQUEST_SUCCEED</code>
+			<value>La valeur minimum du paramètre %s du modifieur de son %s associé au channel %s est maintenant %s</value>
 		</message>
 		<message>
 			<code>MUMBLE__PLAYERS__EXPLANATION</code>

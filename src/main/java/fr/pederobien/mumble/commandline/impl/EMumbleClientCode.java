@@ -208,8 +208,26 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the new parameter value has a bad format
 	PARAMETER__VALUE__VALUE_BAD_FORMAT,
 
-	// Code for the parameter value completion
+	// Code when the new parameter value has a bad format
+	PARAMETER__VALUE__VALUE_OUT_OF_RANGE,
+
+	// Code when the parameter value has been updated on the server
 	PARAMETER__VALUE__REQUEST_SUCCEED,
+
+	// Code for the "parameter minValue" command ---------------------------------
+	PARAMETER__MIN_VALUE__EXPLANATION,
+
+	// Code for the parameter minimum value completion
+	PARAMETER__MIN_VALUE__COMPLETION,
+
+	// Code when the new parameter minimum value is missing
+	PARAMETER__MIN_VALUE__VALUE_IS_MISSING,
+
+	// Code when the new parameter minimum value has a bad format
+	PARAMETER__MIN_VALUE__VALUE_BAD_FORMAT,
+
+	// Code when the parameter minimum value has been updated on the server
+	PARAMETER__MIN_VALUE__REQUEST_SUCCEED,
 
 	// Code for the "mumble players" command -------------------------------------
 	MUMBLE__PLAYERS__EXPLANATION,

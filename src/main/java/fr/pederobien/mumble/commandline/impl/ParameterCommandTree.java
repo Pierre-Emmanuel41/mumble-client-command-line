@@ -15,6 +15,7 @@ public class ParameterCommandTree {
 	private IParameter<?> parameter;
 	private ICommandRootNode<ICode> root;
 	private ParameterValueNode valueNode;
+	private ParameterMinValueNode minValueNode;
 
 	public ParameterCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
@@ -25,6 +26,7 @@ public class ParameterCommandTree {
 
 		root = new CommandRootNode<ICode>("parameter", EMumbleClientCode.PARAMETER__ROOT__EXPLANATION, () -> true, displayer);
 		root.add(valueNode = new ParameterValueNode(() -> getParameter()));
+		root.add(minValueNode = new ParameterMinValueNode(() -> getParameter()));
 	}
 
 	/**
@@ -55,5 +57,9 @@ public class ParameterCommandTree {
 	 */
 	public ParameterValueNode getValueNode() {
 		return valueNode;
+	}
+
+	public ParameterMinValueNode getMinValueNode() {
+		return minValueNode;
 	}
 }
