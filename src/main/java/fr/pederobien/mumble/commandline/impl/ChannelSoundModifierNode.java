@@ -7,6 +7,7 @@ import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 public class ChannelSoundModifierNode extends MumbleClientNode {
 	private ChannelSoundModifierDetailsNode detailsNode;
 	private ChannelSoundModifierModifyNode modifyNode;
+	private ChannelSoundModifierSetNode setNode;
 
 	/**
 	 * Creates a node in order to modify the sound modifier of a channel or the parameters of a sound modifier.
@@ -18,6 +19,7 @@ public class ChannelSoundModifierNode extends MumbleClientNode {
 
 		add(detailsNode = new ChannelSoundModifierDetailsNode(server));
 		add(modifyNode = new ChannelSoundModifierModifyNode(server));
+		add(setNode = new ChannelSoundModifierSetNode(server));
 	}
 
 	/**
@@ -32,5 +34,12 @@ public class ChannelSoundModifierNode extends MumbleClientNode {
 	 */
 	public ChannelSoundModifierModifyNode getModifyNode() {
 		return modifyNode;
+	}
+
+	/**
+	 * @return The node that set the sound modifier of a channel.
+	 */
+	public ChannelSoundModifierSetNode getSetNode() {
+		return setNode;
 	}
 }

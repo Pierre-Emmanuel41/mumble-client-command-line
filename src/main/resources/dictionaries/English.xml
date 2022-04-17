@@ -263,6 +263,30 @@
 			<value>Cannot modify the parameter %s of %s's sound modifier, the parameter does not exist</value>
 		</message>
 		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__EXPLANATION</code>
+			<value>To set the sound modifier of a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__CHANNEL_NAME_IS_MISSING</code>
+			<value>Cannot set the sound modifier of a channel, the channel name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__CHANNEL_NOT_FOUND</code>
+			<value>Cannot set the sound modifier of %s, the channel does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__SOUND_MODIFIER_NAME_IS_MISSING</code>
+			<value>Cannot set the sound modifier of %s, the sound modifier name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__SOUND_MODIFIER_NOT_FOUND</code>
+			<value>Cannot set %s as %s's sound modifier, the sound modifier does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__REQUEST_SUCCEED</code>
+			<value>The sound modifier of the %s channel is now %s</value>
+		</message>
+		<message>
 			<code>PARAMETER__ROOT__EXPLANATION</code>
 			<value>To modify the properties of a parameter of a sound modifier associated to a channel</value>
 		</message>

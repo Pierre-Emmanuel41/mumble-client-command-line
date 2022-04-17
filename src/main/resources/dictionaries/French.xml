@@ -260,6 +260,30 @@
 			<value>Impossible de modifier le paramètre %s du modifieur de son de %s, le paramètre n'existe pas</value>
 		</message>
 		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__EXPLANATION</code>
+			<value>Pour définir le modifieur de son d'un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__CHANNEL_NAME_IS_MISSING</code>
+			<value>Impossible de définir le modifieur de son d'un channel, le nom du channel est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__CHANNEL_NOT_FOUND</code>
+			<value>Impossible de définir le modifieur de son de %s, le channel n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__SOUND_MODIFIER_NAME_IS_MISSING</code>
+			<value>Impossible de définir le modifieur de son de %s, le nom du modifier de son est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__SOUND_MODIFIER_NOT_FOUND</code>
+			<value>Impossible de définir %s en tant que modifieur de son de %s, le modifieur de son n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__REQUEST_SUCCEED</code>
+			<value>Le modifieur de son du channel %s est désormais %s</value>
+		</message>
+		<message>
 			<code>PARAMETER__ROOT__EXPLANATION</code>
 			<value>Pour modifier les propriétés d'un paramètre d'un modifieur de son associé à un channel</value>
 		</message>

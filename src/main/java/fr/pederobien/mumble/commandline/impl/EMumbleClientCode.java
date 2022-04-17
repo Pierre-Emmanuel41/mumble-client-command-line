@@ -193,6 +193,24 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the name of the channel does not exist
 	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NOT_FOUND,
 
+	// Code for the "mumble channel soundModifier set" command -------------------
+	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__EXPLANATION,
+
+	// Code when the channel name is missing
+	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__CHANNEL_NAME_IS_MISSING,
+
+	// Code when the channel does not exist
+	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__CHANNEL_NOT_FOUND,
+
+	// Code when the sound modifier name is missing
+	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__SOUND_MODIFIER_NAME_IS_MISSING,
+
+	// Code when the sound modifier does not exist
+	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__SOUND_MODIFIER_NOT_FOUND,
+
+	// Code when the sound modifier of a channel has been set on the server
+	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__REQUEST_SUCCEED,
+
 	// Code for the "parameter" command ------------------------------------------
 	PARAMETER__ROOT__EXPLANATION,
 
