@@ -2,7 +2,7 @@ package fr.pederobien.mumble.commandline.impl;
 
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersNode extends MumbleClientNode {
 	private PlayersAddNode addNode;
@@ -22,7 +22,7 @@ public class PlayersNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersNode(Supplier<IMumbleServer> server) {
+	protected PlayersNode(Supplier<IMumbleServerType> server) {
 		super(server, "players", EMumbleClientCode.MUMBLE__PLAYERS__EXPLANATION, s -> s != null);
 
 		add(addNode = new PlayersAddNode(server));

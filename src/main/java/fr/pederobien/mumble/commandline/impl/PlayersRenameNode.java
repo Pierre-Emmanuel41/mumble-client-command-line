@@ -5,8 +5,8 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersRenameNode extends MumbleClientNode {
 
@@ -15,8 +15,10 @@ public class PlayersRenameNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersRenameNode(Supplier<IMumbleServer> server) {
+	protected PlayersRenameNode(Supplier<IMumbleServerType> server) {
 		super(server, "rename", EMumbleClientCode.MUMBLE__PLAYERS__RENAME__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

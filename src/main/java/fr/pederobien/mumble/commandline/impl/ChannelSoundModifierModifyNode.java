@@ -5,8 +5,8 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IParameter;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelSoundModifierModifyNode extends MumbleClientNode {
 	private ParameterCommandTree parameterTree;
@@ -16,11 +16,13 @@ public class ChannelSoundModifierModifyNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelSoundModifierModifyNode(Supplier<IMumbleServer> server) {
+	protected ChannelSoundModifierModifyNode(Supplier<IMumbleServerType> server) {
 		super(server, "modify", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION, s -> s != null);
 
 		parameterTree = new ParameterCommandTree();
 		parameterTree.getRoot().export(this);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

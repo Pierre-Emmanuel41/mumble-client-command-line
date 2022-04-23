@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import fr.pederobien.commandtree.exceptions.BooleanParseException;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersMuteByNode extends MumbleClientNode {
 
@@ -20,8 +20,10 @@ public class PlayersMuteByNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersMuteByNode(Supplier<IMumbleServer> server) {
+	protected PlayersMuteByNode(Supplier<IMumbleServerType> server) {
 		super(server, "muteBy", EMumbleClientCode.MUMBLE__PLAYERS__MUTE_BY__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

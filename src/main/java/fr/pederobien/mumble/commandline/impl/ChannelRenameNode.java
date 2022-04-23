@@ -7,8 +7,8 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelRenameNode extends MumbleClientNode {
 
@@ -17,8 +17,10 @@ public class ChannelRenameNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelRenameNode(Supplier<IMumbleServer> server) {
+	protected ChannelRenameNode(Supplier<IMumbleServerType> server) {
 		super(server, "rename", EMumbleClientCode.MUMBLE__CHANNEL__RENAME__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

@@ -6,9 +6,9 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersPositionNode extends MumbleClientNode {
 
@@ -17,8 +17,10 @@ public class PlayersPositionNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersPositionNode(Supplier<IMumbleServer> server) {
+	protected PlayersPositionNode(Supplier<IMumbleServerType> server) {
 		super(server, "position", EMumbleClientCode.MUMBLE__PLAYERS__POSITION__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

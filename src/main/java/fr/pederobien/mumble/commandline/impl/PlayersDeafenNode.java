@@ -6,8 +6,8 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import fr.pederobien.commandtree.exceptions.BooleanParseException;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersDeafenNode extends MumbleClientNode {
 
@@ -16,8 +16,10 @@ public class PlayersDeafenNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersDeafenNode(Supplier<IMumbleServer> server) {
+	protected PlayersDeafenNode(Supplier<IMumbleServerType> server) {
 		super(server, "deafen", EMumbleClientCode.MUMBLE__PLAYERS__DEAFEN__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

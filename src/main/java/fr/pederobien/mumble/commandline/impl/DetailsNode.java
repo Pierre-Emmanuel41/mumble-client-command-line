@@ -7,11 +7,11 @@ import java.util.stream.Collectors;
 
 import fr.pederobien.mumble.client.impl.RangeParameter;
 import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IParameter;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
 import fr.pederobien.mumble.client.interfaces.IRangeParameter;
 import fr.pederobien.mumble.client.interfaces.ISoundModifier;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class DetailsNode extends MumbleClientNode {
 
@@ -20,8 +20,10 @@ public class DetailsNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected DetailsNode(Supplier<IMumbleServer> server) {
+	protected DetailsNode(Supplier<IMumbleServerType> server) {
 		super(server, "details", EMumbleClientCode.MUMBLE__DETAILS__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

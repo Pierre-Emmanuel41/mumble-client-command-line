@@ -8,9 +8,9 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelRemovePlayersNode extends MumbleClientNode {
 	private int current;
@@ -20,8 +20,10 @@ public class ChannelRemovePlayersNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelRemovePlayersNode(Supplier<IMumbleServer> server) {
+	protected ChannelRemovePlayersNode(Supplier<IMumbleServerType> server) {
 		super(server, "players", EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__PLAYERS__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

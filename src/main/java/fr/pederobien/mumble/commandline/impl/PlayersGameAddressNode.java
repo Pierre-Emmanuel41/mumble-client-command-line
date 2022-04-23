@@ -9,9 +9,9 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersGameAddressNode extends MumbleClientNode {
 
@@ -20,8 +20,10 @@ public class PlayersGameAddressNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersGameAddressNode(Supplier<IMumbleServer> server) {
+	protected PlayersGameAddressNode(Supplier<IMumbleServerType> server) {
 		super(server, "gameAddress", EMumbleClientCode.MUMBLE__PLAYERS__GAME_ADDRESS__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

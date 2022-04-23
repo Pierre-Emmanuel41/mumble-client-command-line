@@ -2,7 +2,7 @@ package fr.pederobien.mumble.commandline.impl;
 
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelAddNode extends MumbleClientNode {
 	private ChannelAddChannelNode channelNode;
@@ -13,7 +13,7 @@ public class ChannelAddNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelAddNode(Supplier<IMumbleServer> server) {
+	protected ChannelAddNode(Supplier<IMumbleServerType> server) {
 		super(server, "add", EMumbleClientCode.MUMBLE__CHANNEL__ADD__EXPLANATION, s -> s != null);
 
 		add(channelNode = new ChannelAddChannelNode(server));

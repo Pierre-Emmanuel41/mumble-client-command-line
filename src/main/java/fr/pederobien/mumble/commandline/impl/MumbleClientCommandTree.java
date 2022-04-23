@@ -7,12 +7,12 @@ import fr.pederobien.commandtree.impl.CommandRootNode;
 import fr.pederobien.commandtree.interfaces.ICommandRootNode;
 import fr.pederobien.commandtree.interfaces.INode;
 import fr.pederobien.dictionary.impl.MessageEvent;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 import fr.pederobien.utils.AsyncConsole;
 
 public class MumbleClientCommandTree {
-	private IMumbleServer server;
+	private IMumbleServerType server;
 	private ICommandRootNode<ICode> root;
 	private ConnectNode connectNode;
 	private DisconnectNode disconnectNode;
@@ -39,7 +39,7 @@ public class MumbleClientCommandTree {
 	/**
 	 * @return The underlying mumble server managed by this command tree.
 	 */
-	public IMumbleServer getServer() {
+	public IMumbleServerType getServer() {
 		return server;
 	}
 
@@ -48,7 +48,7 @@ public class MumbleClientCommandTree {
 	 * 
 	 * @param server The new server managed by this command tree.
 	 */
-	public void setServer(IMumbleServer server) {
+	public void setServer(IMumbleServerType server) {
 		this.server = server;
 	}
 

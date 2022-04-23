@@ -7,9 +7,9 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
 import fr.pederobien.mumble.client.interfaces.ISoundModifier;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelSoundModifierSetNode extends MumbleClientNode {
 
@@ -18,8 +18,10 @@ public class ChannelSoundModifierSetNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelSoundModifierSetNode(Supplier<IMumbleServer> server) {
+	protected ChannelSoundModifierSetNode(Supplier<IMumbleServerType> server) {
 		super(server, "set", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__SET__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

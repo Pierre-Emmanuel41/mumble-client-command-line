@@ -11,9 +11,9 @@ import java.util.stream.Stream;
 import fr.pederobien.mumble.client.exceptions.PlayerNotAdministratorException;
 import fr.pederobien.mumble.client.exceptions.PlayerNotRegisteredInChannelException;
 import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IPlayer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersKickNode extends MumbleClientNode {
 
@@ -22,8 +22,10 @@ public class PlayersKickNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersKickNode(Supplier<IMumbleServer> server) {
+	protected PlayersKickNode(Supplier<IMumbleServerType> server) {
 		super(server, "kick", EMumbleClientCode.MUMBLE__PLAYERS__KICK__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

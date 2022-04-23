@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersRemoveNode extends MumbleClientNode {
 
@@ -14,8 +14,10 @@ public class PlayersRemoveNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected PlayersRemoveNode(Supplier<IMumbleServer> server) {
+	protected PlayersRemoveNode(Supplier<IMumbleServerType> server) {
 		super(server, "remove", EMumbleClientCode.MUMBLE__PLAYERS__REMOVE__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

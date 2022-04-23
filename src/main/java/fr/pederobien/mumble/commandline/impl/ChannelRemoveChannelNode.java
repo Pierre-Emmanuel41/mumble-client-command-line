@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
 import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelRemoveChannelNode extends MumbleClientNode {
 
@@ -14,8 +14,10 @@ public class ChannelRemoveChannelNode extends MumbleClientNode {
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelRemoveChannelNode(Supplier<IMumbleServer> server) {
+	protected ChannelRemoveChannelNode(Supplier<IMumbleServerType> server) {
 		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__CHANNEL__EXPLANATION, s -> s != null);
+
+		setAvailable(() -> isAvailableAccordingServerProperties());
 	}
 
 	@Override

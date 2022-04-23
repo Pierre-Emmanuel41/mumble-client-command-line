@@ -6,8 +6,7 @@ import java.net.UnknownHostException;
 import java.util.List;
 import java.util.function.Predicate;
 
-import fr.pederobien.mumble.client.impl.GameMumbleServer;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
+import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ConnectNode extends MumbleClientNode {
 	private MumbleClientCommandTree tree;
@@ -73,10 +72,11 @@ public class ConnectNode extends MumbleClientNode {
 		if (getServer() != null)
 			getServer().dispose();
 
-		IMumbleServer server = new GameMumbleServer(String.format("MumbleServer_%s:%s", address.getHostAddress(), port), new InetSocketAddress(address, port));
+		String name = String.format("MumbleServer_%s:%s", address.getHostAddress(), port);
+		IMumbleServerType server = new MumbleServerType(name, new InetSocketAddress(address, port), ConnectionType.EXTERNAL_GAME_SERVER_TO_SERVER);
 		try {
 			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, address, port);
-			server.open();
+			server.getServer().open();
 			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_COMPLETE, address, port);
 			tree.setServer(server);
 		} catch (IllegalStateException e) {
