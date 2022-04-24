@@ -68,6 +68,14 @@
 			<value>Impossible de se connecter au serveur, le numéro de port %s doit être dans l'intervalle [0,65535]</value>
 		</message>
 		<message>
+			<code>MUMBLE__CONNECT__CONNECTION_TYPE_IS_MISSING</code>
+			<value>Impossible de se connecter au server, le type de connexion est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__CONNECTION_TYPE_NOT_FOUND</code>
+			<value>Impossible de se connecter à %s:%s avec une connexion de type %s, ce type de connexion n'existe pas</value>
+		</message>
+		<message>
 			<code>MUMBLE__CONNECT__ATTEMPTING_CONNECTION</code>
 			<value>Tentative de connexion à %s:%s ...</value>
 		</message>

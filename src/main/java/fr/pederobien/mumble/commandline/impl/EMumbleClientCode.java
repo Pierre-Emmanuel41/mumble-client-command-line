@@ -49,6 +49,12 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the port number has an invalid range
 	MUMBLE__CONNECT__PORT_NUMBER_BAD_RANGE,
 
+	// Code when the connection type is missing
+	MUMBLE__CONNECT__CONNECTION_TYPE_IS_MISSING,
+
+	// Code when the connection type does not exists
+	MUMBLE__CONNECT__CONNECTION_TYPE_NOT_FOUND,
+
 	// Code when trying to connect to the remote
 	MUMBLE__CONNECT__ATTEMPTING_CONNECTION,
 

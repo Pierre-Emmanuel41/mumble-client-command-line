@@ -36,6 +36,17 @@ public class ConnectNode extends MumbleClientNode {
 				return true;
 			};
 			return check(args[0], addressValid, asList(getMessage(EMumbleClientCode.MUMBLE__PORT_COMPLETION)));
+		case 3:
+			Predicate<String> portValid = port -> {
+				if (isStrictInt(port)) {
+					int portValue = Integer.parseInt(port);
+					return portValue < 0 || 65535 < portValue;
+				}
+				return false;
+			};
+
+			List<String> connectionTypes = asList(ConnectionType.EXTERNAL_GAME_SERVER_TO_SERVER.toString(), ConnectionType.PLAYER_TO_SERVER.toString());
+			return check(args[1], portValid, connectionTypes);
 		default:
 			return emptyList();
 		}
@@ -69,11 +80,23 @@ public class ConnectNode extends MumbleClientNode {
 			return false;
 		}
 
+		ConnectionType connectionType;
+		try {
+			connectionType = ConnectionType.getByName(args[2]);
+			if (connectionType == null) {
+				send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_TYPE_NOT_FOUND, address, port, args[2]);
+				return false;
+			}
+		} catch (IndexOutOfBoundsException e) {
+			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_TYPE_IS_MISSING);
+			return false;
+		}
+
 		if (getServer() != null)
 			getServer().dispose();
 
 		String name = String.format("MumbleServer_%s:%s", address.getHostAddress(), port);
-		IMumbleServerType server = new MumbleServerType(name, new InetSocketAddress(address, port), ConnectionType.EXTERNAL_GAME_SERVER_TO_SERVER);
+		IMumbleServerType server = new MumbleServerType(name, new InetSocketAddress(address, port), connectionType);
 		try {
 			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, address, port);
 			server.getServer().open();

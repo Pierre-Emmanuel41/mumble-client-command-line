@@ -71,6 +71,14 @@
 			<value>Cannot connect to the remote, the port number %s should be in range [0,65535]</value>
 		</message>
 		<message>
+			<code>MUMBLE__CONNECT__CONNECTION_TYPE_IS_MISSING</code>
+			<value>Cannot connect to the remote, the connection type is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__CONNECT__CONNECTION_TYPE_NOT_FOUND</code>
+			<value>Cannot connect to %s:%s with a connection of type %s, the type of connection does not exist</value>
+		</message>
+		<message>
 			<code>MUMBLE__CONNECT__ATTEMPTING_CONNECTION</code>
 			<value>Attempting connection to %s:%s ...</value>
 		</message>
