@@ -112,6 +112,18 @@
 			<value>Le client a échoué à rejoindre %s ...</value>
 		</message>
 		<message>
+			<code>MUMBLE__LEAVE__EXPLANATION</code>
+			<value>Pour permettre au joueur de quitter un serveur mumble</value>
+		</message>
+		<message>
+			<code>MUMBLE__LEAVE__ATTEMPTING_TO_LEAVE</code>
+			<value>Tentative de quitter %s ...</value>
+		</message>
+		<message>
+			<code>MUMBLE__LEAVE__REQUEST_SUCCEED</code>
+			<value>%s a été quitté</value>
+		</message>
+		<message>
 			<code>MUMBLE__CHANNEL__EXPLANATION</code>
 			<value>Pour ajouter or supprimer des channels d'un serveur</value>
 		</message>

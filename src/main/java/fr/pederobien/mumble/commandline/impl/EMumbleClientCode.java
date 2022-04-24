@@ -82,6 +82,15 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the request failed
 	MUMBLE__JOIN__REQUEST_ABORT,
 
+	// Code for the "mumble leave" command ---------------------------------------
+	MUMBLE__LEAVE__EXPLANATION,
+
+	// Code when trying to leave the remote
+	MUMBLE__LEAVE__ATTEMPTING_TO_LEAVE,
+
+	// Code when the player has left the server
+	MUMBLE__LEAVE__REQUEST_SUCCEED,
+
 	// Code for the "mumble channel" command -------------------------------------
 	MUMBLE__CHANNEL__EXPLANATION,
 

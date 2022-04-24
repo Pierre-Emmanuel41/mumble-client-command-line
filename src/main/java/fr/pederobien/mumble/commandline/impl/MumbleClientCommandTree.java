@@ -20,6 +20,7 @@ public class MumbleClientCommandTree {
 	private PlayersNode playersNode;
 	private DetailsNode detailsNode;
 	private ServerJoinNode joinNode;
+	private ServerLeaveNode leaveNode;
 
 	public MumbleClientCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
@@ -36,6 +37,7 @@ public class MumbleClientCommandTree {
 		root.add(playersNode = new PlayersNode(() -> getServer()));
 		root.add(detailsNode = new DetailsNode(() -> getServer()));
 		root.add(joinNode = new ServerJoinNode(() -> getServer()));
+		root.add(leaveNode = new ServerLeaveNode(() -> getServer()));
 	}
 
 	/**
@@ -101,5 +103,12 @@ public class MumbleClientCommandTree {
 	 */
 	public ServerJoinNode getJoinNode() {
 		return joinNode;
+	}
+
+	/**
+	 * @return The node that lets a player leaving a mumble server.
+	 */
+	public ServerLeaveNode getLeaveNode() {
+		return leaveNode;
 	}
 }

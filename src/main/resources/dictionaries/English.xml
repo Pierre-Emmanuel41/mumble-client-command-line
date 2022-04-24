@@ -115,6 +115,18 @@
 			<value>Fail to join %s ...</value>
 		</message>
 		<message>
+			<code>MUMBLE__LEAVE__EXPLANATION</code>
+			<value>To let the player leaving a mumble server</value>
+		</message>
+		<message>
+			<code>MUMBLE__LEAVE__ATTEMPTING_TO_LEAVE</code>
+			<value>Attempting to leave %s ...</value>
+		</message>
+		<message>
+			<code>MUMBLE__LEAVE__REQUEST_SUCCEED</code>
+			<value>%s has been left</value>
+		</message>
+		<message>
 			<code>MUMBLE__CHANNEL__EXPLANATION</code>
 			<value>To add or remove channels from a server</value>
 		</message>
