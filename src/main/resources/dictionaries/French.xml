@@ -85,7 +85,7 @@
 		</message>
 		<message>
 			<code>MUMBLE__CONNECT__CONNECTION_ABORT</code>
-			<value>la connexion avec %s:%s a échoué ...</value>
+			<value>La connexion avec %s:%s a échoué ...</value>
 		</message>
 		<message>
 			<code>MUMBLE__DISCONNECT__EXPLANATION</code>
@@ -94,6 +94,22 @@
 		<message>
 			<code>MUMBLE__DISCONNECT__CONNECTION_ABORTED</code>
 			<value>La connexion avec %s:%s a été interrompue</value>
+		</message>
+		<message>
+			<code>MUMBLE__JOIN__EXPLANATION</code>
+			<value>Pour permettre au joueur de rejoindre un serveur mumble</value>
+		</message>
+		<message>
+			<code>MUMBLE__JOIN__ATTEMPTING_TO_JOIN</code>
+			<value>Tentative de joindre %s ...</value>
+		</message>
+		<message>
+			<code>MUMBLE__JOIN__REQUEST_SUCCEED</code>
+			<value>Le client a rejoint %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__JOIN__REQUEST_ABORT</code>
+			<value>Le client a échoué à rejoindre %s ...</value>
 		</message>
 		<message>
 			<code>MUMBLE__CHANNEL__EXPLANATION</code>

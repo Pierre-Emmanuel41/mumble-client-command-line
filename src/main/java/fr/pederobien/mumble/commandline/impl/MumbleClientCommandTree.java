@@ -19,6 +19,7 @@ public class MumbleClientCommandTree {
 	private ChannelNode channelNode;
 	private PlayersNode playersNode;
 	private DetailsNode detailsNode;
+	private ServerJoinNode joinNode;
 
 	public MumbleClientCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
@@ -34,6 +35,7 @@ public class MumbleClientCommandTree {
 		root.add(channelNode = new ChannelNode(() -> getServer()));
 		root.add(playersNode = new PlayersNode(() -> getServer()));
 		root.add(detailsNode = new DetailsNode(() -> getServer()));
+		root.add(joinNode = new ServerJoinNode(() -> getServer()));
 	}
 
 	/**
@@ -92,5 +94,12 @@ public class MumbleClientCommandTree {
 	 */
 	public DetailsNode getDetailsNode() {
 		return detailsNode;
+	}
+
+	/**
+	 * @return The node that lets a player joining a mumble server.
+	 */
+	public ServerJoinNode getJoinNode() {
+		return joinNode;
 	}
 }

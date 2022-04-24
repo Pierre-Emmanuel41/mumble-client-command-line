@@ -70,10 +70,22 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the connection is aborted
 	MUMBLE__DISCONNECT__CONNECTION_ABORTED,
 
-	// Code for the "mumble channel" command ------------------------------------
+	// Code for the "mumble join" command ----------------------------------------
+	MUMBLE__JOIN__EXPLANATION,
+
+	// Code when trying to join the remote
+	MUMBLE__JOIN__ATTEMPTING_TO_JOIN,
+
+	// Code when the player has joined the server
+	MUMBLE__JOIN__REQUEST_SUCCEED,
+
+	// Code when the request failed
+	MUMBLE__JOIN__REQUEST_ABORT,
+
+	// Code for the "mumble channel" command -------------------------------------
 	MUMBLE__CHANNEL__EXPLANATION,
 
-	// Code for the "mumble channel add" command --------------------------------
+	// Code for the "mumble channel add" command ---------------------------------
 	MUMBLE__CHANNEL__ADD__EXPLANATION,
 
 	// Code for the "mumble channel add channels" command ------------------------

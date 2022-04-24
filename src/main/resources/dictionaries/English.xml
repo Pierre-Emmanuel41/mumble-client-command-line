@@ -99,6 +99,22 @@
 			<value>The connection with %s:%s has been aborted</value>
 		</message>
 		<message>
+			<code>MUMBLE__JOIN__EXPLANATION</code>
+			<value>To let the player joining a mumble server</value>
+		</message>
+		<message>
+			<code>MUMBLE__JOIN__ATTEMPTING_TO_JOIN</code>
+			<value>Attempting to join %s ...</value>
+		</message>
+		<message>
+			<code>MUMBLE__JOIN__REQUEST_SUCCEED</code>
+			<value>Client joined %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__JOIN__REQUEST_ABORT</code>
+			<value>Fail to join %s ...</value>
+		</message>
+		<message>
 			<code>MUMBLE__CHANNEL__EXPLANATION</code>
 			<value>To add or remove channels from a server</value>
 		</message>
