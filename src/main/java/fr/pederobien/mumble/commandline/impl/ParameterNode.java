@@ -3,8 +3,8 @@ package fr.pederobien.mumble.commandline.impl;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IParameter;
-import fr.pederobien.mumble.client.interfaces.IRangeParameter;
+import fr.pederobien.mumble.client.external.interfaces.IParameter;
+import fr.pederobien.mumble.client.external.interfaces.IRangeParameter;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
 
 public class ParameterNode extends MumbleClientNode {

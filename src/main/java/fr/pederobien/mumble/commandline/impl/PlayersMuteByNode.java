@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import fr.pederobien.commandtree.exceptions.BooleanParseException;
-import fr.pederobien.mumble.client.interfaces.IPlayer;
-import fr.pederobien.mumble.client.interfaces.IResponse;
+import fr.pederobien.mumble.client.external.interfaces.IPlayer;
+import fr.pederobien.mumble.client.external.interfaces.IResponse;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersMuteByNode extends MumbleClientNode {

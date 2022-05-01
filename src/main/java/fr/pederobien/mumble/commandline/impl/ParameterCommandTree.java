@@ -7,7 +7,7 @@ import fr.pederobien.commandtree.impl.CommandRootNode;
 import fr.pederobien.commandtree.interfaces.ICommandRootNode;
 import fr.pederobien.commandtree.interfaces.INode;
 import fr.pederobien.dictionary.impl.MessageEvent;
-import fr.pederobien.mumble.client.interfaces.IParameter;
+import fr.pederobien.mumble.client.external.interfaces.IParameter;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
 import fr.pederobien.utils.AsyncConsole;
 

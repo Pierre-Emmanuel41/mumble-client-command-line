@@ -5,12 +5,12 @@ import java.util.StringJoiner;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import fr.pederobien.mumble.client.impl.RangeParameter;
-import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IParameter;
-import fr.pederobien.mumble.client.interfaces.IPlayer;
-import fr.pederobien.mumble.client.interfaces.IRangeParameter;
-import fr.pederobien.mumble.client.interfaces.ISoundModifier;
+import fr.pederobien.mumble.client.external.impl.RangeParameter;
+import fr.pederobien.mumble.client.external.interfaces.IChannel;
+import fr.pederobien.mumble.client.external.interfaces.IParameter;
+import fr.pederobien.mumble.client.external.interfaces.IPlayer;
+import fr.pederobien.mumble.client.external.interfaces.IRangeParameter;
+import fr.pederobien.mumble.client.external.interfaces.ISoundModifier;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class DetailsNode extends MumbleClientNode {

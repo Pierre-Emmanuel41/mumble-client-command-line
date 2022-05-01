@@ -2,9 +2,9 @@ package fr.pederobien.mumble.commandline.impl;
 
 import java.net.InetSocketAddress;
 
-import fr.pederobien.mumble.client.impl.GameMumbleServer;
-import fr.pederobien.mumble.client.impl.PlayerMumbleServer;
-import fr.pederobien.mumble.client.interfaces.IMumbleServer;
+import fr.pederobien.mumble.client.external.impl.GameMumbleServer;
+import fr.pederobien.mumble.client.external.impl.PlayerMumbleServer;
+import fr.pederobien.mumble.client.external.interfaces.IMumbleServer;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class MumbleServerType implements IMumbleServerType {

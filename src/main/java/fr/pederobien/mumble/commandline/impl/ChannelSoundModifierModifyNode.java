@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.interfaces.IChannel;
-import fr.pederobien.mumble.client.interfaces.IParameter;
+import fr.pederobien.mumble.client.external.interfaces.IChannel;
+import fr.pederobien.mumble.client.external.interfaces.IParameter;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelSoundModifierModifyNode extends MumbleClientNode {

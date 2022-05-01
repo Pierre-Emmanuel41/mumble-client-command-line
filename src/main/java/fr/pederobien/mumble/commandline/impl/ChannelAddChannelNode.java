@@ -7,8 +7,8 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import fr.pederobien.mumble.client.interfaces.IResponse;
-import fr.pederobien.mumble.client.interfaces.ISoundModifier;
+import fr.pederobien.mumble.client.external.interfaces.IResponse;
+import fr.pederobien.mumble.client.external.interfaces.ISoundModifier;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelAddChannelNode extends MumbleClientNode {
