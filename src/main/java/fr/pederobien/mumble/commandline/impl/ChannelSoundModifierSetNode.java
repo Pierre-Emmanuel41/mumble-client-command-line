@@ -6,8 +6,8 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+import fr.pederobien.mumble.client.common.interfaces.IResponse;
 import fr.pederobien.mumble.client.external.interfaces.IChannel;
-import fr.pederobien.mumble.client.external.interfaces.IResponse;
 import fr.pederobien.mumble.client.external.interfaces.ISoundModifier;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
@@ -31,7 +31,7 @@ public class ChannelSoundModifierSetNode extends MumbleClientNode {
 			return filter(getServer().getChannels().stream().map(channel -> channel.getName()), args);
 		case 2:
 			Predicate<String> nameValid = name -> getServer().getChannels().get(name).isPresent();
-			return filter(check(args[0], nameValid, getServer().getSoundModifierList().stream().map(modifier -> modifier.getName())), args);
+			return filter(check(args[0], nameValid, getServer().getSoundModifiers().stream().map(modifier -> modifier.getName())), args);
 		default:
 			return emptyList();
 		}
@@ -55,7 +55,7 @@ public class ChannelSoundModifierSetNode extends MumbleClientNode {
 
 		ISoundModifier soundModifier;
 		try {
-			Optional<ISoundModifier> optSoundModifier = getServer().getSoundModifierList().get(args[1]);
+			Optional<ISoundModifier> optSoundModifier = getServer().getSoundModifiers().get(args[1]);
 			if (!optSoundModifier.isPresent()) {
 				send(EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__SET__SOUND_MODIFIER_NOT_FOUND, args[1], channel.getName());
 				return false;

@@ -15,10 +15,10 @@ public class DisconnectNode extends MumbleClientNode {
 
 	@Override
 	public boolean onCommand(String[] args) {
-		if (getServer().isDisposed())
+		if (!getServer().isReachable())
 			return true;
 
-		getServer().dispose();
+		getServer().close();
 		send(EMumbleClientCode.MUMBLE__DISCONNECT__CONNECTION_ABORTED, getServer().getAddress().getAddress().getHostAddress(), getServer().getAddress().getPort());
 		tree.setServer(null);
 		return true;

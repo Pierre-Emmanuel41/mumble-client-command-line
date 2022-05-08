@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+import fr.pederobien.mumble.client.common.interfaces.IResponse;
 import fr.pederobien.mumble.client.external.interfaces.IChannel;
 import fr.pederobien.mumble.client.external.interfaces.IPlayer;
-import fr.pederobien.mumble.client.external.interfaces.IResponse;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelRemovePlayersNode extends MumbleClientNode {
@@ -62,7 +62,7 @@ public class ChannelRemovePlayersNode extends MumbleClientNode {
 		for (String name : extract(args, 1)) {
 			Optional<IPlayer> optPlayer = getServer().getPlayers().get(name);
 			if (!optPlayer.isPresent()) {
-				send(EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__PLAYERS__PLAYER_NOT_FOUND, name);
+				send(EMumbleClientCode.MUMBLE__CHANNEL__REMOVE__PLAYERS__PLAYER_NOT_FOUND, name, channel.getName());
 				return false;
 			}
 

@@ -60,8 +60,8 @@ public class DetailsNode extends MumbleClientNode {
 			serverJoiner.add(soundModifiers);
 
 			counter = 0;
-			size = getServer().getSoundModifierList().toList().size();
-			for (ISoundModifier soundModifier : getServer().getSoundModifierList()) {
+			size = getServer().getSoundModifiers().toList().size();
+			for (ISoundModifier soundModifier : getServer().getSoundModifiers()) {
 				// Sound modifier's name
 				String modifierName = getMessage(EMumbleClientCode.MUMBLE__DETAILS__SOUND_MODIFIER_NAME, soundModifier.getName());
 				serverJoiner.add(tabulations.concat(modifierName));

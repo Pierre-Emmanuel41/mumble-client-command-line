@@ -2,8 +2,7 @@ package fr.pederobien.mumble.commandline.impl;
 
 import java.net.InetSocketAddress;
 
-import fr.pederobien.mumble.client.external.impl.GameMumbleServer;
-import fr.pederobien.mumble.client.external.impl.PlayerMumbleServer;
+import fr.pederobien.mumble.client.external.impl.ExternalMumbleServer;
 import fr.pederobien.mumble.client.external.interfaces.IMumbleServer;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
@@ -19,7 +18,9 @@ public class MumbleServerType implements IMumbleServerType {
 	 * @param type    The type of connection between this client and the remote.
 	 */
 	public MumbleServerType(String name, InetSocketAddress address, ConnectionType type) {
-		server = type == ConnectionType.EXTERNAL_GAME_SERVER_TO_SERVER ? new GameMumbleServer(name, address) : new PlayerMumbleServer(name, address);
+		// server = type == ConnectionType.EXTERNAL_GAME_SERVER_TO_SERVER ? new ExternalMumbleServer(name, address) : new
+		// PlayerMumbleServer();
+		server = new ExternalMumbleServer(name, address);
 		this.type = type;
 	}
 

@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import fr.pederobien.mumble.client.external.interfaces.IResponse;
+import fr.pederobien.mumble.client.common.interfaces.IResponse;
 import fr.pederobien.mumble.client.external.interfaces.ISoundModifier;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
@@ -32,7 +32,7 @@ public class ChannelAddChannelNode extends MumbleClientNode {
 
 		case 2:
 			Predicate<String> nameValid = name -> !getServer().getChannels().get(name).isPresent();
-			return check(args[0], nameValid, getServer().getSoundModifierList().stream().map(soundModifier -> soundModifier.getName()).collect(Collectors.toList()));
+			return check(args[0], nameValid, getServer().getSoundModifiers().stream().map(soundModifier -> soundModifier.getName()).collect(Collectors.toList()));
 		default:
 			return emptyList();
 		}
@@ -55,7 +55,7 @@ public class ChannelAddChannelNode extends MumbleClientNode {
 
 		ISoundModifier soundModifier;
 		try {
-			Optional<ISoundModifier> optModifier = getServer().getSoundModifierList().get(args[1]);
+			Optional<ISoundModifier> optModifier = getServer().getSoundModifiers().get(args[1]);
 			if (!optModifier.isPresent()) {
 				send(EMumbleClientCode.MUMBLE__CHANNEL__ADD__CHANNEL__SOUND_MODIFIER_NOT_FOUND, name, getServer().getName(), args[1]);
 				return false;

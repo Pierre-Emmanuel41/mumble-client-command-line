@@ -8,11 +8,11 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import fr.pederobien.mumble.client.common.interfaces.IResponse;
 import fr.pederobien.mumble.client.external.exceptions.PlayerNotAdministratorException;
 import fr.pederobien.mumble.client.external.exceptions.PlayerNotRegisteredInChannelException;
 import fr.pederobien.mumble.client.external.interfaces.IChannel;
 import fr.pederobien.mumble.client.external.interfaces.IPlayer;
-import fr.pederobien.mumble.client.external.interfaces.IResponse;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersKickNode extends MumbleClientNode {

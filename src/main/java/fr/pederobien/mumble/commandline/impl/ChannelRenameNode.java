@@ -6,8 +6,8 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+import fr.pederobien.mumble.client.common.interfaces.IResponse;
 import fr.pederobien.mumble.client.external.interfaces.IChannel;
-import fr.pederobien.mumble.client.external.interfaces.IResponse;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class ChannelRenameNode extends MumbleClientNode {

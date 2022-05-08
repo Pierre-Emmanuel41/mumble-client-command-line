@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.external.interfaces.IResponse;
+import fr.pederobien.mumble.client.common.interfaces.IResponse;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
 public class PlayersRemoveNode extends MumbleClientNode {

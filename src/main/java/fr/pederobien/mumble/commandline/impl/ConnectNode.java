@@ -93,7 +93,7 @@ public class ConnectNode extends MumbleClientNode {
 		}
 
 		if (getServer() != null)
-			getServer().dispose();
+			getServer().close();
 
 		String name = String.format("MumbleServer_%s:%s", address.getHostAddress(), port);
 		IMumbleServerType server = new MumbleServerType(name, new InetSocketAddress(address, port), connectionType);

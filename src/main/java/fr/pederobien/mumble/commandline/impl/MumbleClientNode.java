@@ -9,7 +9,7 @@ import fr.pederobien.commandtree.exceptions.NotAvailableArgumentException;
 import fr.pederobien.commandtree.impl.CommandNode;
 import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.mumble.client.external.interfaces.IMumbleServer;
-import fr.pederobien.mumble.client.external.interfaces.IPlayerMumbleServer;
+import fr.pederobien.mumble.client.player.interfaces.IPlayerMumbleServer;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleClientNode;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
