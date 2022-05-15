@@ -1,6 +1,8 @@
 package fr.pederobien.mumble.commandline.impl;
 
-public class DisconnectNode extends MumbleClientNode {
+import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
+
+public class DisconnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> {
 	private MumbleClientCommandTree tree;
 
 	/**
@@ -18,7 +20,6 @@ public class DisconnectNode extends MumbleClientNode {
 		if (!getServer().isReachable())
 			return true;
 
-		getServer().close();
 		send(EMumbleClientCode.MUMBLE__DISCONNECT__CONNECTION_ABORTED, getServer().getAddress().getAddress().getHostAddress(), getServer().getAddress().getPort());
 		tree.setServer(null);
 		return true;

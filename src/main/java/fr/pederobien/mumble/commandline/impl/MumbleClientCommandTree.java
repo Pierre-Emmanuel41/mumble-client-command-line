@@ -7,20 +7,20 @@ import fr.pederobien.commandtree.impl.CommandRootNode;
 import fr.pederobien.commandtree.interfaces.ICommandRootNode;
 import fr.pederobien.commandtree.interfaces.INode;
 import fr.pederobien.dictionary.impl.MessageEvent;
+import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
+import fr.pederobien.mumble.client.external.interfaces.IExternalMumbleServer;
+import fr.pederobien.mumble.commandline.impl.external.ExternalMumbleClientRoot;
+import fr.pederobien.mumble.commandline.impl.player.PlayerMumbleClientRoot;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
-import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 import fr.pederobien.utils.AsyncConsole;
 
 public class MumbleClientCommandTree {
-	private IMumbleServerType server;
+	private ICommonMumbleServer<?, ?, ?> server;
 	private ICommandRootNode<ICode> root;
+	private ExternalMumbleClientRoot externalRoot;
+	private PlayerMumbleClientRoot playerRoot;
 	private ConnectNode connectNode;
 	private DisconnectNode disconnectNode;
-	private ChannelNode channelNode;
-	private PlayersNode playersNode;
-	private DetailsNode detailsNode;
-	private ServerJoinNode joinNode;
-	private ServerLeaveNode leaveNode;
 
 	public MumbleClientCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
@@ -30,20 +30,17 @@ public class MumbleClientCommandTree {
 		};
 
 		root = new CommandRootNode<ICode>("mumble", EMumbleClientCode.MUMBLE__ROOT__EXPLANATION, () -> true, displayer);
+		externalRoot = new ExternalMumbleClientRoot(this, displayer);
+		playerRoot = new PlayerMumbleClientRoot(this, displayer);
 
 		root.add(connectNode = new ConnectNode(this));
 		root.add(disconnectNode = new DisconnectNode(this));
-		root.add(channelNode = new ChannelNode(() -> getServer()));
-		root.add(playersNode = new PlayersNode(() -> getServer()));
-		root.add(detailsNode = new DetailsNode(() -> getServer()));
-		root.add(joinNode = new ServerJoinNode(() -> getServer()));
-		root.add(leaveNode = new ServerLeaveNode(() -> getServer()));
 	}
 
 	/**
 	 * @return The underlying mumble server managed by this command tree.
 	 */
-	public IMumbleServerType getServer() {
+	public ICommonMumbleServer<?, ?, ?> getServer() {
 		return server;
 	}
 
@@ -52,7 +49,27 @@ public class MumbleClientCommandTree {
 	 * 
 	 * @param server The new server managed by this command tree.
 	 */
-	public void setServer(IMumbleServerType server) {
+	public void setServer(ICommonMumbleServer<?, ?, ?> server) {
+		if (this.server != null)
+			this.server.close();
+
+		// Disconnect
+		if (server == null) {
+			if (this.server instanceof IExternalMumbleServer)
+				for (INode<?> node : externalRoot.getRoot().getChildren().values())
+					root.remove(node.getLabel());
+			else
+				for (INode<?> node : playerRoot.getRoot().getChildren().values())
+					root.remove(node.getLabel());
+		}
+		// Connect
+		else {
+			if (server instanceof IExternalMumbleServer)
+				externalRoot.getRoot().export(root);
+			else
+				playerRoot.getRoot().export(root);
+		}
+
 		this.server = server;
 	}
 
@@ -75,40 +92,5 @@ public class MumbleClientCommandTree {
 	 */
 	public DisconnectNode getDisconnectNode() {
 		return disconnectNode;
-	}
-
-	/**
-	 * @return The node that adds or removes channels from a server.
-	 */
-	public ChannelNode getChannelsNode() {
-		return channelNode;
-	}
-
-	/**
-	 * @return The node that adds, removes or update the properties of a player.
-	 */
-	public PlayersNode getPlayersNode() {
-		return playersNode;
-	}
-
-	/**
-	 * @return The node that displays the configuration of the current mumble server.
-	 */
-	public DetailsNode getDetailsNode() {
-		return detailsNode;
-	}
-
-	/**
-	 * @return The node that lets a player joining a mumble server.
-	 */
-	public ServerJoinNode getJoinNode() {
-		return joinNode;
-	}
-
-	/**
-	 * @return The node that lets a player leaving a mumble server.
-	 */
-	public ServerLeaveNode getLeaveNode() {
-		return leaveNode;
 	}
 }

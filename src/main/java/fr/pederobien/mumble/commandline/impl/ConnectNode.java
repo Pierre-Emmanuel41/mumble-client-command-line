@@ -6,9 +6,13 @@ import java.net.UnknownHostException;
 import java.util.List;
 import java.util.function.Predicate;
 
-import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
+import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
+import fr.pederobien.mumble.client.external.impl.ExternalMumbleServer;
+import fr.pederobien.mumble.client.player.impl.PlayerMumbleServer;
 
-public class ConnectNode extends MumbleClientNode {
+public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> {
+	private static final String EXTERNAL_MUMBLE_SERVER_NAME = "ExternalMumbleServer";
+	private static final String PLAYER_MUMBLE_SERVER_NAME = "PlayerMumbleServer";
 	private MumbleClientCommandTree tree;
 
 	/**
@@ -45,7 +49,7 @@ public class ConnectNode extends MumbleClientNode {
 				return false;
 			};
 
-			List<String> connectionTypes = asList(ConnectionType.EXTERNAL_GAME_SERVER_TO_SERVER.toString(), ConnectionType.PLAYER_TO_SERVER.toString());
+			List<String> connectionTypes = asList(Type.EXTERNAL_TO_SERVER.toString(), Type.PLAYER_TO_SERVER.toString());
 			return check(args[1], portValid, connectionTypes);
 		default:
 			return emptyList();
@@ -54,9 +58,9 @@ public class ConnectNode extends MumbleClientNode {
 
 	@Override
 	public boolean onCommand(String[] args) {
-		InetAddress address;
+		InetAddress ipAddress;
 		try {
-			address = InetAddress.getByName(args[0]);
+			ipAddress = InetAddress.getByName(args[0]);
 		} catch (IndexOutOfBoundsException e) {
 			send(EMumbleClientCode.MUMBLE__CONNECT__ADDRESS_IS_MISSING);
 			return false;
@@ -80,11 +84,11 @@ public class ConnectNode extends MumbleClientNode {
 			return false;
 		}
 
-		ConnectionType connectionType;
+		Type type;
 		try {
-			connectionType = ConnectionType.getByName(args[2]);
-			if (connectionType == null) {
-				send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_TYPE_NOT_FOUND, address, port, args[2]);
+			type = Type.getByName(args[2]);
+			if (type == null) {
+				send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_TYPE_NOT_FOUND, ipAddress, port, args[2]);
 				return false;
 			}
 		} catch (IndexOutOfBoundsException e) {
@@ -92,18 +96,21 @@ public class ConnectNode extends MumbleClientNode {
 			return false;
 		}
 
-		if (getServer() != null)
-			getServer().close();
+		tree.setServer(null);
 
-		String name = String.format("MumbleServer_%s:%s", address.getHostAddress(), port);
-		IMumbleServerType server = new MumbleServerType(name, new InetSocketAddress(address, port), connectionType);
 		try {
-			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, address, port);
-			server.getServer().open();
-			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_COMPLETE, address, port);
+			String prefixName = type == Type.EXTERNAL_TO_SERVER ? EXTERNAL_MUMBLE_SERVER_NAME : PLAYER_MUMBLE_SERVER_NAME;
+			String name = String.format("%s_%s:%s", prefixName, ipAddress.getHostAddress(), port);
+
+			InetSocketAddress address = new InetSocketAddress(ipAddress, port);
+			ICommonMumbleServer<?, ?, ?> server = type == Type.EXTERNAL_TO_SERVER ? new ExternalMumbleServer(name, address) : new PlayerMumbleServer(name, address);
+
+			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, ipAddress, port);
+			server.open();
+			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_COMPLETE, ipAddress, port);
 			tree.setServer(server);
 		} catch (IllegalStateException e) {
-			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_ABORT, address, port);
+			send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_ABORT, ipAddress, port);
 			return false;
 		}
 		return true;

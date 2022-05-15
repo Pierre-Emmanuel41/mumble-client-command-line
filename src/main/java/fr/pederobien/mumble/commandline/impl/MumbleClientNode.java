@@ -8,14 +8,12 @@ import fr.pederobien.commandtree.exceptions.NodeNotFoundException;
 import fr.pederobien.commandtree.exceptions.NotAvailableArgumentException;
 import fr.pederobien.commandtree.impl.CommandNode;
 import fr.pederobien.dictionary.impl.MessageEvent;
-import fr.pederobien.mumble.client.external.interfaces.IMumbleServer;
-import fr.pederobien.mumble.client.player.interfaces.IPlayerMumbleServer;
+import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
 import fr.pederobien.mumble.commandline.interfaces.ICode;
 import fr.pederobien.mumble.commandline.interfaces.IMumbleClientNode;
-import fr.pederobien.mumble.commandline.interfaces.IMumbleServerType;
 
-public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClientNode {
-	private Supplier<IMumbleServerType> server;
+public class MumbleClientNode<T extends ICommonMumbleServer<?, ?, ?>> extends CommandNode<ICode> implements IMumbleClientNode {
+	private Supplier<T> server;
 
 	/**
 	 * Creates a node specified by the given parameters.
@@ -25,7 +23,7 @@ public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClien
 	 * @param explanation The explanation associated to this node.
 	 * @param isAvailable True if this node is available, false otherwise.
 	 */
-	protected MumbleClientNode(Supplier<IMumbleServerType> server, String label, ICode explanation, Function<IMumbleServerType, Boolean> isAvailable) {
+	protected MumbleClientNode(Supplier<T> server, String label, ICode explanation, Function<T, Boolean> isAvailable) {
 		super(label, explanation, () -> isAvailable.apply(server == null ? null : server.get()));
 		this.server = server;
 	}
@@ -45,22 +43,8 @@ public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClien
 	/**
 	 * @return The server associated to this node.
 	 */
-	protected IMumbleServer getServer() {
-		return server.get() == null ? null : server.get().getServer();
-	}
-
-	/**
-	 * @return The server associated to this node.
-	 */
-	protected IPlayerMumbleServer getPlayerServer() {
-		return (IPlayerMumbleServer) (server.get() == null ? null : server.get().getServer());
-	}
-
-	/**
-	 * @return The type of connection between this client and the remote.
-	 */
-	protected ConnectionType getType() {
-		return server.get() == null ? null : server.get().getType();
+	protected T getServer() {
+		return server.get() == null ? null : server.get();
 	}
 
 	/**
@@ -81,18 +65,5 @@ public class MumbleClientNode extends CommandNode<ICode> implements IMumbleClien
 	 */
 	protected String getMessage(ICode code, Object... args) {
 		return MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), code.getCode(), args));
-	}
-
-	/**
-	 * This node is available if the server associated to this node is not null and if the connection type is
-	 * {@link ConnectionType#PLAYER_TO_SERVER} then the server should have been joined by the player.
-	 * 
-	 * @return True if this node is available, false otherwise.
-	 */
-	protected boolean isAvailableAccordingServerProperties() {
-		if (getType() == ConnectionType.EXTERNAL_GAME_SERVER_TO_SERVER)
-			return getServer() != null;
-		else
-			return getPlayerServer() != null && getPlayerServer().isJoined();
 	}
 }
