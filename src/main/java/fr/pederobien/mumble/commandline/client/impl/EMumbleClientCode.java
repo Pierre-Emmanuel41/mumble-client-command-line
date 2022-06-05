@@ -238,6 +238,21 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the sound modifier of a channel has been set on the server
 	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__REQUEST_SUCCEED,
 
+	// Code for the "mumble channel join" command --------------------------------
+	MUMBLE__CHANNEL__JOIN__EXPLANATION,
+
+	// Code when the main player is not connected in game
+	MUMBLE__CHANNEL__JOIN__PLAYER_NOT_ONLINE,
+
+	// Code for the "mumble channel leave" command -------------------------------
+	MUMBLE__CHANNEL__LEAVE__EXPLANATION,
+
+	// Code when the main player is not registered in a channel
+	MUMBLE__CHANNEL__LEAVE__PLAYER_NOT_REGISTERED_IN_CHANNEL,
+
+	// Code when the main player is not connected in game
+	MUMBLE__CHANNEL__LEAVE__PLAYER_NOT_ONLINE,
+
 	// Code for the "parameter" command ------------------------------------------
 	PARAMETER__ROOT__EXPLANATION,
 

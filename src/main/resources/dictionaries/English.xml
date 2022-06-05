@@ -128,7 +128,7 @@
 		</message>
 		<message>
 			<code>MUMBLE__CHANNEL__EXPLANATION</code>
-			<value>To add or remove channels from a server</value>
+			<value>To add/remove channels from a server or to add/remove players from a channel</value>
 		</message>
 		<message>
 			<code>MUMBLE__CHANNEL__ADD__EXPLANATION</code>
@@ -321,6 +321,26 @@
 		<message>
 			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__REQUEST_SUCCEED</code>
 			<value>The sound modifier of the %s channel is now %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__JOIN__EXPLANATION</code>
+			<value>To join a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__JOIN__PLAYER_NOT_ONLINE</code>
+			<value>Cannot join the channel %s, the player should be connected in game</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__LEAVE__EXPLANATION</code>
+			<value>To leave a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__LEAVE__PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Cannot leave a channel, the player is not registered in a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__LEAVE__PLAYER_NOT_ONLINE</code>
+			<value>Cannot leave a channel, the player should be connected in game</value>
 		</message>
 		<message>
 			<code>PARAMETER__ROOT__EXPLANATION</code>

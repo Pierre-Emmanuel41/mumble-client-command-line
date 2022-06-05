@@ -1,29 +1,31 @@
-package fr.pederobien.mumble.commandline.client.impl.external;
+package fr.pederobien.mumble.commandline.client.impl.player;
 
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.external.interfaces.IExternalMumbleServer;
+import fr.pederobien.mumble.client.player.interfaces.IPlayerMumbleServer;
 import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
 import fr.pederobien.mumble.commandline.client.impl.MumbleClientNode;
 
-public class ChannelNode extends MumbleClientNode<IExternalMumbleServer> {
+public class ChannelNode extends MumbleClientNode<IPlayerMumbleServer> {
 	private ChannelAddNode addNode;
 	private ChannelRemoveNode removeNode;
 	private ChannelRenameNode renameNode;
-	private ChannelSoundModifierNode soundModifierNode;
+	private ChannelJoinNode joinNode;
+	private ChannelLeaveNode leaveNode;
 
 	/**
 	 * Creates a node that adds or removes channel from a mumble server or adds/removes players from a channel.
 	 * 
 	 * @param server The server associated to this node.
 	 */
-	protected ChannelNode(Supplier<IExternalMumbleServer> server) {
-		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNEL__EXPLANATION, s -> s != null);
+	protected ChannelNode(Supplier<IPlayerMumbleServer> server) {
+		super(server, "channel", EMumbleClientCode.MUMBLE__CHANNEL__EXPLANATION, s -> s != null && s.isJoined());
 
 		add(addNode = new ChannelAddNode(server));
 		add(removeNode = new ChannelRemoveNode(server));
 		add(renameNode = new ChannelRenameNode(server));
-		add(soundModifierNode = new ChannelSoundModifierNode(server));
+		add(joinNode = new ChannelJoinNode(server));
+		add(leaveNode = new ChannelLeaveNode(server));
 	}
 
 	/**
@@ -48,9 +50,16 @@ public class ChannelNode extends MumbleClientNode<IExternalMumbleServer> {
 	}
 
 	/**
-	 * @return The node that modifies the sound modifier of a channel or the parameters of a sound modifier.
+	 * @return The node in order to join a channel.
 	 */
-	public ChannelSoundModifierNode getSoundModifierNode() {
-		return soundModifierNode;
+	public ChannelJoinNode getJoinNode() {
+		return joinNode;
+	}
+
+	/**
+	 * @return The node in order to leave a channel.
+	 */
+	public ChannelLeaveNode getLeaveNode() {
+		return leaveNode;
 	}
 }

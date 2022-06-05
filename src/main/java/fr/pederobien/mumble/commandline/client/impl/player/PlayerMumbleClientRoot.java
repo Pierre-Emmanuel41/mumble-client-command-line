@@ -15,6 +15,7 @@ public class PlayerMumbleClientRoot {
 	private ServerJoinNode joinNode;
 	private ServerLeaveNode leaveNode;
 	private DetailsNode detailsNode;
+	private ChannelNode channelNode;
 
 	/**
 	 * Creates a root node in order to modify an player mumble server.
@@ -28,6 +29,7 @@ public class PlayerMumbleClientRoot {
 		root.add(joinNode = new ServerJoinNode(() -> (IPlayerMumbleServer) tree.getServer()));
 		root.add(leaveNode = new ServerLeaveNode(() -> (IPlayerMumbleServer) tree.getServer()));
 		root.add(detailsNode = new DetailsNode(() -> (IPlayerMumbleServer) tree.getServer()));
+		root.add(channelNode = new ChannelNode(() -> (IPlayerMumbleServer) tree.getServer()));
 	}
 
 	/**
@@ -56,5 +58,12 @@ public class PlayerMumbleClientRoot {
 	 */
 	public DetailsNode getDetailsNode() {
 		return detailsNode;
+	}
+
+	/**
+	 * @return The node that adds/removes channels from a server or adds/removes the main player from a channel.
+	 */
+	public ChannelNode getChannelNode() {
+		return channelNode;
 	}
 }

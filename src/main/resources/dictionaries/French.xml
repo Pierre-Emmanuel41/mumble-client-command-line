@@ -125,7 +125,7 @@
 		</message>
 		<message>
 			<code>MUMBLE__CHANNEL__EXPLANATION</code>
-			<value>Pour ajouter or supprimer des channels d'un serveur</value>
+			<value>Pour ajouter/supprimer des channels d'un serveur ou ajouter/enlever des joueurs d'un channel</value>
 		</message>
 		<message>
 			<code>MUMBLE__CHANNEL__ADD__EXPLANATION</code>
@@ -318,6 +318,26 @@
 		<message>
 			<code>MUMBLE__CHANNEL__SOUND_MODIFIER__SET__REQUEST_SUCCEED</code>
 			<value>Le modifieur de son du channel %s est désormais %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__JOIN__EXPLANATION</code>
+			<value>Pour rejoindre channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__JOIN__PLAYER_NOT_ONLINE</code>
+			<value>Impossible de rejoindre le channel %s, le joueur doit être connecté dans le jeu</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__LEAVE__EXPLANATION</code>
+			<value>Pour quitter un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__LEAVE__PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Impossible de quitter un channel, le joueur n'est pas enregistré dans un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__CHANNEL__LEAVE__PLAYER_NOT_ONLINE</code>
+			<value>Impossible de quitter un channel, le joueur doit être connecté dans le jeu</value>
 		</message>
 		<message>
 			<code>PARAMETER__ROOT__EXPLANATION</code>
