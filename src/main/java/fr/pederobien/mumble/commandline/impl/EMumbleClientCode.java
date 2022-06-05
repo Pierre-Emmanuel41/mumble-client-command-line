@@ -742,8 +742,11 @@ public enum EMumbleClientCode implements ICode {
 	// Code for the details of the channel's sound modifier
 	MUMBLE__DETAILS__CHANNEL_SOUND_MODIFIER,
 
-	// Code for the complete server configuration
+	// Code for the server configuration
 	MUMBLE__DETAILS__SERVER,
+
+	// Code for the main player's information
+	MUMBLE__DETAILS__MAIN_PLAYER
 
 	;
 

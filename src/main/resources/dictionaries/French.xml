@@ -920,6 +920,10 @@
 			<value>Configuration du serveur :%n%s</value>
 		</message>
 		<message>
+			<code>MUMBLE__DETAILS__MAIN_PLAYER</code>
+			<value>Joueur principal :</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__POSITION__EXPLANATION</code>
 			<value>Pour mettre à jour la position d'un joueur</value>
 		</message>

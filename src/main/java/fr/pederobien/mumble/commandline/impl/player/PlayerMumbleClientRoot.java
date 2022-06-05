@@ -14,6 +14,7 @@ public class PlayerMumbleClientRoot {
 	private ICommandRootNode<ICode> root;
 	private ServerJoinNode joinNode;
 	private ServerLeaveNode leaveNode;
+	private DetailsNode detailsNode;
 
 	/**
 	 * Creates a root node in order to modify an player mumble server.
@@ -26,6 +27,7 @@ public class PlayerMumbleClientRoot {
 
 		root.add(joinNode = new ServerJoinNode(() -> (IPlayerMumbleServer) tree.getServer()));
 		root.add(leaveNode = new ServerLeaveNode(() -> (IPlayerMumbleServer) tree.getServer()));
+		root.add(detailsNode = new DetailsNode(() -> (IPlayerMumbleServer) tree.getServer()));
 	}
 
 	/**
@@ -47,5 +49,12 @@ public class PlayerMumbleClientRoot {
 	 */
 	public ServerLeaveNode getLeaveNode() {
 		return leaveNode;
+	}
+
+	/**
+	 * @return The node that displays the configuration of the current mumble server.
+	 */
+	public DetailsNode getDetailsNode() {
+		return detailsNode;
 	}
 }

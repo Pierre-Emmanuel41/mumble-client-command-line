@@ -919,6 +919,10 @@
 			<value>Server configuration:%n%s</value>
 		</message>
 		<message>
+			<code>MUMBLE__DETAILS__MAIN_PLAYER</code>
+			<value>Main Player:</value>
+		</message>
+		<message>
 			<code>MUMBLE__PLAYERS__POSITION__EXPLANATION</code>
 			<value>To update the position of a player</value>
 		</message>
