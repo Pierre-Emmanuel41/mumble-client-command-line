@@ -70,7 +70,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>fr.pederobien.mumble.commandline.MumbleClientCommandLine</mainClass>
+							<mainClass>fr.pederobien.mumble.commandline.client.MumbleClientCommandLine</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
