@@ -15,6 +15,7 @@ import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.dictionary.impl.XmlDictionaryParser;
 import fr.pederobien.dictionary.interfaces.IDictionaryParser;
 import fr.pederobien.mumble.commandline.client.interfaces.ICode;
+import fr.pederobien.sound.event.SoundEvent;
 import fr.pederobien.utils.AsyncConsole;
 import fr.pederobien.utils.event.EventLogger;
 
@@ -41,7 +42,8 @@ public class BeginContext {
 		if (!isInitialized.compareAndSet(false, true))
 			return this;
 
-		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class).register();
+		EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class);
+		EventLogger.instance().ignore(NodeEvent.class).ignore(SoundEvent.class).register();
 
 		tree = new MumbleClientCommandTree();
 		scanner = new Scanner(System.in);
