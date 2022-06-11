@@ -795,6 +795,82 @@
 			<value>%s has been kicked from %s by %s</value>
 		</message>
 		<message>
+			<code>MUMBLE__PLAYERS__POSITION__EXPLANATION</code>
+			<value>To update the position of a player</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_COMPLETION</code>
+			<value>&lt;x&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_COMPLETION</code>
+			<value>&lt;y&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_COMPLETION</code>
+			<value>&lt;z&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_COMPLETION</code>
+			<value>&lt;yaw&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_COMPLETION</code>
+			<value>&lt;pitch&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NAME_IS_MISSING</code>
+			<value>Cannot update the position of a player, the player name is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NOT_FOUND</code>
+			<value>Cannot update the position of %s, the player does not exist</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_IS_MISSING</code>
+			<value>Cannot update the position of %s, the X coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the X coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_IS_MISSING</code>
+			<value>Cannot update the position of %s, the Y coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the Y coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_IS_MISSING</code>
+			<value>Cannot update the position of %s, the Z coordinate is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the Z coordinate should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_IS_MISSING</code>
+			<value>Cannot update the position of %s, the yaw angle is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the yaw angle should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_IS_MISSING</code>
+			<value>Cannot update the position of %s, the pitch angle is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_BAD_FORMAT</code>
+			<value>Cannot update the position of %s, the pitch angle should be a double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__REQUEST_SUCCEED</code>
+			<value>%s's position is now X=%s, Y=%s, Z=%s, yaw=%s, pitch=%s</value>
+		</message>
+		<message>
 			<code>MUMBLE__DETAILS__EXPLANATION</code>
 			<value>To display the mumble server current configuration</value>
 		</message>
@@ -943,80 +1019,48 @@
 			<value>Main Player:</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__EXPLANATION</code>
-			<value>To update the position of a player</value>
+			<code>MUMBLE__SET__EXPLANATION</code>
+			<value>To modify the properties of the main player and/or the properties of a player registered in a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__X_COMPLETION</code>
-			<value>&lt;x&gt;</value>
+			<code>MUMBLE__SET__MUTE__EXPLANATION</code>
+			<value>To update the mute status of the main player or the mute status of a player registered in a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Y_COMPLETION</code>
-			<value>&lt;y&gt;</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Cannot update the mute status of a player, the main player is not registered in a channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Z_COMPLETION</code>
-			<value>&lt;z&gt;</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_NAME_OR_MUTE_STATUS_IS_MISSING</code>
+			<value>Cannot update the mute status of a player, the mute status or the player name is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__YAW_COMPLETION</code>
-			<value>&lt;yaw&gt;</value>
+			<code>MUMBLE__SET__MUTE__MUTED_REQUEST_SUCCEED</code>
+			<value>%s is now muted</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PITCH_COMPLETION</code>
-			<value>&lt;pitch&gt;</value>
+			<code>MUMBLE__SET__MUTE__UNMUTED_REQUEST_SUCCEED</code>
+			<value>%s is no more muted</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NAME_IS_MISSING</code>
-			<value>Cannot update the position of a player, the player name is missing</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_NOT_REGISTERED_IN_SAME_CHANNEL</code>
+			<value>Cannot update the mute status of %s, the player is not registered in channel %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NOT_FOUND</code>
-			<value>Cannot update the position of %s, the player does not exist</value>
+			<code>MUMBLE__SET__MUTE__MUTE_STATUS_IS_MISSING</code>
+			<value>Cannot update the mute status of %s, the mute status is missing</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__X_IS_MISSING</code>
-			<value>Cannot update the position of %s, the X coordinate is missing</value>
+			<code>MUMBLE__SET__MUTE__MUTE_STATUS_BAD_FORMAT</code>
+			<value>Cannot update the mute status of %s, the mute status should be a boolean value</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__X_BAD_FORMAT</code>
-			<value>Cannot update the position of %s, the X coordinate should be a double</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_MUTED_REQUEST_SUCCEED</code>
+			<value>%s is now muted for %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Y_IS_MISSING</code>
-			<value>Cannot update the position of %s, the Y coordinate is missing</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Y_BAD_FORMAT</code>
-			<value>Cannot update the position of %s, the Y coordinate should be a double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Z_IS_MISSING</code>
-			<value>Cannot update the position of %s, the Z coordinate is missing</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Z_BAD_FORMAT</code>
-			<value>Cannot update the position of %s, the Z coordinate should be a double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__YAW_IS_MISSING</code>
-			<value>Cannot update the position of %s, the yaw angle is missing</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__YAW_BAD_FORMAT</code>
-			<value>Cannot update the position of %s, the yaw angle should be a double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PITCH_IS_MISSING</code>
-			<value>Cannot update the position of %s, the pitch angle is missing</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PITCH_BAD_FORMAT</code>
-			<value>Cannot update the position of %s, the pitch angle should be a double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__REQUEST_SUCCEED</code>
-			<value>%s's position is now X=%s, Y=%s, Z=%s, yaw=%s, pitch=%s</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_UNMUTED_REQUEST_SUCCEED</code>
+			<value>%s is no more muted for %s</value>
 		</message>
 	</messages>
 </dictionary>

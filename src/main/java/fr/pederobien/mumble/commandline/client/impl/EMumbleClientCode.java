@@ -761,7 +761,40 @@ public enum EMumbleClientCode implements ICode {
 	MUMBLE__DETAILS__SERVER,
 
 	// Code for the main player's information
-	MUMBLE__DETAILS__MAIN_PLAYER
+	MUMBLE__DETAILS__MAIN_PLAYER,
+
+	// Code for the "mumble set" command -----------------------------------------
+	MUMBLE__SET__EXPLANATION,
+
+	// Code for the "mumble set mute" command ------------------------------------
+	MUMBLE__SET__MUTE__EXPLANATION,
+
+	// Code when the player is not registered in a channel
+	MUMBLE__SET__MUTE__PLAYER_NOT_REGISTERED_IN_CHANNEL,
+
+	// Code when the mute status or the player name is missing
+	MUMBLE__SET__MUTE__PLAYER_NAME_OR_MUTE_STATUS_IS_MISSING,
+
+	// Code when the player is mute
+	MUMBLE__SET__MUTE__MUTED_REQUEST_SUCCEED,
+
+	// Code when the player is unmute
+	MUMBLE__SET__MUTE__UNMUTED_REQUEST_SUCCEED,
+
+	// Code when the player is not registered in the same channel as the main player
+	MUMBLE__SET__MUTE__PLAYER_NOT_REGISTERED_IN_SAME_CHANNEL,
+
+	// Code when the mute status is missing
+	MUMBLE__SET__MUTE__MUTE_STATUS_IS_MISSING,
+
+	// Code when the mute status has a bad format
+	MUMBLE__SET__MUTE__MUTE_STATUS_BAD_FORMAT,
+
+	// Code when another player is mute on the server
+	MUMBLE__SET__MUTE__PLAYER_MUTED_REQUEST_SUCCEED,
+
+	// Code when another player is unmute on the server
+	MUMBLE__SET__MUTE__PLAYER_UNMUTED_REQUEST_SUCCEED,
 
 	;
 

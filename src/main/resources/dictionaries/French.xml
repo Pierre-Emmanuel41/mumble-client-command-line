@@ -796,6 +796,82 @@
 			<value>%s a été kick de %s par %s</value>
 		</message>
 		<message>
+			<code>MUMBLE__PLAYERS__POSITION__EXPLANATION</code>
+			<value>Pour mettre à jour la position d'un joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_COMPLETION</code>
+			<value>&lt;x&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_COMPLETION</code>
+			<value>&lt;y&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_COMPLETION</code>
+			<value>&lt;z&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_COMPLETION</code>
+			<value>&lt;lacet&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_COMPLETION</code>
+			<value>&lt;tangage&gt;</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NAME_IS_MISSING</code>
+			<value>Impossible de mettre à jour la position d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NOT_FOUND</code>
+			<value>Impossible de mettre à jour la position de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_IS_MISSING</code>
+			<value>Impossible de mettre à jour la position de %s, la coordonnée X est manquante</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__X_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour la position de %s, la coordonnée X doit être un double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_IS_MISSING</code>
+			<value>Impossible de mettre à jour la position de %s, la coordonnée Y est manquante</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Y_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour la position de %s, la coordonnée Y doit être un double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_IS_MISSING</code>
+			<value>Impossible de mettre à jour la position de %s, la coordonnée Z est manquante</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__Z_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour la position de %s, la coordonnée Z doit être un double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_IS_MISSING</code>
+			<value>Impossible de mettre à jour la position de %s, l'angle de lacet est manquante</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__YAW_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour la position de %s, l'angle de lacet doit être un double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_IS_MISSING</code>
+			<value>Impossible de mettre à jour la position de %s, l'angle de tangage est manquante</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__PITCH_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour la position de %s, l'angle de tangage doit être un double</value>
+		</message>
+		<message>
+			<code>MUMBLE__PLAYERS__POSITION__REQUEST_SUCCEED</code>
+			<value>La position de %s est désormais X=%s, Y=%s, Z=%s, lacet=%s, tangage=%s</value>
+		</message>
+		<message>
 			<code>MUMBLE__DETAILS__EXPLANATION</code>
 			<value>Pour afficher la configuration actuelle su serveur mumble</value>
 		</message>
@@ -944,80 +1020,48 @@
 			<value>Joueur principal :</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__EXPLANATION</code>
-			<value>Pour mettre à jour la position d'un joueur</value>
+			<code>MUMBLE__SET__EXPLANATION</code>
+			<value>Pour modifier les propriétés du joueur principal et/ou les propriétés d'un joueur enregistré dans un channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__X_COMPLETION</code>
-			<value>&lt;x&gt;</value>
+			<code>MUMBLE__SET__MUTE__EXPLANATION</code>
+			<value>Pour mettre à jour le status muet du joueur principal ou celui d'un joueur enregistré dans un channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Y_COMPLETION</code>
-			<value>&lt;y&gt;</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Impossible de mettre à jour le statut muet d'un joueur, le joueur principal n'est pas enregistré dans un channel</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Z_COMPLETION</code>
-			<value>&lt;z&gt;</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_NAME_OR_MUTE_STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le statut muet d'un joueur, le statut muet ou le nom du joueur est manquant</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__YAW_COMPLETION</code>
-			<value>&lt;lacet&gt;</value>
+			<code>MUMBLE__SET__MUTE__MUTED_REQUEST_SUCCEED</code>
+			<value>%s est désormais muet</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PITCH_COMPLETION</code>
-			<value>&lt;tangage&gt;</value>
+			<code>MUMBLE__SET__MUTE__UNMUTED_REQUEST_SUCCEED</code>
+			<value>%s n'est plus muet</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NAME_IS_MISSING</code>
-			<value>Impossible de mettre à jour la position d'un joueur, le nom du joueur est manquant</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_NOT_REGISTERED_IN_SAME_CHANNEL</code>
+			<value>Impossible de mettre à jour le statut muet de %s, le joueur n'est pas enregistré dans le channel %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PLAYER_NOT_FOUND</code>
-			<value>Impossible de mettre à jour la position de %s, le joueur n'existe pas</value>
+			<code>MUMBLE__SET__MUTE__MUTE_STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le status muet de %s, le statut muet est manquant</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__X_IS_MISSING</code>
-			<value>Impossible de mettre à jour la position de %s, la coordonnée X est manquante</value>
+			<code>MUMBLE__SET__MUTE__MUTE_STATUS_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour le status muet de %s, the status muet doit être un booléen</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__X_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour la position de %s, la coordonnée X doit être un double</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_MUTED_REQUEST_SUCCEED</code>
+			<value>%s est désormais muet pour %s</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Y_IS_MISSING</code>
-			<value>Impossible de mettre à jour la position de %s, la coordonnée Y est manquante</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Y_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour la position de %s, la coordonnée Y doit être un double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Z_IS_MISSING</code>
-			<value>Impossible de mettre à jour la position de %s, la coordonnée Z est manquante</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__Z_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour la position de %s, la coordonnée Z doit être un double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__YAW_IS_MISSING</code>
-			<value>Impossible de mettre à jour la position de %s, l'angle de lacet est manquante</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__YAW_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour la position de %s, l'angle de lacet doit être un double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PITCH_IS_MISSING</code>
-			<value>Impossible de mettre à jour la position de %s, l'angle de tangage est manquante</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__PITCH_BAD_FORMAT</code>
-			<value>Impossible de mettre à jour la position de %s, l'angle de tangage doit être un double</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__POSITION__REQUEST_SUCCEED</code>
-			<value>La position de %s est désormais X=%s, Y=%s, Z=%s, lacet=%s, tangage=%s</value>
+			<code>MUMBLE__SET__MUTE__PLAYER_UNMUTED_REQUEST_SUCCEED</code>
+			<value>%s n'est plus muet pour %s</value>
 		</message>
 	</messages>
 </dictionary>
