@@ -1063,5 +1063,29 @@
 			<code>MUMBLE__SET__MUTE__PLAYER_UNMUTED_REQUEST_SUCCEED</code>
 			<value>%s n'est plus muet pour %s</value>
 		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__EXPLANATION</code>
+			<value>Pour mettre à jour le status source du joueur principal </value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Impossible de mettre à jour le statut sourd, le joueur principal n'est pas enregistré dans un channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__DEAFEN_STATUS_IS_MISSING</code>
+			<value>Impossible de mettre à jour le status sourd de %s, le statut sourd est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__DEAFEN_STATUS_BAD_FORMAT</code>
+			<value>Impossible de mettre à jour le status sourd de %s, the status sourd doit être un booléen</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__DEAFENED_REQUEST_SUCCEED</code>
+			<value>%s est désormais sourd</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__UNDEAFENED_REQUEST_SUCCEED</code>
+			<value>%s n'est plus sourd</value>
+		</message>
 	</messages>
 </dictionary>

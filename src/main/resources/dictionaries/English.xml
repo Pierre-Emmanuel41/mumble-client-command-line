@@ -1052,7 +1052,7 @@
 		</message>
 		<message>
 			<code>MUMBLE__SET__MUTE__MUTE_STATUS_BAD_FORMAT</code>
-			<value>Cannot update the mute status of %s, the mute status should be a boolean value</value>
+			<value>Cannot update the mute status of %s, the mute status should be a boolean</value>
 		</message>
 		<message>
 			<code>MUMBLE__SET__MUTE__PLAYER_MUTED_REQUEST_SUCCEED</code>
@@ -1061,6 +1061,30 @@
 		<message>
 			<code>MUMBLE__SET__MUTE__PLAYER_UNMUTED_REQUEST_SUCCEED</code>
 			<value>%s is no more muted for %s</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__EXPLANATION</code>
+			<value>To update the deafen status of the main player</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__PLAYER_NOT_REGISTERED_IN_CHANNEL</code>
+			<value>Cannot update the deafen status, the main player is not registered in a channel</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__DEAFEN_STATUS_IS_MISSING</code>
+			<value>Cannot update the deafen status of %s, the deafen status is missing</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__DEAFEN_STATUS_BAD_FORMAT</code>
+			<value>Cannot update the deafen status of %s, the deafen status should be a boolean</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__DEAFENED_REQUEST_SUCCEED</code>
+			<value>%s is now deafened</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__DEAFEN__UNDEAFENED_REQUEST_SUCCEED</code>
+			<value>%s is no more deafened</value>
 		</message>
 	</messages>
 </dictionary>

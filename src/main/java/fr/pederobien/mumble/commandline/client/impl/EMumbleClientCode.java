@@ -796,6 +796,24 @@ public enum EMumbleClientCode implements ICode {
 	// Code when another player is unmute on the server
 	MUMBLE__SET__MUTE__PLAYER_UNMUTED_REQUEST_SUCCEED,
 
+	// Code for the "mumble set deafen" command ----------------------------------
+	MUMBLE__SET__DEAFEN__EXPLANATION,
+
+	// Code when the player is not registered in a channel
+	MUMBLE__SET__DEAFEN__PLAYER_NOT_REGISTERED_IN_CHANNEL,
+
+	// Code when the deafen status is missing
+	MUMBLE__SET__DEAFEN__DEAFEN_STATUS_IS_MISSING,
+
+	// Code when the deafen status has a bad format
+	MUMBLE__SET__DEAFEN__DEAFEN_STATUS_BAD_FORMAT,
+
+	// Code when the player is deafen
+	MUMBLE__SET__DEAFEN__DEAFENED_REQUEST_SUCCEED,
+
+	// Code when the player is undeafen
+	MUMBLE__SET__DEAFEN__UNDEAFENED_REQUEST_SUCCEED,
+
 	;
 
 	@Override
