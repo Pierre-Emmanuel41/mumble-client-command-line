@@ -24,7 +24,8 @@ public class MumbleClientCommandLine {
 			EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class);
 			EventLogger.instance().ignore(NodeEvent.class).ignore(SoundEvent.class).register();
 
-			registerDictionaries();
+			String dictionaryFolder = commandLine.getEnvironment() == CommandLine.DEVELOPMENT_ENVIRONMENT ? DEV_DICTIONARY_FOLDER : PROD_DICTIONARY_FOLDER;
+			commandLine.registerDictionaries(dictionaryFolder, new String[] { "English.xml", "French.xml" });
 			return true;
 		});
 
@@ -37,10 +38,5 @@ public class MumbleClientCommandLine {
 
 		commandLine = builder.build(tree.getRoot());
 		commandLine.start();
-	}
-
-	private static void registerDictionaries() {
-		String dictionaryFolder = commandLine.getEnvironment() == CommandLine.DEVELOPMENT_ENVIRONMENT ? DEV_DICTIONARY_FOLDER : PROD_DICTIONARY_FOLDER;
-		commandLine.registerDictionaries(dictionaryFolder, new String[] { "English.xml", "French.xml" });
 	}
 }
