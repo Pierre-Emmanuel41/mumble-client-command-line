@@ -4,12 +4,11 @@ import java.util.Locale;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import fr.pederobien.commandtree.exceptions.NodeNotFoundException;
-import fr.pederobien.commandtree.exceptions.NotAvailableArgumentException;
+import fr.pederobien.commandline.CommandLineDictionaryContext;
+import fr.pederobien.commandline.ICode;
 import fr.pederobien.commandtree.impl.CommandNode;
 import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
-import fr.pederobien.mumble.commandline.client.interfaces.ICode;
 import fr.pederobien.mumble.commandline.client.interfaces.IMumbleClientNode;
 
 public class MumbleClientNode<T extends ICommonMumbleServer<?, ?, ?>> extends CommandNode<ICode> implements IMumbleClientNode {
@@ -28,18 +27,6 @@ public class MumbleClientNode<T extends ICommonMumbleServer<?, ?, ?>> extends Co
 		this.server = server;
 	}
 
-	@Override
-	public boolean onCommand(String[] args) {
-		try {
-			return super.onCommand(args);
-		} catch (NodeNotFoundException e) {
-			send(EMumbleClientCode.MUMBLE__NODE_NOT_FOUND, e.getNotFoundArgument());
-		} catch (NotAvailableArgumentException e) {
-			send(EMumbleClientCode.MUMBLE__NODE_NOT_AVAILABLE, e.getLabel());
-		}
-		return false;
-	}
-
 	/**
 	 * @return The server associated to this node.
 	 */
@@ -54,7 +41,7 @@ public class MumbleClientNode<T extends ICommonMumbleServer<?, ?, ?>> extends Co
 	 * @param args Some arguments (optional) used for dynamic messages.
 	 */
 	protected void send(ICode code, Object... args) {
-		MumbleClientDictionaryContext.instance().send(new MessageEvent(Locale.getDefault(), code.getCode(), args));
+		CommandLineDictionaryContext.instance().send(new MessageEvent(Locale.getDefault(), code.getCode(), args));
 	}
 
 	/**
@@ -64,6 +51,6 @@ public class MumbleClientNode<T extends ICommonMumbleServer<?, ?, ?>> extends Co
 	 * @param args Some arguments (optional) used for dynamic messages.
 	 */
 	protected String getMessage(ICode code, Object... args) {
-		return MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), code.getCode(), args));
+		return CommandLineDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), code.getCode(), args));
 	}
 }

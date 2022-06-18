@@ -3,11 +3,11 @@ package fr.pederobien.mumble.commandline.client.impl.external;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+import fr.pederobien.commandline.ICode;
 import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
 import fr.pederobien.mumble.client.external.interfaces.IParameter;
 import fr.pederobien.mumble.client.external.interfaces.IRangeParameter;
 import fr.pederobien.mumble.commandline.client.impl.MumbleClientNode;
-import fr.pederobien.mumble.commandline.client.interfaces.ICode;
 
 public class ParameterNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> {
 	private Supplier<IParameter<?>> parameter;

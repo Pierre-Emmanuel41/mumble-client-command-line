@@ -3,14 +3,14 @@ package fr.pederobien.mumble.commandline.client.impl.external;
 import java.util.Locale;
 import java.util.function.Consumer;
 
+import fr.pederobien.commandline.CommandLineDictionaryContext;
+import fr.pederobien.commandline.ICode;
 import fr.pederobien.commandtree.impl.CommandRootNode;
 import fr.pederobien.commandtree.interfaces.ICommandRootNode;
 import fr.pederobien.commandtree.interfaces.INode;
 import fr.pederobien.dictionary.impl.MessageEvent;
 import fr.pederobien.mumble.client.external.interfaces.IParameter;
 import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
-import fr.pederobien.mumble.commandline.client.impl.MumbleClientDictionaryContext;
-import fr.pederobien.mumble.commandline.client.interfaces.ICode;
 import fr.pederobien.utils.AsyncConsole;
 
 public class ParameterCommandTree {
@@ -23,7 +23,7 @@ public class ParameterCommandTree {
 	public ParameterCommandTree() {
 		Consumer<INode<ICode>> displayer = node -> {
 			String label = node.getLabel();
-			String explanation = MumbleClientDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), node.getExplanation().toString()));
+			String explanation = CommandLineDictionaryContext.instance().getMessage(new MessageEvent(Locale.getDefault(), node.getExplanation().toString()));
 			AsyncConsole.println(String.format("%s - %s", label, explanation));
 		};
 
