@@ -12,6 +12,10 @@
 			<value>Démarrage de Mumble client command line</value>
 		</message>
 		<message>
+			<code>MUMBLE__STARTING__IGNORING_ARGUMENTS__NOT_ENOUGH_ARGUMENT</code>
+			<value>Arguments non pris en compte, arguments attendus : "&lt;IP address&gt; &lt;port number&gt; [&lt;external&gt;|&lt;player&gt;]"</value>
+		</message>
+		<message>
 			<code>MUMBLE__STOPPING</code>
 			<value>Arrêt de Mumble client command line</value>
 		</message>

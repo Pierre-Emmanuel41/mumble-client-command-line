@@ -7,6 +7,9 @@ public enum EMumbleClientCode implements ICode {
 	// Starting application ------------------------------------------------------
 	MUMBLE__STARTING,
 
+	// Code when the arguments are ignored
+	MUMBLE__STARTING__IGNORING_ARGUMENTS__NOT_ENOUGH_ARGUMENT,
+
 	// Stopping application ------------------------------------------------------
 	MUMBLE__STOPPING,
 
