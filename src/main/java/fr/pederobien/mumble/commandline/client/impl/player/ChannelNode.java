@@ -12,6 +12,7 @@ public class ChannelNode extends MumbleClientNode<IPlayerMumbleServer> {
 	private ChannelRenameNode renameNode;
 	private ChannelJoinNode joinNode;
 	private ChannelLeaveNode leaveNode;
+	private ChannelSoundModifierNode soundModifierNode;
 
 	/**
 	 * Creates a node that adds or removes channel from a mumble server or adds/removes players from a channel.
@@ -26,6 +27,7 @@ public class ChannelNode extends MumbleClientNode<IPlayerMumbleServer> {
 		add(renameNode = new ChannelRenameNode(server));
 		add(joinNode = new ChannelJoinNode(server));
 		add(leaveNode = new ChannelLeaveNode(server));
+		add(soundModifierNode = new ChannelSoundModifierNode(server));
 	}
 
 	/**
@@ -61,5 +63,12 @@ public class ChannelNode extends MumbleClientNode<IPlayerMumbleServer> {
 	 */
 	public ChannelLeaveNode getLeaveNode() {
 		return leaveNode;
+	}
+
+	/**
+	 * @return The node that modifies the sound modifier of a channel or the parameters of a sound modifier.
+	 */
+	public ChannelSoundModifierNode getSoundModifierNode() {
+		return soundModifierNode;
 	}
 }
