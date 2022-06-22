@@ -583,12 +583,6 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player to kick does not exist
 	MUMBLE__PLAYERS__KICK__KICKED_PLAYER_NOT_FOUND,
 
-	// Code when name of the kicking player is missing
-	MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NAME_IS_MISSING,
-
-	// Code when the kicking player does not exist
-	MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_FOUND,
-
 	// Code when the kicking player is not an administrator
 	MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_ADMIN,
 
