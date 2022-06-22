@@ -16,7 +16,6 @@ public class PlayersNode extends MumbleClientNode<IExternalMumbleServer> {
 	private PlayersMuteNode muteNode;
 	private PlayersDeafenNode deafenNode;
 	private PlayersMuteByNode muteByNode;
-	private PlayersKickNode kickNode;
 	private PlayersPositionNode positionNode;
 
 	/**
@@ -36,7 +35,6 @@ public class PlayersNode extends MumbleClientNode<IExternalMumbleServer> {
 		add(muteNode = new PlayersMuteNode(server));
 		add(deafenNode = new PlayersDeafenNode(server));
 		add(muteByNode = new PlayersMuteByNode(server));
-		add(kickNode = new PlayersKickNode(server));
 		add(positionNode = new PlayersPositionNode(server));
 	}
 
@@ -101,13 +99,6 @@ public class PlayersNode extends MumbleClientNode<IExternalMumbleServer> {
 	 */
 	public PlayersMuteByNode getMuteByNode() {
 		return muteByNode;
-	}
-
-	/**
-	 * @return The node that kicks a player from a channel.
-	 */
-	public PlayersKickNode getKickNode() {
-		return kickNode;
 	}
 
 	/**

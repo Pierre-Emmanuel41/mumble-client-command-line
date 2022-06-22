@@ -779,14 +779,6 @@
 			<value>Cannot kick %s, the player to kick does not exist</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NAME_IS_MISSING</code>
-			<value>Cannot kick %s by another player, the kicking player name is missing</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_FOUND</code>
-			<value>Cannot kick %s by %s, the kicking player does not exist</value>
-		</message>
-		<message>
 			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_ADMIN</code>
 			<value>Cannot kick %s by %s, the kicking player is not an administrator</value>
 		</message>

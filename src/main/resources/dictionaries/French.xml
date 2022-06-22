@@ -780,14 +780,6 @@
 			<value>Impossible de kick %s, le joueur à kicker n'existe pas</value>
 		</message>
 		<message>
-			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NAME_IS_MISSING</code>
-			<value>Impossible de kick %s par un autre joueur, le nom du joueur qui kick est manquant</value>
-		</message>
-		<message>
-			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_FOUND</code>
-			<value>Impossible de kick %s par %s, le joueur qui kick n'existe pas</value>
-		</message>
-		<message>
 			<code>MUMBLE__PLAYERS__KICK__KICKING_PLAYER_NOT_ADMIN</code>
 			<value>Impossible de kick %s par %s, le joueur qui kick n'est pas un administrateur</value>
 		</message>
