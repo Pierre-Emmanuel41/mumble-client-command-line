@@ -1,6 +1,5 @@
 package fr.pederobien.mumble.commandline.client.impl.player;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.StringJoiner;
 import java.util.function.Supplier;
@@ -20,12 +19,7 @@ public class ChannelSoundModifierDetailsNode extends MumbleClientNode<IPlayerMum
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelSoundModifierDetailsNode(Supplier<IPlayerMumbleServer> server) {
-		super(server, "details", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__EXPLANATION, s -> s != null);
-	}
-
-	@Override
-	public List<String> onTabComplete(String[] args) {
-		return super.onTabComplete(args);
+		super(server, "details", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__EXPLANATION, s -> s != null && s.isJoined());
 	}
 
 	@Override

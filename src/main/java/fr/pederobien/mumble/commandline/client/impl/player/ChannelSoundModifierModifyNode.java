@@ -18,7 +18,7 @@ public class ChannelSoundModifierModifyNode extends MumbleClientNode<IPlayerMumb
 	 * @param server The server associated to this node.
 	 */
 	protected ChannelSoundModifierModifyNode(Supplier<IPlayerMumbleServer> server) {
-		super(server, "modify", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION, s -> s != null);
+		super(server, "modify", EMumbleClientCode.MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION, s -> s != null && s.isJoined());
 
 		parameterTree = new ParameterCommandTree();
 		parameterTree.getRoot().export(this);

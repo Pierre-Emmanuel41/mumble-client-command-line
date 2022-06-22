@@ -29,9 +29,9 @@ public class PlayerMumbleClientRoot {
 
 		root.add(joinNode = new ServerJoinNode(() -> (IPlayerMumbleServer) tree.getServer()));
 		root.add(leaveNode = new ServerLeaveNode(() -> (IPlayerMumbleServer) tree.getServer()));
-		root.add(detailsNode = new DetailsNode(() -> (IPlayerMumbleServer) tree.getServer()));
 		root.add(channelNode = new ChannelNode(() -> (IPlayerMumbleServer) tree.getServer()));
 		root.add(setNode = new SetNode(() -> (IPlayerMumbleServer) tree.getServer()));
+		root.add(detailsNode = new DetailsNode(() -> (IPlayerMumbleServer) tree.getServer()));
 	}
 
 	/**
