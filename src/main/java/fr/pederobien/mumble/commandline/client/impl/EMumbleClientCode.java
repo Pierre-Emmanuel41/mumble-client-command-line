@@ -472,7 +472,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the game address of a player has been updated on the remote
 	MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED,
 
-	// Code for the "mumble players mute" command --------------------------------
+	// Code for the "mumble players admin" command ------------------------------
 	MUMBLE__PLAYERS__ADMIN__EXPLANATION,
 
 	// Code for the administrator status completion
