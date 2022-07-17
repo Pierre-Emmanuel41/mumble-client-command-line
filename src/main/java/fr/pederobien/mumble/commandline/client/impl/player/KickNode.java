@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import fr.pederobien.mumble.client.common.interfaces.IResponse;
+import fr.pederobien.messenger.interfaces.IResponse;
 import fr.pederobien.mumble.client.player.exceptions.PlayerNotAdministratorException;
 import fr.pederobien.mumble.client.player.exceptions.PlayerNotRegisteredInChannelException;
 import fr.pederobien.mumble.client.player.interfaces.IChannel;

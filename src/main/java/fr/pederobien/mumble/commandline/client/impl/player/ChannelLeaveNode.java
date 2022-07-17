@@ -3,7 +3,7 @@ package fr.pederobien.mumble.commandline.client.impl.player;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import fr.pederobien.mumble.client.common.interfaces.IResponse;
+import fr.pederobien.messenger.interfaces.IResponse;
 import fr.pederobien.mumble.client.player.exceptions.PlayerNotOnlineException;
 import fr.pederobien.mumble.client.player.interfaces.IPlayerMumbleServer;
 import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
