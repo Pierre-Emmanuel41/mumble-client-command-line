@@ -7,7 +7,7 @@ import fr.pederobien.communication.event.ConnectionEvent;
 import fr.pederobien.dictionary.event.DictionaryEvent;
 import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
 import fr.pederobien.mumble.commandline.client.impl.MumbleClientCommandTree;
-import fr.pederobien.sound.event.SoundEvent;
+import fr.pederobien.sound.event.ProjectSoundEvent;
 import fr.pederobien.utils.event.EventLogger;
 
 public class MumbleClientCommandLine {
@@ -22,7 +22,7 @@ public class MumbleClientCommandLine {
 
 		CommandLineBuilder builder = new CommandLineBuilder(root -> {
 			EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class);
-			EventLogger.instance().ignore(NodeEvent.class).ignore(SoundEvent.class).register();
+			EventLogger.instance().ignore(NodeEvent.class).ignore(ProjectSoundEvent.class).register();
 
 			String dictionaryFolder = commandLine.getEnvironment() == CommandLine.DEVELOPMENT_ENVIRONMENT ? DEV_DICTIONARY_FOLDER : PROD_DICTIONARY_FOLDER;
 			commandLine.registerDictionaries(dictionaryFolder, new String[] { "English.xml", "French.xml" });
