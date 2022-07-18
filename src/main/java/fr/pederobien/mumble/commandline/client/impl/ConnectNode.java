@@ -11,8 +11,8 @@ import fr.pederobien.mumble.client.external.impl.ExternalMumbleServer;
 import fr.pederobien.mumble.client.player.impl.PlayerMumbleServer;
 
 public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> {
-	private static final String EXTERNAL_MUMBLE_SERVER_NAME = "ExternalMumbleServer";
-	private static final String PLAYER_MUMBLE_SERVER_NAME = "PlayerMumbleServer";
+	private static final String EXTERNAL_MUMBLE_SERVER_NAME = "ExternalServer";
+	private static final String PLAYER_MUMBLE_SERVER_NAME = "PlayerServer";
 	private MumbleClientCommandTree tree;
 
 	/**
@@ -99,8 +99,7 @@ public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> 
 		tree.setServer(null);
 
 		try {
-			String prefixName = type == Type.EXTERNAL_TO_SERVER ? EXTERNAL_MUMBLE_SERVER_NAME : PLAYER_MUMBLE_SERVER_NAME;
-			String name = String.format("%s_%s:%s", prefixName, ipAddress.getHostAddress(), port);
+			String name = type == Type.EXTERNAL_TO_SERVER ? EXTERNAL_MUMBLE_SERVER_NAME : PLAYER_MUMBLE_SERVER_NAME;
 
 			InetSocketAddress address = new InetSocketAddress(ipAddress, port);
 			ICommonMumbleServer<?, ?, ?> server = type == Type.EXTERNAL_TO_SERVER ? new ExternalMumbleServer(name, address) : new PlayerMumbleServer(name, address);

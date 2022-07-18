@@ -9,6 +9,8 @@ import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
 import fr.pederobien.mumble.commandline.client.impl.MumbleClientCommandTree;
 import fr.pederobien.sound.event.ProjectSoundEvent;
 import fr.pederobien.utils.event.EventLogger;
+import fr.pederobien.vocal.client.event.VocalPlayerSpeakPostEvent;
+import fr.pederobien.vocal.client.event.VocalPlayerSpeakPreEvent;
 
 public class MumbleClientCommandLine {
 	private static final String DEV_DICTIONARY_FOLDER = "src/main/resources/dictionaries/";
@@ -21,8 +23,8 @@ public class MumbleClientCommandLine {
 		tree = new MumbleClientCommandTree();
 
 		CommandLineBuilder builder = new CommandLineBuilder(root -> {
-			EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class);
-			EventLogger.instance().ignore(NodeEvent.class).ignore(ProjectSoundEvent.class).register();
+			EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class);
+			EventLogger.instance().ignore(ProjectSoundEvent.class).ignore(VocalPlayerSpeakPreEvent.class).ignore(VocalPlayerSpeakPostEvent.class).register();
 
 			String dictionaryFolder = commandLine.getEnvironment() == CommandLine.DEVELOPMENT_ENVIRONMENT ? DEV_DICTIONARY_FOLDER : PROD_DICTIONARY_FOLDER;
 			commandLine.registerDictionaries(dictionaryFolder, new String[] { "English.xml", "French.xml" });
