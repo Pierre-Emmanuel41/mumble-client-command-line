@@ -5,6 +5,8 @@ import fr.pederobien.commandline.CommandLine.CommandLineBuilder;
 import fr.pederobien.commandtree.events.NodeEvent;
 import fr.pederobien.communication.event.ConnectionEvent;
 import fr.pederobien.dictionary.event.DictionaryEvent;
+import fr.pederobien.mumble.client.external.event.PlayerPositionChangePostEvent;
+import fr.pederobien.mumble.client.external.event.PlayerPositionChangePreEvent;
 import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
 import fr.pederobien.mumble.commandline.client.impl.MumbleClientCommandTree;
 import fr.pederobien.sound.event.ProjectSoundEvent;
@@ -23,8 +25,16 @@ public class MumbleClientCommandLine {
 		tree = new MumbleClientCommandTree();
 
 		CommandLineBuilder builder = new CommandLineBuilder(root -> {
-			EventLogger.instance().newLine(true).timeStamp(true).ignore(DictionaryEvent.class).ignore(ConnectionEvent.class).ignore(NodeEvent.class);
-			EventLogger.instance().ignore(ProjectSoundEvent.class).ignore(VocalPlayerSpeakPreEvent.class).ignore(VocalPlayerSpeakPostEvent.class).register();
+			EventLogger.instance().newLine(true).timeStamp(true).register();
+
+			EventLogger.instance().ignore(DictionaryEvent.class);
+			EventLogger.instance().ignore(ConnectionEvent.class);
+			EventLogger.instance().ignore(NodeEvent.class);
+			EventLogger.instance().ignore(ProjectSoundEvent.class);
+			EventLogger.instance().ignore(VocalPlayerSpeakPreEvent.class);
+			EventLogger.instance().ignore(VocalPlayerSpeakPostEvent.class);
+			EventLogger.instance().ignore(PlayerPositionChangePreEvent.class);
+			EventLogger.instance().ignore(PlayerPositionChangePostEvent.class);
 
 			String dictionaryFolder = commandLine.getEnvironment() == CommandLine.DEVELOPMENT_ENVIRONMENT ? DEV_DICTIONARY_FOLDER : PROD_DICTIONARY_FOLDER;
 			commandLine.registerDictionaries(dictionaryFolder, new String[] { "English.xml", "French.xml" });
