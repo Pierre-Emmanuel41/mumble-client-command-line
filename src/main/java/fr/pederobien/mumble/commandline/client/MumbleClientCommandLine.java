@@ -7,6 +7,7 @@ import fr.pederobien.communication.event.ConnectionEvent;
 import fr.pederobien.dictionary.event.DictionaryEvent;
 import fr.pederobien.mumble.client.external.event.PlayerPositionChangePostEvent;
 import fr.pederobien.mumble.client.external.event.PlayerPositionChangePreEvent;
+import fr.pederobien.mumble.client.player.event.MumblePlayerPositionChangePostEvent;
 import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
 import fr.pederobien.mumble.commandline.client.impl.MumbleClientCommandTree;
 import fr.pederobien.sound.event.ProjectSoundEvent;
@@ -35,6 +36,7 @@ public class MumbleClientCommandLine {
 			EventLogger.instance().ignore(VocalPlayerSpeakPostEvent.class);
 			EventLogger.instance().ignore(PlayerPositionChangePreEvent.class);
 			EventLogger.instance().ignore(PlayerPositionChangePostEvent.class);
+			EventLogger.instance().ignore(MumblePlayerPositionChangePostEvent.class);
 
 			String dictionaryFolder = commandLine.getEnvironment() == CommandLine.DEVELOPMENT_ENVIRONMENT ? DEV_DICTIONARY_FOLDER : PROD_DICTIONARY_FOLDER;
 			commandLine.registerDictionaries(dictionaryFolder, new String[] { "English.xml", "French.xml" });
