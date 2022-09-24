@@ -11,8 +11,8 @@ import fr.pederobien.mumble.client.external.impl.ExternalMumbleServer;
 import fr.pederobien.mumble.client.player.impl.PlayerMumbleServer;
 
 public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> {
-	private static final String EXTERNAL_MUMBLE_SERVER_NAME = "ExternalServer";
-	private static final String PLAYER_MUMBLE_SERVER_NAME = "PlayerServer";
+	private static final String EXTERNAL_MUMBLE_SERVER_NAME = "StandaloneServer";
+	private static final String PLAYER_MUMBLE_SERVER_NAME = "SimpleServer";
 	private MumbleClientCommandTree tree;
 
 	/**
