@@ -1,12 +1,14 @@
 package fr.pederobien.mumble.commandline.client.impl;
 
 public enum Type {
-	EXTERNAL_TO_SERVER("external"),
+	// In order to create a stand-alone mumble server.
+	STANDALONE_SERVER("Standalone"),
 
-	PLAYER_TO_SERVER("player");
+	// In order to create a simple mumble server.
+	SIMPLE_SERVER("Simple"),
 
-	private static final String EXTERNAL = "external";
-	private static final String PLAYER = "player";
+	UNKOWN("unknown");
+
 	private String name;
 
 	private Type(String name) {
@@ -26,13 +28,10 @@ public enum Type {
 	 * @return The connection type if it exists, null otherwise.
 	 */
 	public static Type getByName(String name) {
-		switch (name) {
-		case EXTERNAL:
-			return EXTERNAL_TO_SERVER;
-		case PLAYER:
-			return PLAYER_TO_SERVER;
-		default:
-			return null;
-		}
+		for (Type type : values())
+			if (type.toString().equalsIgnoreCase(name))
+				return type;
+
+		return UNKOWN;
 	}
 }

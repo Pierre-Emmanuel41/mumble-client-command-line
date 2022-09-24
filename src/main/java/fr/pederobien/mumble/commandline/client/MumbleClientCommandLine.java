@@ -62,7 +62,11 @@ public class MumbleClientCommandLine {
 			return true;
 		});
 
-		builder.onStop(root -> commandLine.send(EMumbleClientCode.MUMBLE__STOPPING));
+		builder.onStop(root -> {
+			if (tree.getServer() != null)
+				tree.getServer().close();
+			commandLine.send(EMumbleClientCode.MUMBLE__STOPPING);
+		});
 
 		commandLine = builder.build(tree.getRoot(), args);
 		commandLine.start();

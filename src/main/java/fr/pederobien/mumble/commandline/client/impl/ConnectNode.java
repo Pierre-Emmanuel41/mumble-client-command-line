@@ -11,8 +11,6 @@ import fr.pederobien.mumble.client.external.impl.ExternalMumbleServer;
 import fr.pederobien.mumble.client.player.impl.PlayerMumbleServer;
 
 public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> {
-	private static final String EXTERNAL_MUMBLE_SERVER_NAME = "StandaloneServer";
-	private static final String PLAYER_MUMBLE_SERVER_NAME = "SimpleServer";
 	private MumbleClientCommandTree tree;
 
 	/**
@@ -49,7 +47,7 @@ public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> 
 				return false;
 			};
 
-			List<String> connectionTypes = asList(Type.EXTERNAL_TO_SERVER.toString(), Type.PLAYER_TO_SERVER.toString());
+			List<String> connectionTypes = asList(Type.STANDALONE_SERVER.toString(), Type.SIMPLE_SERVER.toString());
 			return check(args[1], portValid, connectionTypes);
 		default:
 			return emptyList();
@@ -87,7 +85,7 @@ public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> 
 		Type type;
 		try {
 			type = Type.getByName(args[2]);
-			if (type == null) {
+			if (type == Type.UNKOWN) {
 				send(EMumbleClientCode.MUMBLE__CONNECT__CONNECTION_TYPE_NOT_FOUND, ipAddress, port, args[2]);
 				return false;
 			}
@@ -99,10 +97,9 @@ public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> 
 		tree.setServer(null);
 
 		try {
-			String name = type == Type.EXTERNAL_TO_SERVER ? EXTERNAL_MUMBLE_SERVER_NAME : PLAYER_MUMBLE_SERVER_NAME;
-
+			String name = String.format("%s_Server", type);
 			InetSocketAddress address = new InetSocketAddress(ipAddress, port);
-			ICommonMumbleServer<?, ?, ?> server = type == Type.EXTERNAL_TO_SERVER ? new ExternalMumbleServer(name, address) : new PlayerMumbleServer(name, address);
+			ICommonMumbleServer<?, ?, ?> server = type == Type.STANDALONE_SERVER ? new ExternalMumbleServer(name, address) : new PlayerMumbleServer(name, address);
 
 			send(EMumbleClientCode.MUMBLE__CONNECT__ATTEMPTING_CONNECTION, ipAddress, port);
 			server.open();
