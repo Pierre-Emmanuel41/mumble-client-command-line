@@ -8,10 +8,16 @@ import java.util.function.Predicate;
 
 import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
 import fr.pederobien.mumble.client.external.impl.ExternalMumbleServer;
+import fr.pederobien.mumble.client.player.event.MumbleGamePortCheckPostEvent;
 import fr.pederobien.mumble.client.player.impl.PlayerMumbleServer;
+import fr.pederobien.utils.event.EventHandler;
+import fr.pederobien.utils.event.EventManager;
+import fr.pederobien.utils.event.EventPriority;
+import fr.pederobien.utils.event.IEventListener;
 
 public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> {
 	private MumbleClientCommandTree tree;
+	private Listener listener;
 
 	/**
 	 * Creates a node in order to creates a new mumble server associated to a specific
@@ -21,6 +27,8 @@ public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> 
 	protected ConnectNode(MumbleClientCommandTree tree) {
 		super(() -> tree.getServer(), "connect", EMumbleClientCode.MUMBLE__CONNECT__EXPLANATION, server -> true);
 		this.tree = tree;
+
+		listener = new Listener();
 	}
 
 	@Override
@@ -94,6 +102,9 @@ public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> 
 			return false;
 		}
 
+		if (args.length > 3 && args[3].equalsIgnoreCase("true"))
+			listener.setRegistered(true);
+
 		tree.setServer(null);
 
 		try {
@@ -110,5 +121,37 @@ public class ConnectNode extends MumbleClientNode<ICommonMumbleServer<?, ?, ?>> 
 			return false;
 		}
 		return true;
+	}
+
+	private class Listener implements IEventListener {
+		private boolean isRegistered;
+
+		private Listener() {
+			isRegistered = false;
+		}
+
+		/**
+		 * Register or unregister this listener for the EventManager.
+		 * 
+		 * @param isRegistered True to register, false to unregister.
+		 */
+		public void setRegistered(boolean isRegistered) {
+			if (this.isRegistered == isRegistered)
+				return;
+
+			this.isRegistered = isRegistered;
+			if (isRegistered)
+				EventManager.registerListener(this);
+			else
+				EventManager.unregisterListener(this);
+		}
+
+		@EventHandler(priority = EventPriority.HIGH)
+		private void onGamePortCheck(MumbleGamePortCheckPostEvent event) {
+			if (!event.getServer().equals(getServer()))
+				return;
+
+			event.setUsed(true);
+		}
 	}
 }
