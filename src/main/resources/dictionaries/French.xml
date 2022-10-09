@@ -1083,5 +1083,33 @@
 			<code>MUMBLE__SET__DEAFEN__UNDEAFENED_REQUEST_SUCCEED</code>
 			<value>%s n'est plus sourd</value>
 		</message>
+		<message>
+			<code>MUMBLE__SET__VOLUME__EXPLANATION</code>
+			<value>Pour modifier le volume audio d'un joueur</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__VOLUME__NAME_IS_MISSING</code>
+			<value>Impossible de définir le volume audio d'un joueur, le nom du joueur est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__VOLUME__PLAYER_NOT_FOUND</code>
+			<value>Impossible de définir le volume audio de %s, le joueur n'existe pas</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__VOLUME__VOLUME_IS_MISSING</code>
+			<value>Impossible de définir le volume audio de %s, le volume audio est manquant</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__VOLUME__VOLUME_BAD_FORMAT</code>
+			<value>Impossible de définir le volume audio de %s, le volume audio a un mauvais format, une valeur entière est attendue</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__VOLUME__VOLUME_OUT_OF_RANGE</code>
+			<value>Impossible de définir le volume audio de %s, le volume audio doit être dans l'intervalle [0%, 200%]</value>
+		</message>
+		<message>
+			<code>MUMBLE__SET__VOLUME__VOLUME_UPDATED</code>
+			<value>Le volume audio de %s, est maintenant %s%%</value>
+		</message>
 	</messages>
 </dictionary>

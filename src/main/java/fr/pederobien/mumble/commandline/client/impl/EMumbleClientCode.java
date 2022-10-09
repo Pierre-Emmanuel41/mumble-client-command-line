@@ -22,6 +22,9 @@ public enum EMumbleClientCode implements ICode {
 	// Code for the port number completion
 	MUMBLE__PORT_COMPLETION,
 
+	// Code for the volume completion
+	MUMBLE__VOLUME_COMPLETION,
+
 	// Code when the server returns a fail code
 	MUMBLE__REQUEST_FAILED,
 
@@ -810,6 +813,27 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the player is undeafen
 	MUMBLE__SET__DEAFEN__UNDEAFENED_REQUEST_SUCCEED,
+
+	// Code for the "mumble set volume" command ----------------------------------
+	MUMBLE__SET__VOLUME__EXPLANATION,
+
+	// Code when the player name is missing
+	MUMBLE__SET__VOLUME__NAME_IS_MISSING,
+
+	// Code when the player does not exist
+	MUMBLE__SET__VOLUME__PLAYER_NOT_FOUND,
+
+	// Code when the volume is missing
+	MUMBLE__SET__VOLUME__VOLUME_IS_MISSING,
+
+	// Code when the volume has a bad format
+	MUMBLE__SET__VOLUME__VOLUME_BAD_FORMAT,
+
+	// Code when the volume is out of range
+	MUMBLE__SET__VOLUME__VOLUME_OUT_OF_RANGE,
+
+	// Code when the volume has been updated
+	MUMBLE__SET__VOLUME__VOLUME_UPDATED,
 
 	;
 

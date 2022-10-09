@@ -9,6 +9,7 @@ import fr.pederobien.mumble.commandline.client.impl.MumbleClientNode;
 public class SetNode extends MumbleClientNode<IPlayerMumbleServer> {
 	private SetMuteNode muteNode;
 	private SetDeafenNode deafenNode;
+	private SetVolumeNode volumeNode;
 
 	/**
 	 * Creates a node in order to modify the properties of the main player and/or the properties of a player registered in a channel.
@@ -20,6 +21,7 @@ public class SetNode extends MumbleClientNode<IPlayerMumbleServer> {
 
 		add(muteNode = new SetMuteNode(server));
 		add(deafenNode = new SetDeafenNode(server));
+		add(volumeNode = new SetVolumeNode(server));
 	}
 
 	/**
@@ -34,5 +36,12 @@ public class SetNode extends MumbleClientNode<IPlayerMumbleServer> {
 	 */
 	public SetDeafenNode getDeafenNode() {
 		return deafenNode;
+	}
+
+	/**
+	 * @return The node that set the audio volume of a player.
+	 */
+	public SetVolumeNode getVolumeNode() {
+		return volumeNode;
 	}
 }
