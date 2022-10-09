@@ -4,16 +4,16 @@ import fr.pederobien.commandline.ICode;
 
 public enum EMumbleClientCode implements ICode {
 
-	// Starting application ------------------------------------------------------
+	// Starting application -----------------------------------------------------------------------
 	MUMBLE__STARTING,
 
 	// Code when the arguments are ignored
 	MUMBLE__STARTING__IGNORING_ARGUMENTS__NOT_ENOUGH_ARGUMENT,
 
-	// Stopping application ------------------------------------------------------
+	// Stopping application -----------------------------------------------------------------------
 	MUMBLE__STOPPING,
 
-	// Common codes --------------------------------------------------------------
+	// Common codes -------------------------------------------------------------------------------
 	MUMBLE__NAME__COMPLETION,
 
 	// Code for the IP address completion
@@ -34,10 +34,10 @@ public enum EMumbleClientCode implements ICode {
 	// Code when a node is not available
 	MUMBLE__NODE_NOT_AVAILABLE,
 
-	// Code for the "mumble" command ---------------------------------------------
+	// Code for the "mumble" command --------------------------------------------------------------
 	MUMBLE__ROOT__EXPLANATION,
 
-	// Code for the "mumble connect" command -------------------------------------
+	// Code for the "mumble connect" command ------------------------------------------------------
 	MUMBLE__CONNECT__EXPLANATION,
 
 	// Code when the IP address is missing
@@ -70,13 +70,13 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the connection with the remote failed
 	MUMBLE__CONNECT__CONNECTION_ABORT,
 
-	// Code for the "mumble disconnect" command ----------------------------------
+	// Code for the "mumble disconnect" command ---------------------------------------------------
 	MUMBLE__DISCONNECT__EXPLANATION,
 
 	// Code when the connection is aborted
 	MUMBLE__DISCONNECT__CONNECTION_ABORTED,
 
-	// Code for the "mumble join" command ----------------------------------------
+	// Code for the "mumble join" command ---------------------------------------------------------
 	MUMBLE__JOIN__EXPLANATION,
 
 	// Code when trying to join the remote
@@ -88,7 +88,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the request failed
 	MUMBLE__JOIN__REQUEST_ABORT,
 
-	// Code for the "mumble leave" command ---------------------------------------
+	// Code for the "mumble leave" command --------------------------------------------------------
 	MUMBLE__LEAVE__EXPLANATION,
 
 	// Code when trying to leave the remote
@@ -97,13 +97,13 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player has left the server
 	MUMBLE__LEAVE__REQUEST_SUCCEED,
 
-	// Code for the "mumble channel" command -------------------------------------
+	// Code for the "mumble channel" command ------------------------------------------------------
 	MUMBLE__CHANNEL__EXPLANATION,
 
-	// Code for the "mumble channel add" command ---------------------------------
+	// Code for the "mumble channel add" command --------------------------------------------------
 	MUMBLE__CHANNEL__ADD__EXPLANATION,
 
-	// Code for the "mumble channel add channels" command ------------------------
+	// Code for the "mumble channel add channels" command -----------------------------------------
 	MUMBLE__CHANNEL__ADD__CHANNEL__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -121,7 +121,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the channel has been added on the remote
 	MUMBLE__CHANNEL__ADD__CHANNEL__REQUEST_SUCCEED,
 
-	// Code for the "mumble channel add players" command ------------------------
+	// Code for the "mumble channel add players" command ------------------------------------------
 	MUMBLE__CHANNEL__ADD__PLAYERS__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -142,10 +142,10 @@ public enum EMumbleClientCode implements ICode {
 	// Code when several players has been added
 	MUMBLE__CHANNEL__ADD__PLAYERS__SEVERAL_PLAYERS_ADDED_REQUEST_SUCCEED,
 
-	// Code for the "mumble channel remove" command -----------------------------
+	// Code for the "mumble channel remove" command -----------------------------------------------
 	MUMBLE__CHANNEL__REMOVE__EXPLANATION,
 
-	// Code for the "mumble channel remove channel" command ---------------------
+	// Code for the "mumble channel remove channel" command ---------------------------------------
 	MUMBLE__CHANNEL__REMOVE__CHANNEL__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -157,7 +157,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the channel has been removed from the remote
 	MUMBLE__CHANNEL__REMOVE__CHANNEL__REQUEST_SUCCEED,
 
-	// Code for the "mumble channel remove channels" command ---------------------
+	// Code for the "mumble channel remove channels" command --------------------------------------
 	MUMBLE__CHANNEL__REMOVE__PLAYERS__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -178,7 +178,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when several players has been removed
 	MUMBLE__CHANNEL__REMOVE__PLAYERS__SEVERAL_PLAYERS_REMOVED_REQUEST_SUCCEED,
 
-	// Code for the "mumble channel rename" command -----------------------------
+	// Code for the "mumble channel rename" command -----------------------------------------------
 	MUMBLE__CHANNEL__RENAME__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -196,10 +196,10 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the channel has been renamed on the remote
 	MUMBLE__CHANNEL__RENAME__REQUEST_SUCCEED,
 
-	// Code for the "mumble channel soundModifier" command ----------------------
+	// Code for the "mumble channel soundModifier" command ----------------------------------------
 	MUMBLE__CHANNEL__SOUND_MODIFIER__EXPLANATION,
 
-	// Code for the "mumble channel soundModifier details" command --------------
+	// Code for the "mumble channel soundModifier details" command --------------------------------
 	MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -211,7 +211,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code to display the properties of a sound modifier
 	MUMBLE__CHANNEL__SOUND_MODIFIER__DETAILS__SOUND_MODIFIER_DETAILS,
 
-	// Code for the "mumble channel soundModifier modify" command ----------------
+	// Code for the "mumble channel soundModifier modify" command ---------------------------------
 	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__EXPLANATION,
 
 	// Code when the name of the channel is missing
@@ -226,7 +226,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the name of the channel does not exist
 	MUMBLE__CHANNEL__SOUND_MODIFIER__MODIFY__PARAMETER_NOT_FOUND,
 
-	// Code for the "mumble channel soundModifier set" command -------------------
+	// Code for the "mumble channel soundModifier set" command ------------------------------------
 	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__EXPLANATION,
 
 	// Code when the channel name is missing
@@ -244,13 +244,13 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the sound modifier of a channel has been set on the server
 	MUMBLE__CHANNEL__SOUND_MODIFIER__SET__REQUEST_SUCCEED,
 
-	// Code for the "mumble channel join" command --------------------------------
+	// Code for the "mumble channel join" command -------------------------------------------------
 	MUMBLE__CHANNEL__JOIN__EXPLANATION,
 
 	// Code when the main player is not connected in game
 	MUMBLE__CHANNEL__JOIN__PLAYER_NOT_ONLINE,
 
-	// Code for the "mumble channel leave" command -------------------------------
+	// Code for the "mumble channel leave" command ------------------------------------------------
 	MUMBLE__CHANNEL__LEAVE__EXPLANATION,
 
 	// Code when the main player is not registered in a channel
@@ -259,10 +259,10 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the main player is not connected in game
 	MUMBLE__CHANNEL__LEAVE__PLAYER_NOT_ONLINE,
 
-	// Code for the "parameter" command ------------------------------------------
+	// Code for the "parameter" command -----------------------------------------------------------
 	PARAMETER__ROOT__EXPLANATION,
 
-	// Code for the "parameter value" command ------------------------------------
+	// Code for the "parameter value" command -----------------------------------------------------
 	PARAMETER__VALUE__EXPLANATION,
 
 	// Code for the parameter value completion
@@ -280,7 +280,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the parameter value has been updated on the server
 	PARAMETER__VALUE__REQUEST_SUCCEED,
 
-	// Code for the "parameter minValue" command ---------------------------------
+	// Code for the "parameter minValue" command --------------------------------------------------
 	PARAMETER__MIN_VALUE__EXPLANATION,
 
 	// Code for the parameter minimum value completion
@@ -295,7 +295,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the parameter minimum value has been updated on the server
 	PARAMETER__MIN_VALUE__REQUEST_SUCCEED,
 
-	// Code for the "parameter maxValue" command ---------------------------------
+	// Code for the "parameter maxValue" command --------------------------------------------------
 	PARAMETER__MAX_VALUE__EXPLANATION,
 
 	// Code for the parameter maximum value completion
@@ -310,10 +310,10 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the parameter maximum value has been updated on the server
 	PARAMETER__MAX_VALUE__REQUEST_SUCCEED,
 
-	// Code for the "mumble players" command -------------------------------------
+	// Code for the "mumble players" command ------------------------------------------------------
 	MUMBLE__PLAYERS__EXPLANATION,
 
-	// Code for the "mumble players add" command ---------------------------------
+	// Code for the "mumble players add" command --------------------------------------------------
 	MUMBLE__PLAYERS__ADD__EXPLANATION,
 
 	// Code for the administrator status completion
@@ -394,7 +394,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player has been added on the remote
 	MUMBLE__PLAYERS__ADD__REQUEST_SUCCEED,
 
-	// Code for the "mumble players remove" command ------------------------------
+	// Code for the "mumble players remove" command -----------------------------------------------
 	MUMBLE__PLAYERS__REMOVE__EXPLANATION,
 
 	// Code when the player name is missing
@@ -406,7 +406,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player has been removed on the remote
 	MUMBLE__PLAYERS__REMOVE__REQUEST_SUCCEED,
 
-	// Code for the "mumble players remove" command ------------------------------
+	// Code for the "mumble players remove" command -----------------------------------------------
 	MUMBLE__PLAYERS__RENAME__EXPLANATION,
 
 	// Code when the player name is missing
@@ -424,7 +424,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player has been renamed on the remote
 	MUMBLE__PLAYERS__RENAME__REQUEST_SUCCEED,
 
-	// Code for the "mumble players online" command ------------------------------
+	// Code for the "mumble players online" command -----------------------------------------------
 	MUMBLE__PLAYERS__ONLINE__EXPLANATION,
 
 	// Code for the online status completion
@@ -448,7 +448,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player online status has been updated on the remote
 	MUMBLE__PLAYERS__ONLINE__OFFLINE_REQUEST_SUCCEED,
 
-	// Code for the "mumble players gameAddress" command -------------------------
+	// Code for the "mumble players gameAddress" command ------------------------------------------
 	MUMBLE__PLAYERS__GAME_ADDRESS__EXPLANATION,
 
 	// Code when the player name is missing
@@ -475,7 +475,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the game address of a player has been updated on the remote
 	MUMBLE__PLAYERS__GAME_ADDRESS__REQUEST_SUCCEED,
 
-	// Code for the "mumble players admin" command ------------------------------
+	// Code for the "mumble players admin" command ------------------------------------------------
 	MUMBLE__PLAYERS__ADMIN__EXPLANATION,
 
 	// Code for the administrator status completion
@@ -499,7 +499,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is not and administrator
 	MUMBLE__PLAYERS__ADMIN__NOT_ADMIN_REQUEST_SUCCEED,
 
-	// Code for the "mumble players mute" command --------------------------------
+	// Code for the "mumble players mute" command -------------------------------------------------
 	MUMBLE__PLAYERS__MUTE__EXPLANATION,
 
 	// Code for the mute status completion
@@ -523,7 +523,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is unmute
 	MUMBLE__PLAYERS__MUTE__UNMUTED_REQUEST_SUCCEED,
 
-	// Code for the "mumble players muteBy" command ------------------------------
+	// Code for the "mumble players muteBy" command -----------------------------------------------
 	MUMBLE__PLAYERS__MUTE_BY__EXPLANATION,
 
 	// Code for the mute by status completion
@@ -553,7 +553,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the source player does not exist
 	MUMBLE__PLAYERS__MUTE_BY__UNMUTE_REQUEST_SUCCEED,
 
-	// Code for the "mumble players deafen" command ------------------------------
+	// Code for the "mumble players deafen" command -----------------------------------------------
 	MUMBLE__PLAYERS__DEAFEN__EXPLANATION,
 
 	// Code for the deafen status completion
@@ -577,7 +577,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is undeafen
 	MUMBLE__PLAYERS__DEAFEN__UNDEAFEND_REQUEST_SUCCEED,
 
-	// Code for the "mumble players kick" command -------------------------------
+	// Code for the "mumble players kick" command -------------------------------------------------
 	MUMBLE__PLAYERS__KICK__EXPLANATION,
 
 	// Code when name of the player to kick is missing
@@ -595,7 +595,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when a player has been kicked from a channel
 	MUMBLE__PLAYERS__KICK__REQUEST_SUCCEED,
 
-	// Code for the "mumble players position" command ---------------------------
+	// Code for the "mumble players position" command ---------------------------------------------
 	MUMBLE__PLAYERS__POSITION__EXPLANATION,
 
 	// Code for the X coordinate completion,
@@ -652,7 +652,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player's position has been updated on the server
 	MUMBLE__PLAYERS__POSITION__REQUEST_SUCCEED,
 
-	// Code for the "mumble details" command -------------------------------------
+	// Code for the "mumble details" command ------------------------------------------------------
 	MUMBLE__DETAILS__EXPLANATION,
 
 	// Code for the server name
@@ -763,10 +763,10 @@ public enum EMumbleClientCode implements ICode {
 	// Code for the main player's information
 	MUMBLE__DETAILS__MAIN_PLAYER,
 
-	// Code for the "mumble set" command -----------------------------------------
+	// Code for the "mumble set" command ----------------------------------------------------------
 	MUMBLE__SET__EXPLANATION,
 
-	// Code for the "mumble set mute" command ------------------------------------
+	// Code for the "mumble set mute" command -----------------------------------------------------
 	MUMBLE__SET__MUTE__EXPLANATION,
 
 	// Code when the player is not registered in a channel
@@ -796,7 +796,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when another player is unmute on the server
 	MUMBLE__SET__MUTE__PLAYER_UNMUTED_REQUEST_SUCCEED,
 
-	// Code for the "mumble set deafen" command ----------------------------------
+	// Code for the "mumble set deafen" command ---------------------------------------------------
 	MUMBLE__SET__DEAFEN__EXPLANATION,
 
 	// Code when the player is not registered in a channel
@@ -814,7 +814,7 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the player is undeafen
 	MUMBLE__SET__DEAFEN__UNDEAFENED_REQUEST_SUCCEED,
 
-	// Code for the "mumble set volume" command ----------------------------------
+	// Code for the "mumble set volume" command ---------------------------------------------------
 	MUMBLE__SET__VOLUME__EXPLANATION,
 
 	// Code when the player name is missing
