@@ -35,6 +35,10 @@
 			<value>&lt;port&gt;</value>
 		</message>
 		<message>
+			<code>MUMBLE__VOLUME_COMPLETION</code>
+			<value>&lt;volume&gt;</value>
+		</message>
+		<message>
 			<code>MUMBLE__REQUEST_FAILED</code>
 			<value>Request failed (message : %s)</value>
 		</message>
