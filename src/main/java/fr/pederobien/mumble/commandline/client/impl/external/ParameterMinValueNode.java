@@ -53,7 +53,13 @@ public class ParameterMinValueNode extends ParameterNode {
 			else
 				send(EMumbleClientCode.PARAMETER__MIN_VALUE__REQUEST_SUCCEED, getParameter().getName(), soundModifier.getName(), channel.getName(), min);
 		};
-		getRangeParameter().setMin(min, update);
+
+		try {
+			getRangeParameter().setMin(min, update);
+		} catch (IllegalArgumentException e) {
+			send(EMumbleClientCode.PARAMETER__MIN_VALUE__VALUE_OUT_OF_RANGE, getParameter().getName(), getRangeParameter().getMax());
+			return false;
+		}
 		return true;
 	}
 }

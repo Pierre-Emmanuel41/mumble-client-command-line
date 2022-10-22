@@ -392,6 +392,10 @@
 			<value>Impossible de modifier la valeur minimum de %s, la nouvelle valeur minimum n'a pas le format attendu</value>
 		</message>
 		<message>
+			<code>MUMBLE_SERVER_CL__PARAMETER__MIN_VALUE__VALUE_OUT_OF_RANGE</code>
+			<value>Impossible de modifier la valeur minimum de l'intervalle de %s, le minimum doit être inférieur à la valeur maximum actuelle (%s)</value>
+		</message>
+		<message>
 			<code>PARAMETER__MIN_VALUE__REQUEST_SUCCEED</code>
 			<value>La valeur minimum du paramètre %s du modifieur de son %s associé au channel %s est maintenant %s</value>
 		</message>
@@ -410,6 +414,10 @@
 		<message>
 			<code>PARAMETER__MAX_VALUE__VALUE_BAD_FORMAT</code>
 			<value>Impossible de modifier la valeur maximum de %s, la nouvelle valeur maximum n'a pas le format attendu</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__VALUE_OUT_OF_RANGE</code>
+			<value>Impossible de modifier la valeur maximum de l'intervalle de %s, le maximum doit être supérieur à la valeur minimum actuelle (%s)</value>
 		</message>
 		<message>
 			<code>PARAMETER__MAX_VALUE__REQUEST_SUCCEED</code>

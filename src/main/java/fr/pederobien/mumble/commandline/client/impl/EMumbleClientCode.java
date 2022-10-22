@@ -292,6 +292,9 @@ public enum EMumbleClientCode implements ICode {
 	// Code when the new parameter minimum value has a bad format
 	PARAMETER__MIN_VALUE__VALUE_BAD_FORMAT,
 
+	// Code when the new parameter minimum value is greater than the current maximum value
+	PARAMETER__MIN_VALUE__VALUE_OUT_OF_RANGE,
+
 	// Code when the parameter minimum value has been updated on the server
 	PARAMETER__MIN_VALUE__REQUEST_SUCCEED,
 
@@ -306,6 +309,9 @@ public enum EMumbleClientCode implements ICode {
 
 	// Code when the new parameter maximum value has a bad format
 	PARAMETER__MAX_VALUE__VALUE_BAD_FORMAT,
+
+	// Code when the new parameter maximum value is less than the current minimum value
+	PARAMETER__MAX_VALUE__VALUE_OUT_OF_RANGE,
 
 	// Code when the parameter maximum value has been updated on the server
 	PARAMETER__MAX_VALUE__REQUEST_SUCCEED,

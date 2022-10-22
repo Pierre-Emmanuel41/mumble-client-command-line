@@ -395,6 +395,10 @@
 			<value>Cannot modify the minimum value of %s, the new minimum value has not the expected format</value>
 		</message>
 		<message>
+			<code>PARAMETER__MIN_VALUE__VALUE_OUT_OF_RANGE</code>
+			<value>Cannot modify the minimum value of the range of %s, the minimum must be less than the current maximum (%s)</value>
+		</message>
+		<message>
 			<code>PARAMETER__MIN_VALUE__REQUEST_SUCCEED</code>
 			<value>The minimum value of parameter %s of sound modifier %s associated to channel %s is now %s</value>
 		</message>
@@ -413,6 +417,10 @@
 		<message>
 			<code>PARAMETER__MAX_VALUE__VALUE_BAD_FORMAT</code>
 			<value>Cannot modify the maximum value of %s, the new maximum value has not the expected format</value>
+		</message>
+		<message>
+			<code>PARAMETER__MAX_VALUE__VALUE_OUT_OF_RANGE</code>
+			<value>Cannot modify the maximum value of the range of %s, the maximum must be greater than the current minimum (%s)</value>
 		</message>
 		<message>
 			<code>PARAMETER__MAX_VALUE__REQUEST_SUCCEED</code>

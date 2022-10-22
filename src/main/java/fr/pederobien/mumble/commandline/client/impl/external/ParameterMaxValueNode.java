@@ -53,7 +53,13 @@ public class ParameterMaxValueNode extends ParameterNode {
 			else
 				send(EMumbleClientCode.PARAMETER__MAX_VALUE__REQUEST_SUCCEED, getParameter().getName(), soundModifier.getName(), channel.getName(), max);
 		};
-		getRangeParameter().setMax(max, update);
+
+		try {
+			getRangeParameter().setMax(max, update);
+		} catch (IndexOutOfBoundsException e) {
+			send(EMumbleClientCode.PARAMETER__MAX_VALUE__VALUE_OUT_OF_RANGE, getParameter().getName(), getRangeParameter().getMin());
+			return false;
+		}
 		return true;
 	}
 }
