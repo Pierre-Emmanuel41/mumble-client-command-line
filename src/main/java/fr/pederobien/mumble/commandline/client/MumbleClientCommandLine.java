@@ -1,7 +1,7 @@
 package fr.pederobien.mumble.commandline.client;
 
-import fr.pederobien.commandline.CommandLine;
-import fr.pederobien.commandline.CommandLine.CommandLineBuilder;
+import fr.pederobien.commandline.impl.CommandLine;
+import fr.pederobien.commandline.impl.CommandLine.CommandLineBuilder;
 import fr.pederobien.commandtree.events.NodeEvent;
 import fr.pederobien.communication.event.ConnectionEvent;
 import fr.pederobien.dictionary.event.DictionaryEvent;

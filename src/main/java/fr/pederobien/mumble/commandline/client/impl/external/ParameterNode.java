@@ -3,7 +3,7 @@ package fr.pederobien.mumble.commandline.client.impl.external;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import fr.pederobien.commandline.ICode;
+import fr.pederobien.dictionary.interfaces.ICode;
 import fr.pederobien.mumble.client.common.interfaces.ICommonMumbleServer;
 import fr.pederobien.mumble.client.external.interfaces.IParameter;
 import fr.pederobien.mumble.client.external.interfaces.IRangeParameter;

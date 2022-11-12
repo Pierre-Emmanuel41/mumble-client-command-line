@@ -2,10 +2,10 @@ package fr.pederobien.mumble.commandline.client.impl.player;
 
 import java.util.function.Consumer;
 
-import fr.pederobien.commandline.ICode;
 import fr.pederobien.commandtree.impl.CommandRootNode;
 import fr.pederobien.commandtree.interfaces.ICommandRootNode;
 import fr.pederobien.commandtree.interfaces.INode;
+import fr.pederobien.dictionary.interfaces.ICode;
 import fr.pederobien.mumble.client.player.interfaces.IPlayerMumbleServer;
 import fr.pederobien.mumble.commandline.client.impl.EMumbleClientCode;
 import fr.pederobien.mumble.commandline.client.impl.MumbleClientCommandTree;
